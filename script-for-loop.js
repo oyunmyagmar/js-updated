@@ -422,7 +422,7 @@ let nSize1 = 5;
 for (let i = 1; i <= nSize1; i++) {
   let numbers = "";
   for (let j = 1; j <= nSize1; j++) {
-    numbers += "1";
+    numbers += j;
   }
   console.log(numbers);
 }

@@ -1,15 +1,20 @@
+// nasaa ugch yavulahad tursun on hevlej uguh function bich
 function findBirthYear(age) {
   let birthYear = 2025 - age;
   console.log(birthYear);
 }
 findBirthYear(35);
 
-function greet(name) {
-  let greeting = "Hello! ";
-  console.log(greeting + name);
+// neree ugch yavuulahad console.log deer "Sain baina uu Erdene" ged
+// minii nereer mendchileh function bich
+function sayGreeting(name) {
+  let greet = "Sain Baina uu! ";
+  console.log(greet + name);
 }
-greet("Miga");
+sayGreeting("Miga");
 
+// 2 bolon tuunees deesh utga avdag funvtion bich
+// 3 too ugch yavuulahad 3 toonii niilber oldog function bich
 function findSum(a, b, c) {
   let sum = a + b + c;
   console.log(sum);
@@ -38,7 +43,7 @@ function findMax3(a, b, c) {
 }
 findMax3(100, 240, 30);
 
-// 2.1 Гурван тооны багыг ол
+// 3 too avdag function, console.log der hamgiin bagiig ni hevledeg function bich
 function findMin(a, b, c) {
   if (a < b && a < c) {
     console.log(a);
