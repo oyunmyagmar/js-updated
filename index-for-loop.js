@@ -82,6 +82,17 @@ for (let i = 0; i < size9; i++) {
   }
   console.log(star);
 }
+// asuuuh !
+
+let size99 = 5;
+for (let i = 0; i < size99; i++) {
+  let star = "";
+  for (let j = 0; j < size99; j++) {
+    star += "*";
+  }
+  console.log(star);
+}
+
 // 10. Hollow Right Triangle Star Pattern
 
 //  01234
@@ -134,7 +145,10 @@ for (let i = 0; i < size11; i++) {
 let size12 = 5;
 for (let i = 0; i < size12; i++) {
   let star = "";
-  for (let j = 0; j <= i; j++) {
+  for (let j = 0; j < i; j++) {
+    star += " ";
+  }
+  for (let j = 0; j < size12 - i; j++) {
     star += "*";
   }
   console.log(star);
