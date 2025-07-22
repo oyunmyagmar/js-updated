@@ -190,40 +190,22 @@ for (let i = 1; i <= size108; i++) {
   console.log(star);
 }
 
-//9. Mirrored Right Triangle Star Pattern
+//9. Mirrored Right Triangle Star Pattern OK
 
 //  01234
-//0     *
-//1    **
-//2   ***
-//3  ****
+//0 ----*
+//1 ---**
+//2 --***
+//3 -****
 //4 *****
 
 let size9 = 5;
 for (let i = 0; i < size9; i++) {
   let star = "";
-  for (let j = 0; j >= size9 - 1 - i; j++) {
-    star += "*";
+  for (let j = 0; j < size9 - 1 - i; j++) {
+    star += " ";
   }
-  console.log(star);
-}
-// let size9 = 5;
-// for (let i = 0; i < size9; i++) {
-//   let star = "";
-//   for (let j = 0; j < size9 - i; j++) {
-//     star += "-";
-//   }
-//   for (let j = 0; j < i; j++) {
-//     star += "*";
-//   }
-//   console.log(star);
-// }
-// asuuuh !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-let size99 = 5;
-for (let i = 0; i < size99; i++) {
-  let star = "";
-  for (let j = 0; j < size99; j++) {
+  for (let j = 0; j <= i; j++) {
     star += "*";
   }
   console.log(star);
@@ -242,7 +224,7 @@ let size10 = 5;
 for (let i = 0; i < size10; i++) {
   let star = "";
   for (let j = 0; j <= i; j++) {
-    if (i == size10 - 1 || i == j || j == 0) {
+    if (j == 0 || j == i || i == size10 - 1) {
       star += "*";
     } else {
       star += " ";
@@ -281,14 +263,23 @@ for (let i = 0; i < size11; i++) {
 let size12 = 5;
 for (let i = 0; i < size12; i++) {
   let star = "";
-  for (let j = 0; j < i; j++) {
-    star += " ";
-  }
-  for (let j = 0; j < size12 - i; j++) {
-    star += "*";
+  for (let j = 0; j <= i; j++) {
+    star += "-";
   }
   console.log(star);
 }
+
+// let size12 = 5;
+// for (let i = 0; i < size12; i++) {
+//   let star = "";
+//   for (let j = 0; j < i; j++) {
+//     star += " ";
+//   }
+//   for (let j = 0; j < size12 - i; j++) {
+//     star += "*";
+//   }
+//   console.log(star);
+// }
 
 // 13. Pyramid (Equilateral Triangle) Star Pattern
 
