@@ -211,7 +211,7 @@ for (let i = 0; i < size9; i++) {
   console.log(star);
 }
 
-// 10. Hollow Right Triangle Star Pattern
+// 10. Hollow Right Triangle Star Pattern OK
 
 //  01234
 //0 *
@@ -233,7 +233,7 @@ for (let i = 0; i < size10; i++) {
   console.log(star);
 }
 
-// 11. Inverted Right Triangle Star Pattern
+// 11. Inverted Right Triangle Star Pattern OK
 
 //  01234
 //0 *****
@@ -251,77 +251,98 @@ for (let i = 0; i < size11; i++) {
   console.log(star);
 }
 
-// 12. Inverted Mirrored Right Triangle Star Pattern
+// 12. Inverted Mirrored Right Triangle Star Pattern OK
 
 //  01234
 //0 *****
-//1  ****
-//2   ***
-//3    **
-//4     *
+//1 -****
+//2 --***
+//3 ---**
+//4 ----*
 
 let size12 = 5;
 for (let i = 0; i < size12; i++) {
   let star = "";
-  for (let j = 0; j <= i; j++) {
-    star += "-";
+  for (let j = 0; j < i; j++) {
+    star += " ";
+  }
+  for (let j = 0; j < size12 - i; j++) {
+    star += "*";
   }
   console.log(star);
 }
 
-// let size12 = 5;
-// for (let i = 0; i < size12; i++) {
-//   let star = "";
-//   for (let j = 0; j < i; j++) {
-//     star += " ";
-//   }
-//   for (let j = 0; j < size12 - i; j++) {
-//     star += "*";
-//   }
-//   console.log(star);
-// }
+// 13. Pyramid (Equilateral Triangle) Star Pattern OK
 
-// 13. Pyramid (Equilateral Triangle) Star Pattern
-
-//  01234
-//0     *      0-1
-//1    ***     1-3
-//2   *****    2-5
-//3  *******   3-7
-//4 *********  4-9
-
-let size113 = 5;
-for (let i = 0; i < size113; i++) {
-  let star = "";
-  for (let j = 0; j < size113; j++) {
-    if (j >= size113 - 1 - i) {
-      star = star + "*";
-    } else {
-      star = star + "-";
-    }
-  }
-  console.log(star);
-}
+//  01234 01234
+//0 ----*|
+//1 ---**|*
+//2 --***|**
+//3 -****|***
+//4 *****|****
 
 let size13 = 5;
 for (let i = 0; i < size13; i++) {
   let star = "";
-  for (let j = 0; j < size13; j++) {
-    if (j == (size13 - 1) / 2) {
-      if (j > i) {
-        star = star + "*" + "*" + "*";
-      } else {
-        star = star + "*";
-      }
-    } else {
-      star = star + "-";
-    }
+  for (let j = 0; j < size13 - 1 - i; j++) {
+    star += " ";
+  }
+  for (let j = 0; j <= i; j++) {
+    star += "*";
+  }
+  for (let j = 0; j < i; j++) {
+    star += "*";
   }
   console.log(star);
 }
-// asuuuuuuuuuuuuuuuuhhhhhhhhhhhhhhhhhhh!!!!!!!!!!
 
-// 16. X Star Pattern 이해했음.
+// 14. Hollow Pyramid Star Pattern!!!!!!!!!!!!!!!!!!!!!!!!!
+
+//  01234|01234
+//0 ----*|
+//1 ---* |*
+//2 --*  | *
+//3 -*   |  *
+//4 *****|****
+
+let size14 = 5;
+for (let i = 0; i < size14; i++) {
+  let star = "";
+  for (let j = 0; j < size14 - 1 - i; j++) {
+    if (j == size14 - 1 - i) {
+      star += "*";
+    } else {
+      star += "-";
+    }
+  }
+  for (let j = 0; j <= i; j++) {
+    star += "*";
+  }
+  for (let j = 0; j < i; j++) {
+    star += "*";
+  }
+  console.log(star);
+}
+
+// 15. Diamond Star Pattern
+
+//  01234
+//0   *
+//1  ***
+//2 *****
+//3  ***
+//4   *
+
+let size15 = 5;
+for (i = 0; i < size15; i++) {
+  let star = "";
+  for (j = 0; j < size15; j++) {
+    star += "*";
+  }
+  console.log(star);
+}
+
+// 16. X Star Pattern OK
 
 //  012345678
 //0 *       *
@@ -347,7 +368,7 @@ for (let i = 0; i < size16; i++) {
   console.log(star);
 }
 
-// 17. Plus Star Pattern
+// 17. Plus Star Pattern OK
 
 //  012345678
 //0     +
@@ -368,7 +389,6 @@ for (let i = 0; i < size17; i++) {
     for (let j = 0; j < size17; j++) {
       star += "*";
     }
-    console.log(star);
   } else {
     for (let j = 0; j < size17; j++) {
       if (j == (size17 - 1) / 2) {
@@ -377,11 +397,9 @@ for (let i = 0; i < size17; i++) {
         star += " ";
       }
     }
-    console.log(star);
   }
+  console.log(star);
 }
-// asuuh -------> console.log(star) ni i murnuu haaltand bj bloh eseh
-
 // option2
 let size117 = 9;
 for (let i = 0; i < size117; i++) {
@@ -394,4 +412,17 @@ for (let i = 0; i < size117; i++) {
     }
   }
   console.log(star);
+}
+
+// Number Patterns
+
+// 1. Rectangle Number Pattern
+
+let nSize1 = 5;
+for (let i = 1; i <= nSize1; i++) {
+  let numbers = "";
+  for (let j = 1; j <= nSize1; j++) {
+    numbers += "1";
+  }
+  console.log(numbers);
 }
