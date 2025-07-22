@@ -1,10 +1,10 @@
 // 1. Square Star Pattern
-
-// *****
-// *****
-// *****
-// *****
-// *****
+//  54321
+//5 *****
+//4 *****
+//3 *****
+//2 *****
+//1 *****
 
 let sp1Size = 7;
 let sp1mur = sp1Size;
@@ -52,12 +52,12 @@ while (sp2row > 0) {
 }
 
 // 3. Hollow Square Star Pattern with Diagonal
-
-// *****
-// **  *
-// * * *
-// *  **
-// *****
+//  54321
+//5 *****
+//4 **  * 4 - 4
+//3 * * * 3 - 3
+//2 *  ** 2 - 2
+//1 *****
 
 let sp3Size = 6;
 let sp3row = sp3Size;
@@ -119,6 +119,32 @@ while (row > 0) {
   row = row - 1;
 }
 // end of - Hollow Square Star Pattern with LEFT Diagonal
+
+// 4. Rhombus Star Pattern
+//  54321
+//5     *****
+//4    *****
+//3   *****
+//2  *****
+//1 *****
+
+let sp4Size = 5;
+let sp4row = sp4Size;
+while (sp4row > 0) {
+  let sp4column = sp4Size;
+  let sp4Result = "";
+  while (sp4column + sp4Size > 0) {
+    if (sp4column <= sp4row) {
+      sp4Result = sp4Result + "*";
+    } else {
+      sp4Result = sp4Result + " ";
+    }
+
+    sp4column = sp4column - 1;
+  }
+  console.log(sp4Result);
+  sp4row = sp4row - 1;
+}
 
 // 9. Mirrored Right Triangle Star Pattern
 
