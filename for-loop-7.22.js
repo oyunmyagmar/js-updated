@@ -511,12 +511,34 @@ for (i = 1; i <= nsize4; i++) {
 }
 
 // 5. Right Triangle with Row Numbers
-// 54321
 // 1----
 // 21---
 // 321--
 // 4321-
 // 54321
+
+// 6. Floyd’s Triangle
+// 1
+// 2  3
+// 4  5  6
+// 7  8  9  10
+// 11 12 13 14 15
+
+let nsize6 = 5;
+for (i = 1; i <= nsize6; i++) {
+  let number = "";
+  for (j = 1; j <= i; j++) {
+    number += "" + 1 * j;
+  }
+  console.log(number);
+}
+
+// 13. Descending Number Triangle
+//5 5
+//4 54
+//3 543
+//2 5432
+//1 54321
 
 let nsize5 = 5;
 for (i = nsize5; i >= 1; i--) {
@@ -526,3 +548,10 @@ for (i = nsize5; i >= 1; i--) {
   }
   console.log(number);
 }
+
+// 14. Mirror Right Triangle
+// ----1
+// ---12
+// --123
+// -1234
+// 12345
