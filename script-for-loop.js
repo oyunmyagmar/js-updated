@@ -287,14 +287,14 @@ for (let i = 0; i < size13; i++) {
   for (let j = 0; j < size13 - 1 - i; j++) {
     star += " ";
   }
-  for (let j = 0; j <= i; j++) {
+  for (let j = 0; j <= i * 2; j++) {
     star += "*";
   }
-  for (let j = 0; j < i; j++) {
-    star += "*";
-  }
+
   console.log(star);
 }
+// j <= i * 2 + 1 gej usun nemdegduuleh
+// hollow der hamgin ehend hemgiin tugsuld zuun baruun
 
 // 14. Hollow Pyramid Star Pattern!!!!!!!!!!!!!!!!!!!!!!!!!
 

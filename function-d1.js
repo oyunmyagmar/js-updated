@@ -21,6 +21,20 @@ function findSum(a, b, c) {
 }
 findSum(10, 20, 30);
 
+// 3 too avdag function, console.log der hamgiin bagiig ni hevledeg function bich
+function findMin(a, b, c) {
+  if (a < b && a < c) {
+    console.log(a);
+  } else if (b < c) {
+    console.log(b);
+  } else {
+    console.log(c);
+  }
+}
+findMin(100, 200, 300);
+
+// If-Else Бодлогууд
+
 // 1. Хоёр тооны ихийг ол
 function findMax(a, b) {
   if (a > b) {
@@ -42,18 +56,6 @@ function findMax3(a, b, c) {
   }
 }
 findMax3(100, 240, 30);
-
-// 3 too avdag function, console.log der hamgiin bagiig ni hevledeg function bich
-function findMin(a, b, c) {
-  if (a < b && a < c) {
-    console.log(a);
-  } else if (b < c) {
-    console.log(b);
-  } else {
-    console.log(c);
-  }
-}
-findMin(100, 200, 300);
 
 // 3. Эерэг, сөрөг эсвэл тэг эсэхийг шалга
 function findPositiveNegativeZero(a) {
@@ -127,3 +129,51 @@ function profitLossCalc(cost, quant, price, soldQ) {
   }
 }
 profitLossCalc(100, 20, 150, 20);
+
+// Loop/Iteration Бодлогууд
+
+// 1. 1-ээс n хүртэлх тоонуудыг хэвлэ
+function findNumbers(a) {
+  for (let number = 1; number <= a; number++) {
+    console.log(number);
+  }
+}
+findNumbers(5);
+
+// 2. 1-ээс n хүртэлх тэгш тоог хэвлэ
+function findEvenNumbers(a) {
+  for (let number = 1; number <= a; number++) {
+    if (number % 2 == 0) {
+    }
+  }
+  console.log(number);
+}
+findEvenNumbers(10);
+
+// 3. 1-ээс n хүртэлх тоонуудын нийлбэрийг ол
+function findSumNumbers(a) {
+  let sum = 0;
+  for (let number = 1; number <= a; number++) {
+    sum = sum + number;
+  }
+  console.log(sum);
+}
+findSumNumbers(5);
+
+// 4. 1-ээс n хүртэлх сондгой тоонуудын нийлбэрийг ол.
+function findSumEvenNumbers(a) {
+  let sum = 0;
+  for (let number = 0; number <= a; number++) {
+    if (number % 2 == 1) {
+      sum = sum + number;
+    }
+  }
+  console.log(sum);
+}
+findSumEvenNumbers(10);
+
+// 5. n тооны үржвэрийн хүрд хэвлэ ж: input:5 1x5=5 2x5=10 3x5=15 4x5=20 5x5=25 6x5=30 7x5=35 8x5=40 9x5=45
+function findTimesTable(a) {
+  console.log(timesTable);
+}
+findTimesTable();
