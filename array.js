@@ -2,11 +2,24 @@
 // number
 // boolean
 // undefined
+// null
 // NaN
 // object {}
 // array []
 
 let grades = [-20, -10, 50, 25, 45, -35, 100, -98, 90];
+// let shalgalt1 = -20;
+// let shalgalt2 = -10;
+// let shalgalt3 = 50;
+// let shalgalt4 = 25;
+// let shalgalt5 = 45;
+console.log(grades[3]); // 0 -ees ehelj bgaa uchir 4 deh too ni console.log der garna
+// let sum = grades[0] + grades[1] + grades[2] + grades[3];
+// let average = sum / 4;
+// deed hesgiig niiluulj bichvel doorh bolno
+// let average = (grades[0] + grades[1] + grades[2] + grades[3]) / 4;
+// ( ) ene haaltnii umnu ner ugvul function bolno -> anhaarah heregtei
+// console.log(average);
 
 // find average
 function findAvg(arr) {
