@@ -1,13 +1,50 @@
+// tuhain function-g yamar neg console.log -gui bolgoh
 // console.log hevlehgui - geer gargah:
 
 function findSum(a, b) {
   let sum = a + b;
   //   console.log(sum);
-  return sum;
+  return sum; // yum uguhud butsadag // function heden ch utga avch bolno gehdee 1 l zuil butsana
 }
-let result;
-result = findSum(10, 20);
+let resultSum = findSum(10, 20); // eniig duudaad nadaa yu uguh yum teriig ni barihad huvisagch taniulad barij avna
+console.log(resultSum); // hugjuulelt der console.log-iig bichdeggui
+// hugjuuleltiin yavtsad minii code zuv yavj bui esehiig shalgah command
+// butegdehun bolgohin yumnu ustgana
+
+// olon console.log-oor garch irj bga for loop davtagdaj bui zuiliig butsaah
+function getTriangle(size) {
+  let result = "";
+  for (i = 0; i < size; i++) {
+    let stars = "";
+    for (j = 0; j <= i; j++) {
+      stars += "*";
+    }
+    // console.log(stars); console.logiin orond doorh mor
+    result += stars + "\n";
+  }
+  return result;
+}
+let result = getTriangle(5);
+console.log("Triangle:");
 console.log(result);
+
+// html - tei holboh:
+function findSum(a, b) {
+  return a + b;
+}
+let num1Input = document.getElementById("num1");
+let num2Input = document.getElementById("num2");
+let button = document.getElementById("btn");
+let answer1 = document.getElementById("answer");
+
+function buttonClick() {
+  let num1 = parseInt(num1Input.value);
+  let num2 = parseInt(num2Input.value);
+  let sum = num1 + num2;
+  answer1.innerText = sum;
+}
+button.addEventListener("click", buttonClick);
+// function-g tusdaa gargaj bga ni ner uguh bolomjtoi bolj bga, dahin dahin ashiglaj bolno
 
 // 3. Эерэг, сөрөг эсвэл тэг эсэхийг шалга
 function findNegativePositiveZero(a) {
@@ -23,9 +60,8 @@ function findNegativePositiveZero(a) {
 let result3;
 result3 = findNegativePositiveZero(-90);
 console.log(result3);
-// findNegativePositiveZero(0);
 
-// 1. Square Star Pattern -  --------- urgeljluleh endess
+// 1. Square Star Pattern -------- urgeljluleh endess
 function findGetSquare(size) {
   let resultStar1 = "";
   for (i = 0; i < size; i++) {
@@ -43,21 +79,3 @@ let resultStar1;
 resultStar1 = findGetSquare(5);
 console.log(resultStar1);
 // findGetSquare(5);
-
-// html - tei holboh:
-
-let num1Input = document.getElementById("num1");
-let num2Input = document.getElementById("num2");
-let button = document.getElementById("btn");
-let answer1 = document.getElementById("answer");
-// console.log(num1Input);
-
-function buttonClick() {
-  let num1 = parseInt(num1Input.value);
-  let num2 = parseInt(num2Input.value);
-  //   console.log(num1);
-  //   console.log(num2);
-  let sum = num1 + num2;
-  answer1.innerText = sum;
-}
-button.addEventListener("click", buttonClick);
