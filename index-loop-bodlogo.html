@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style-loop.css" />
+    <link rel="stylesheet" href="./style-loop-bodlogo.css" />
   </head>
   <body>
     <div class="loop">
       <h1>LOOP БОДЛОГО</h1>
-      <input id="num-input" />
+      <input type="text" id="num-input" />
+      <input
+        type="text"
+        placeholder="enter exponent here"
+        id="exponent-input"
+      />
       <div class="buttons">
         <button id="all-num-btn">Numbers from 1 to n</button>
         <button id="even-num-btn">Even Numbers</button>
@@ -27,11 +32,11 @@
         <button id="frequency-digit-btn">Frequency of Digits</button>
         <button id="exponent-btn">Exponents</button>
         <button id="factorial-btn">Factorials</button>
-        <button>HCF</button>
-        <button>LCM</button>
+        <button id="highest-common-factor ">HCF</button>
+        <button id="least-common-multiple">LCM</button>
       </div>
-      <p>Answer<span id="answer"></span></p>
+      <p>Answer: <span id="answer"></span></p>
     </div>
   </body>
-  <script src="./script-loop.js"></script>
+  <script src="./script-loop-bodlogo.js"></script>
 </html>
