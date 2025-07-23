@@ -1,11 +1,8 @@
 let nsize5 = 5;
-for (i = 1; i <= nsize5; i++) {
+for (i = nsize5; i >= 1; i++) {
   let number = "";
-  for (j = 1; i >= nsize5 - j; j++) {
-    number += "-";
-  }
-  for (j = 1; j <= nsize5; j++) {
-    number += i;
+  for (j = nsize5; j >= i; j--) {
+    number += j;
   }
   console.log(number);
 }
