@@ -148,12 +148,63 @@ firstLastDigitBtn.addEventListener("click", () => {
     lastDigit;
 });
 
+// 8. Эхний ба сүүлийн оронгийн нийлбэрийг ол
 let sumFirstLastDigitBtn = document.getElementById("sum-first-last-digit-btn");
+sumFirstLastDigitBtn.addEventListener("click", () => {
+  let num = numInput.value;
+  let number = parseInt(num);
+  let firstDigit = 0;
+  let lastDigit = 0;
+  let sum = 0;
+  lastDigit = number % 10;
+
+  while (number > 10) {
+    number = number / 10;
+    firstDigit = parseInt(number);
+  }
+  sum = firstDigit + lastDigit;
+  // console.log(sum);
+  document.getElementById("answer").innerText = sum;
+});
+
+// 9. Эхний ба сүүлийн оронг солих програм бич.
 let swapFirstLastDigitBtn = document.getElementById(
   "swap-first-last-digit-btn"
 );
+
+// 10. Цифэрүүдийн нийлбэрийг олох програм бич.
 let sumDigitBtn = document.getElementById("sum-digit-btn");
+sumDigitBtn.addEventListener("click", () => {
+  let num = numInput.value;
+  let number = parseInt(num);
+  let digit = 0;
+  let sum = 0;
+
+  while (number >= 1) {
+    digit = number % 10;
+    number = parseInt(number / 10);
+    // console.log(digit);
+    sum = sum + digit;
+    // console.log(sum);
+    document.getElementById("answer").innerText = sum;
+  }
+});
+
+// 11. Тоо урвуу дарааллаар хэвлэх програм бич.(ж: 123 → 321).
 let reverseBtn = document.getElementById("reverse-btn");
+
+// 12. Тоо бүрийн давтамжийг тооцох програм бич.
+// (ж: 113334 -> 1:2ш,2:0ш,3:3ш,4:1ш,5:0ш...)
 let frequencyDigitBtn = document.getElementById("frequency-digit-btn");
+
+// 13. Тооны зэргийг олох програм бич. (ж: Тоо:2, Зэрэг:4, Үр дүн: 16 )
 let exponentBtn = document.getElementById("exponent-btn");
+
+// 14. Факториал олох програм бич.
 let factorialBtn = document.getElementById("factorial-btn");
+
+// 15. Хамгийн их ерөнхий хуваагч (HCF) олох програм бич.
+let btnHCF = document.getElementById("highest-common-factor");
+
+// 16. Хамгийн бага ерөнхий хуваагдагч (LCM) олох програм бич.
+let btnLCM = document.getElementById("least-common-multiple");
