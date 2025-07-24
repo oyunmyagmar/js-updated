@@ -511,11 +511,11 @@ for (i = 1; i <= nsize4; i++) {
 }
 
 // 5. Right Triangle with Row Numbers
-// 1----
-// 21---
-// 321--
-// 4321-
-// 54321
+//5 1----
+//4 21---
+//3 321--
+//2 4321-
+//1 54321
 
 // 6. Floyd’s Triangle
 // 1
@@ -540,10 +540,10 @@ for (i = 1; i <= nsize6; i++) {
 //2 5432
 //1 54321
 
-let nsize5 = 5;
-for (i = nsize5; i >= 1; i--) {
+let nsize13 = 5;
+for (i = nsize13; i >= 1; i--) {
   let number = "";
-  for (j = nsize5; j >= i; j--) {
+  for (j = nsize13; j >= i; j--) {
     number += j;
   }
   console.log(number);

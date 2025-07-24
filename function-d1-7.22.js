@@ -106,15 +106,15 @@ findDividedBy3or5(1);
 // 5. (Leap Year) Хэрэглэгчийн оруулсан он өндөр жил мөн эсэхийг шалгах код бич.
 function findLeapYear(a) {
   if (a % 4 == 0 || a % 400 == 0) {
-    if (a % 100 == 0) {
-      console.log(a + " is not a Leap Year");
-    }
     console.log(a + " is a Leap Year");
-  } else {
+  } else if (a % 100 == 0 || a % 4 == 0) {
     console.log(a + " is not a Leap Year");
   }
 }
 findLeapYear(2600);
+// console.log(a + " is a Leap Year")
+
+//  console.log(a + " is not a Leap Year");
 // asuuh !!!!!!!!!!!!!!!!!!!!!!!
 
 // 6. Долоо хоногийн өдрийг хэвлэх
