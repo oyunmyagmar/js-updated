@@ -1,3 +1,31 @@
+// // at class gehdee zuvhun js -iig bichsen html der oruulaagui
+// let num1 = document.getElementById("num1");
+// // console.log(num1); -> orj irsen esehiig shalgasan
+// let num2 = document.getElementById("num2");
+// // console.log(num2); -> orj irsen esehiig shalgasan
+
+// let plusBtn = document.getElementById("plusBtn");
+
+// plusBtn.addEventListener("click", () => {
+//   let number1 = num1.value;
+//   let number2 = num2.value;
+//   // console.log(number1); -> bichigdej bgag shalgasen
+//   // console.log(number2); -> bichigdej bgag shalgasen
+//   // console.log(typeof number1); number1 yamar turul -iig shalgasan
+//   // console.log(typeof number2); number2 yamar turul -iig shalgasan
+
+//   let numberNumber1 = parseInt(number1);
+//   let numberNumber2 = parseInt(number2);
+//   // console.log(typeof numberNumber1); -> numberNumber1 string -ees number bolson eshiig shalgasan
+//   // console.log(typeof numberNumber2); -> numberNumber2 string -ees number bolson eshiig shalgasan
+
+//   // console.log(numberNumber1 + numberNumber2);
+//   // daraagiin alham html answer deer hariugaa gargah
+//   // deed taliin console.log -iin orond dood tald bichne
+//   // console.log - oo ustgana
+//   document.getElementById("answer").innerText = numberNumber1 + numberNumber2;
+// });
+
 // 1. 1-ээс n хүртэлх тоонуудыг хэвлэ
 let numInput = document.getElementById("num-input");
 let exponentInput = document.getElementById("exponent-input");
@@ -5,12 +33,9 @@ let exponentInput = document.getElementById("exponent-input");
 let allNumBtn = document.getElementById("all-num-btn");
 allNumBtn.addEventListener("click", () => {
   let num = numInput.value;
-  // console.log(num);
-  // console.log(typeof num);
   let number = parseInt(num);
-  // console.log(typeof number);
 
-  document.getElementById("answer").innerText = "";
+  document.getElementById("answer").innerText = ""; // answer innertext - iig hoosolj bga
   while (number > 0) {
     // console.log(number); //10 9 8 7 6 5 4 3 2 1
     document.getElementById("answer").innerText =
@@ -18,7 +43,6 @@ allNumBtn.addEventListener("click", () => {
     number = number - 1; //9 8 7 6 5 4 3 2 1 0
   }
 });
-
 // let too = 10;
 // while (too > 0) {
 //   console.log(too); //10 9 8 7 6 5 4 3 2 1
@@ -53,10 +77,10 @@ sumAllNumBtn.addEventListener("click", () => {
   while (number > 0) {
     // console.log(number);
     sum = sum + number;
-    // console.log(sum);
-    document.getElementById("answer").innerText = sum;
     number = number - 1;
   }
+  // console.log(sum);
+  document.getElementById("answer").innerText = sum;
 });
 
 // 4. 1-ээс n хүртэлх сондгой тоонуудын нийлбэрийг ол.
@@ -71,11 +95,11 @@ sumOddNumBtn.addEventListener("click", () => {
     if (number % 2 === 1) {
       //   console.log(number);
       sum = sum + number;
-      // console.log(sum);
-      document.getElementById("answer").innerText = sum;
     }
     number = number - 1;
   }
+  // console.log(sum);
+  document.getElementById("answer").innerText = sum;
 });
 
 // 5. n тооны үржвэрийн хүрд хэвлэ
@@ -110,16 +134,16 @@ let countDigitBtn = document.getElementById("count-digit-btn");
 countDigitBtn.addEventListener("click", () => {
   let num = numInput.value;
   let number = parseInt(num);
-  let i = 0;
+  let count = 0;
 
   document.getElementById("answer").innerText = "";
-  while (number > 0) {
+  while (number >= 1) {
     number = number / 10;
-    i = i + 1;
-    number = number - 1;
+    // console.log(number);
+    count = count + 1;
   }
-  // console.log(i);
-  document.getElementById("answer").innerText = i;
+  // console.log(count);
+  document.getElementById("answer").innerText = count;
 });
 
 // 7. Эхний болон сүүлийн оронг ол
@@ -130,14 +154,14 @@ firstLastDigitBtn.addEventListener("click", () => {
   let firstDigit = 0;
   let lastDigit = 0;
   lastDigit = number % 10;
-  // console.log("Last digit: " + lastDigit);
 
   document.getElementById("answer").innerText = "";
-  while (number > 10) {
+  while (number >= 10) {
     number = number / 10;
-    firstDigit = parseInt(number);
   }
-  // console.log("First digit: " + firstDigit);
+  // console.log(number);
+  firstDigit = parseInt(number);
+  // console.log(firstDigit);
   document.getElementById("answer").innerText =
     document.getElementById("answer").innerText +
     "\n" +
@@ -158,10 +182,11 @@ sumFirstLastDigitBtn.addEventListener("click", () => {
   let sum = 0;
   lastDigit = number % 10;
 
-  while (number > 10) {
+  while (number >= 10) {
     number = number / 10;
-    firstDigit = parseInt(number);
   }
+  firstDigit = parseInt(number);
+  // console.log(firstDigit);
   sum = firstDigit + lastDigit;
   // console.log(sum);
   document.getElementById("answer").innerText = sum;
@@ -172,7 +197,7 @@ let swapFirstLastDigitBtn = document.getElementById(
   "swap-first-last-digit-btn"
 );
 
-// 10. Цифэрүүдийн нийлбэрийг олох програм бич.
+// 10. Цифрүүдийн нийлбэрийг олох програм бич.
 let sumDigitBtn = document.getElementById("sum-digit-btn");
 sumDigitBtn.addEventListener("click", () => {
   let num = numInput.value;
@@ -182,16 +207,32 @@ sumDigitBtn.addEventListener("click", () => {
 
   while (number >= 1) {
     digit = number % 10;
-    number = parseInt(number / 10);
-    // console.log(digit);
+    console.log(digit);
     sum = sum + digit;
-    // console.log(sum);
-    document.getElementById("answer").innerText = sum;
+    number = parseInt(number / 10);
   }
+  // console.log(sum);
+  document.getElementById("answer").innerText = sum;
 });
 
 // 11. Тоо урвуу дарааллаар хэвлэх програм бич.(ж: 123 → 321).
 let reverseBtn = document.getElementById("reverse-btn");
+reverseBtn.addEventListener("click", () => {
+  let num = numInput.value;
+  let number = parseInt(num);
+  let digit = 0;
+  let reverse = 0;
+
+  while (number >= 1) {
+    digit = number % 10;
+    // console.log(digit);
+    reverse = (reverse + digit) * 10;
+    number = parseInt(number / 10);
+  }
+  reverse = reverse / 10;
+  // console.log(reverse);
+  document.getElementById("answer").innerText = reverse;
+});
 
 // 12. Тоо бүрийн давтамжийг тооцох програм бич.
 // (ж: 113334 -> 1:2ш,2:0ш,3:3ш,4:1ш,5:0ш...)
