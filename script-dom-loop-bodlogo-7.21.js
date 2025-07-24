@@ -26,6 +26,23 @@
 //   document.getElementById("answer").innerText = numberNumber1 + numberNumber2;
 // });
 
+// let too = 10;
+// while (too > 0) {
+//   console.log(too); //10 9 8 7 6 5 4 3 2 1
+//   too = too - 1; //9 8 7 6 5 4 3 2 1 0
+// }
+
+let too = 10;
+
+while (too > 0) {
+  if (too % 2 === 0) {
+    console.log(too);
+  }
+  too = too - 1;
+}
+// == -> 9 == "9"
+// tiimees === taviarai
+
 // 1. 1-ээс n хүртэлх тоонуудыг хэвлэ
 let numInput = document.getElementById("num-input");
 let exponentInput = document.getElementById("exponent-input");
@@ -43,11 +60,6 @@ allNumBtn.addEventListener("click", () => {
     number = number - 1; //9 8 7 6 5 4 3 2 1 0
   }
 });
-// let too = 10;
-// while (too > 0) {
-//   console.log(too); //10 9 8 7 6 5 4 3 2 1
-//   too = too - 1; //9 8 7 6 5 4 3 2 1 0
-// }
 
 //2. 1-ээс n хүртэлх тэгш тоог хэвлэ
 let evenNumBtn = document.getElementById("even-num-btn");
