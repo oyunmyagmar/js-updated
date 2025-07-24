@@ -28,7 +28,7 @@ console.log(grades.length); // dotor ni heden element bgag toolj ugdug
 // find average
 function findAvg(arr) {
   let sum = 0;
-  for (i = 0; i < arr.length; i++) {
+  for (i = 0; i < arr.length; i++) { // arr ged ner ugch bga ni zuvhun ter function dotroo nerlej bn
     sum = sum + arr[i];
   }
   // console.log(sum);
