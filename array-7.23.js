@@ -8,18 +8,22 @@
 // array []
 
 let grades = [-20, -10, 50, 25, 45, -35, 100, -98, 90];
-// let shalgalt1 = -20;
-// let shalgalt2 = -10;
+// let shalgalt1 = -20; // geed 1 burchilen bichij bolno
+// let shalgalt2 = -10; // gehdee 200 shalgalt ugvul yah ve?
 // let shalgalt3 = 50;
 // let shalgalt4 = 25;
 // let shalgalt5 = 45;
-console.log(grades[3]); // 0 -ees ehelj bgaa uchir 4 deh too ni console.log der garna
+console.log(grades[3]); // [] haaltaar tuhain element-iig avna
+// computer 0 -ees ehelj tooldog uchir 4 deh too ni console.log der garna
 // let sum = grades[0] + grades[1] + grades[2] + grades[3];
 // let average = sum / 4;
-// deed hesgiig niiluulj bichvel doorh bolno
-// let average = (grades[0] + grades[1] + grades[2] + grades[3]) / 4;
+// deed hesgiig niiluulj bichvel doorh bolno // gehdee () haalttai
+let avg = (grades[0] + grades[1] + grades[2] + grades[3]) / 4;
 // ( ) ene haaltnii umnu ner ugvul function bolno -> anhaarah heregtei
-// console.log(average);
+console.log(avg);
+
+// davtalt yavagdaj bn // nemed bgaga davtaltar hiie
+console.log(grades.length); // dotor ni heden element bgag toolj ugdug
 
 // find average
 function findAvg(arr) {
@@ -27,10 +31,12 @@ function findAvg(arr) {
   for (i = 0; i < arr.length; i++) {
     sum = sum + arr[i];
   }
-  let avg = sum / arr.length;
-  return avg;
+  // console.log(sum);
+  let average = sum / arr.length;
+  console.log(avg);
+  return average;
 }
-let resultAverage = findAvg(grades);
+let resultAverage = findAvg(arr);
 console.log("Average grade =", resultAverage);
 
 // find sum
