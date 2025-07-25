@@ -233,7 +233,7 @@ function findExponent(base, power) {
   }
   console.log(exponent);
 }
-findExponent(2, 4);
+findExponent(2, 5);
 // (ж: Тоо:2, Зэрэг:4, Үр дүн: 16 )
 // 14. Факториал олох програм бич.
 // 15. Хамгийн их ерөнхий хуваагч (HCF) олох програм бич.

@@ -47,9 +47,9 @@ function findYoungestStudent(arr) {
 let resultYoungest = findYoungestStudent(students);
 console.log("Youngest student:", resultYoungest);
 
-// student object but deer balance gsen property nem
+// student object buh deer balance gsen property nem
 // balance dotor toon utga nem
-// hamgiin ih balance tai suragchiig oloh function bich
+// hamgiin ih balance -tai suragchiig oloh function bich
 function findStudentWithMaxBalance(arr) {
   let studentWithMaxBalance = arr[0];
   for (i = 0; i < arr.length; i++) {
@@ -103,21 +103,21 @@ let resultAverageAge = findAverageAge(students);
 console.log("Average age:", resultAverageAge);
 
 // bodlogo 4
-// nasand hursen suragchdiin dundaj balance iig oldog function bich
+// nasand hursen suragchdiin dundaj balance -iig oldog function bich
 function findAverageBalanceOfAdultStudent(arr) {
   let sum = 0;
   let count = 0;
   for (i = 0; i < arr.length; i++) {
     if (arr[i].age >= 18) {
       sum = sum + arr[i].balance;
-      count = count + 1;
-      //   console.log("sum" + j);
+      count++;
+      //   console.log("sum" + count);
     }
   }
   let average = sum / count;
   return average;
 }
-let resultAverageBalance = findAverageBalanceofAdultStudent(students);
+let resultAverageBalance = findAverageBalanceOfAdultStudent(students);
 console.log("Average balance of adult students:", resultAverageBalance);
 
 // bodlogo 5
@@ -127,7 +127,7 @@ function countMaleStudent(arr) {
   let count = 0;
   for (i = 0; i < arr.length; i++) {
     if (arr[i].gender == "male") {
-      count = count + 1;
+      count++;
       //   console.log(j);
     }
   }
@@ -142,7 +142,7 @@ function findPercentFemaleStudent(arr) {
   let count = 0;
   for (i = 0; i < arr.length; i++) {
     if (arr[i].gender == "female") {
-      count = count + 1;
+      count++;
     }
   }
   let percentFemale = (count / arr.length) * 100;

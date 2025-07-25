@@ -11,6 +11,13 @@ console.log(resultSum); // hugjuulelt der console.log-iig bichdeggui
 // hugjuuleltiin yavtsad minii code zuv yavj bui esehiig shalgah command
 // butegdehun bolgohin yumnu ustgana
 
+function findSum3(a, b, c) {
+  let sum = a + b + c;
+  return sum;
+}
+let sumOfThreeNum = findSum3(20, 30, 40);
+console.log(sumOfThreeNum);
+
 // olon console.log-oor garch irj bga for loop davtagdaj bui zuiliig butsaah
 function getTriangle(size) {
   let result = "";
@@ -62,20 +69,38 @@ result3 = findNegativePositiveZero(-90);
 console.log(result3);
 
 // 1. Square Star Pattern -------- urgeljluleh endess
-function findGetSquare(size) {
+function getSquare(size) {
   let resultStar1 = "";
   for (i = 0; i < size; i++) {
     let stars = "";
     for (j = 0; j < size; j++) {
       stars += "*";
     }
-    console.log(stars);
-    resultStar1 += stars;
-    return resultStar1;
+    // console.log(stars);
+    resultStar1 += stars + "\n";
   }
-  console.log(resultStar1);
+  return resultStar1;
 }
-let resultStar1;
-resultStar1 = findGetSquare(5);
-console.log(resultStar1);
-// findGetSquare(5);
+let resultOfStar1;
+resultOfStar1 = getSquare(5);
+console.log(resultOfStar1);
+
+// 2. Hollow Square Star Pattern
+function getHollowSquare(size) {
+  let resultStar2 = "";
+  for (i = 0; i < size; i++) {
+    let star = "";
+    for (j = 0; j < size; j++) {
+      if (i == 0 || i == size - 1 || j == 0 || j == size - 1) {
+        star += "*";
+      } else {
+        star += " ";
+      }
+    }
+    // console.log(star);
+    resultStar2 += star + "\n";
+  }
+  return resultStar2;
+}
+let resultOfStar2 = getHollowSquare(5);
+console.log(resultOfStar2);
