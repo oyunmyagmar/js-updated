@@ -1,3 +1,10 @@
+// command var -iig ashiglahgui yavah // let bolon var scope -iin yalgatai
+// const - react deer ashiglagdana // uurchlugduj boldoggui huvisagchiig
+
+// console.log() ni hugjuulelt hiih yavtsad minii huvisagch yamar bolj huvirch ve gedgiig harah zorilgotoi
+// tiimd function dotor console.log() bichih ni utgagui
+// console.log() -doj ur dungee harah zorilgotoi
+
 function sayHello() {
   return "Hello World";
 }
