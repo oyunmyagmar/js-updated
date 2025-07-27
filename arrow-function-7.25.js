@@ -103,6 +103,7 @@ const calculatePercentageFemaleStudents = (students) => {
 const femaleStudentsPercentage = calculatePercentageFemaleStudents(students);
 console.log("Percentage of female students: ", femaleStudentsPercentage, "%");
 
+// 7.25 bodlogo
 let animals = [
   { leg: 4, name: "dog ", height: 10 },
   { leg: 2, name: "chicken ", height: 10 },
@@ -122,8 +123,8 @@ let animals = [
 //   }
 //   return filteredAnimals;
 // };
-// const filteredAnimals = find4LeggedAnimals(animals);
-// console.log(filteredAnimals);
+// const filtered4LeggedAnimals = find4LeggedAnimals(animals);
+// console.log(filtered4LeggedAnimals);
 
 // after finding 4 legged animals, object -iin attribute-ees leg -iig has
 const find4LeggedAnimals = (aasd) => {
@@ -143,8 +144,8 @@ const find4LeggedAnimals = (aasd) => {
 const filteredAnimals = find4LeggedAnimals(animals);
 console.log(filteredAnimals);
 
-// bodlogo 1
-// ugugsgun suragchdiin jagsaaltaas hamgiin baga onootoi suragchiig olj butsaadag function bich
+// Бодлого 1
+// Өгөгдсөн сурагчдын жагсаалтаас хамгийн бага оноотой сурагчийг олж буцаадаг функц бич.
 const findMinGradeStudent = (arr) => {
   let minGradeStudent = arr[0];
   for (i = 0; i < arr.length; i++) {
@@ -154,11 +155,11 @@ const findMinGradeStudent = (arr) => {
   }
   return minGradeStudent;
 };
-const resultMinGrade = findMinGradeStudent(students);
-console.log("Student with min grade", resultMinGrade);
+const resultMinGradeStudent = findMinGradeStudent(students);
+console.log("Student with min grade: ", resultMinGradeStudent);
 
-// bodlogo 2
-// nas ni 18-aas doosh buh suragchdiig shine massiv (array) bolgon yalgaj butsaadag function bich
+// Бодлого 2
+// Нас нь 18-аас доош бүх сурагчдыг шинэ массив болгон ялгаж буцаадаг функц бич.
 const findMinorStudent = (students) => {
   let filteredMinorStudent = [];
   console.log(students);
