@@ -2,7 +2,7 @@
 // let num1 = document.getElementById("num1");
 // // console.log(num1); -> orj irsen esehiig shalgasan
 // let num2 = document.getElementById("num2");
-// // console.log(num2); -> orj irsen esehiig shalgasan
+// // console.log(num2);
 
 // let plusBtn = document.getElementById("plusBtn");
 
@@ -10,14 +10,14 @@
 //   let number1 = num1.value;
 //   let number2 = num2.value;
 //   // console.log(number1); -> bichigdej bgag shalgasen
-//   // console.log(number2); -> bichigdej bgag shalgasen
+//   // console.log(number2);
 //   // console.log(typeof number1); number1 yamar turul -iig shalgasan
-//   // console.log(typeof number2); number2 yamar turul -iig shalgasan
+//   // console.log(typeof number2);
 
 //   let numberNumber1 = parseInt(number1);
 //   let numberNumber2 = parseInt(number2);
 //   // console.log(typeof numberNumber1); -> numberNumber1 string -ees number bolson eshiig shalgasan
-//   // console.log(typeof numberNumber2); -> numberNumber2 string -ees number bolson eshiig shalgasan
+//   // console.log(typeof numberNumber2);
 
 //   // console.log(numberNumber1 + numberNumber2);
 //   // daraagiin alham html answer deer hariugaa gargah
@@ -36,7 +36,7 @@ let too = 10;
 
 while (too > 0) {
   if (too % 2 === 0) {
-    console.log(too);
+    // console.log(too);
   }
   too = too - 1;
 }
@@ -45,7 +45,6 @@ while (too > 0) {
 
 // 1. 1-ээс n хүртэлх тоонуудыг хэвлэ
 let numInput = document.getElementById("num-input");
-let exponentInput = document.getElementById("exponent-input");
 
 let allNumBtn = document.getElementById("all-num-btn");
 allNumBtn.addEventListener("click", () => {
@@ -194,6 +193,7 @@ sumFirstLastDigitBtn.addEventListener("click", () => {
   let sum = 0;
   lastDigit = number % 10;
 
+  document.getElementById("answer").innerText = "";
   while (number >= 10) {
     number = number / 10;
   }
@@ -217,9 +217,10 @@ sumDigitBtn.addEventListener("click", () => {
   let digit = 0;
   let sum = 0;
 
+  document.getElementById("answer").innerText = "";
   while (number >= 1) {
     digit = number % 10;
-    console.log(digit);
+    // console.log(digit);
     sum = sum + digit;
     number = parseInt(number / 10);
   }
@@ -235,6 +236,7 @@ reverseBtn.addEventListener("click", () => {
   let digit = 0;
   let reverse = 0;
 
+  document.getElementById("answer").innerText = "";
   while (number >= 1) {
     digit = number % 10;
     // console.log(digit);
@@ -249,14 +251,116 @@ reverseBtn.addEventListener("click", () => {
 // 12. Тоо бүрийн давтамжийг тооцох програм бич.
 // (ж: 113334 -> 1:2ш,2:0ш,3:3ш,4:1ш,5:0ш...)
 let frequencyDigitBtn = document.getElementById("frequency-digit-btn");
+frequencyDigitBtn.addEventListener("click", () => {
+  let num = numInput.value;
+  let number = parseInt(num);
+  let digit = 0;
+  let count0 = 0;
+  let count1 = 0;
+  let count2 = 0;
+  let count3 = 0;
+  let count4 = 0;
+  let count5 = 0;
+  let count6 = 0;
+  let count7 = 0;
+  let count8 = 0;
+  let count9 = 0;
+
+  while (number >= 1) {
+    digit = number % 10;
+    number = parseInt(number / 10);
+    // console.log(digit);
+    if (digit == 0) {
+      count0 = count0 + 1;
+    } else if (digit == 1) {
+      count1 = count1 + 1;
+    } else if (digit == 2) {
+      count2 = count2 + 1;
+    } else if (digit == 3) {
+      count3 = count3 + 1;
+    } else if (digit == 4) {
+      count4 = count4 + 1;
+    } else if (digit == 5) {
+      count5 = count5 + 1;
+    } else if (digit == 6) {
+      count6 = count6 + 1;
+    } else if (digit == 7) {
+      count7 = count7 + 1;
+    } else if (digit == 8) {
+      count8 = count8 + 1;
+    } else if (digit == 9) {
+      count9 = count9 + 1;
+    }
+  }
+  document.getElementById("answer").innerText =
+    "\n" +
+    "0: " +
+    count0 +
+    "\n" +
+    "1: " +
+    count1 +
+    "\n" +
+    "2: " +
+    count2 +
+    "\n" +
+    "3: " +
+    count3 +
+    "\n" +
+    "4: " +
+    count4 +
+    "\n" +
+    "5: " +
+    count5 +
+    "\n" +
+    "6: " +
+    count6 +
+    "\n" +
+    "7: " +
+    count7 +
+    "\n" +
+    "8: " +
+    count8 +
+    "\n" +
+    "9: " +
+    count9;
+});
 
 // 13. Тооны зэргийг олох програм бич. (ж: Тоо:2, Зэрэг:4, Үр дүн: 16 )
+let exponentInput = document.getElementById("exponent-input");
 let exponentBtn = document.getElementById("exponent-btn");
+exponentBtn.addEventListener("click", () => {
+  let num = numInput.value;
+  let number = parseInt(num);
+  let exponent = parseInt(exponentInput.value);
+  let power = 1;
+
+  document.getElementById("answer").innerText = "";
+  while (exponent > 0) {
+    power = power * number;
+    exponent = exponent - 1;
+  }
+  // console.log(power);
+  document.getElementById("answer").innerText = power;
+});
 
 // 14. Факториал олох програм бич.
 let factorialBtn = document.getElementById("factorial-btn");
+factorialBtn.addEventListener("click", () => {
+  let num = numInput.value;
+  let number = parseInt(num);
+  let factorial = 1;
+
+  document.getElementById("answer").innerText = "";
+  while (number >= 1) {
+    factorial = factorial * number;
+    number = number - 1;
+  }
+  // console.log(factorial);
+  document.getElementById("answer").innerText = factorial;
+});
 
 // 15. Хамгийн их ерөнхий хуваагч (HCF) олох програм бич.
+let commonDiviserInput = document.getElementById("common-diviser-input");
 let btnHCF = document.getElementById("highest-common-factor");
 
 // 16. Хамгийн бага ерөнхий хуваагдагч (LCM) олох програм бич.

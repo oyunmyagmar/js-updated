@@ -104,7 +104,7 @@ const calculatePercentageFemaleStudents = (students) => {
 const femaleStudentsPercentage = calculatePercentageFemaleStudents(students);
 console.log("Percentage of female students = ", femaleStudentsPercentage, "%");
 
-// 7.25 bodlogo
+// 7.25 bodlogo endees ehelj bgaa
 let animals = [
   { leg: 4, name: "dog ", height: 10 },
   { leg: 2, name: "chicken ", height: 10 },
@@ -262,7 +262,26 @@ const countStudentsByName = (arr) => {
 };
 const studentNameFrequency = countStudentsByName(students);
 console.log(studentNameFrequency);
+
 // Бодлого 8
 // Сурагчдын gender тус бүрээр онооны дундаж хэд байгааг тооцоолж буцаадаг функц бич.
-// Жишээ:
-// { male: 30, female: 60 }
+// Жишээ: { male: 30, female: 60 }
+const findAvgGradeByGender = (arr) => {
+  let filteredByFemale = {};
+  let sumGradeFemale = 0;
+  let sumGradeMale = 0;
+  let countFemale = 0;
+  let countMale = 0;
+
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i].gender === "female") {
+      filteredByFemale[countFemale] = {
+        female: arr[i].grade,
+      };
+      countFemale++;
+    }
+    return filteredByFemale;
+  }
+};
+const filteredByFemale = findAvgGradeByGender(students);
+console.log(filteredByFemale);
