@@ -208,6 +208,10 @@ sumFirstLastDigitBtn.addEventListener("click", () => {
 let swapFirstLastDigitBtn = document.getElementById(
   "swap-first-last-digit-btn"
 );
+swapFirstLastDigitBtn.addEventListener("click", () => {
+  let num = numInput.value;
+  let number = parseInt(num);
+});
 
 // 10. Цифрүүдийн нийлбэрийг олох програм бич.
 let sumDigitBtn = document.getElementById("sum-digit-btn");
@@ -362,6 +366,41 @@ factorialBtn.addEventListener("click", () => {
 // 15. Хамгийн их ерөнхий хуваагч (HCF) олох програм бич.
 let commonDiviserInput = document.getElementById("common-diviser-input");
 let btnHCF = document.getElementById("highest-common-factor");
+btnHCF.addEventListener("click", () => {
+  let num = numInput.value;
+  let number1 = parseInt(num);
+  let number2 = parseInt(commonDiviserInput.value);
+  let i = 1;
+  let highestCommonFactor = 0;
+
+  document.getElementById("answer").innerText = "";
+  while (i <= number1 && i <= number2) {
+    if (number1 % i === 0 && number2 % i === 0) {
+      highestCommonFactor = i;
+    }
+    i = i + 1;
+  }
+  // console.log(highestCommonFactor);
+  document.getElementById("answer").innerText = highestCommonFactor;
+});
 
 // 16. Хамгийн бага ерөнхий хуваагдагч (LCM) олох програм бич.
 let btnLCM = document.getElementById("least-common-multiple");
+btnLCM.addEventListener("click", () => {
+  let num = numInput.value;
+  let number1 = parseInt(num);
+  let number2 = parseInt(commonDiviserInput.value);
+  let i = 1;
+  let leastCommonMultiple = 0;
+
+  document.getElementById("answer").innerText = "";
+  while (i <= number1 * number2) {
+    if (i % number1 === 0 && i % number2 === 0) {
+      leastCommonMultiple = i;
+      // console.log(leastCommonMultiple);
+      break;
+    }
+    i = i + 1;
+  }
+  document.getElementById("answer").innerText = leastCommonMultiple;
+});
