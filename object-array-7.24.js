@@ -1,3 +1,9 @@
+// array of numbers
+let grades = [10, 20, 30, 100];
+
+// array of strings
+let names = ["boldo", "dorjo", "bataa"];
+
 // array of objects
 let students = [
   { name: "boldo", age: 20, grade: 20, balance: 500, gender: "male" },
@@ -11,15 +17,15 @@ let students = [
 function findTopStudent(arr) {
   let topStudent = arr[0];
   for (i = 0; i < arr.length; i++) {
-    // hervee topStudent grade < arr[i] iin grade ih baivl topStudent ee solino
+    // hervee topStudent grade < arr[i] iin grade ih baivl topStudent -ee solino
     if (topStudent.grade < arr[i].grade) {
       topStudent = arr[i];
     }
   }
   return topStudent;
 }
-let resultTop = findTopStudent(students);
-console.log("Top student:", resultTop);
+let resultTopStudent = findTopStudent(students);
+console.log("Top student:", resultTopStudent);
 
 // find oldest student
 function findOldestStudent(arr) {
@@ -92,64 +98,66 @@ console.log("Student by NAME:", resultByName);
 // bodlogo 3
 // buh suragchdiin dundaj nas oldog function bich
 function findAverageAge(arr) {
-  let sum = 0;
+  let sumAge = 0;
   for (i = 0; i < arr.length; i++) {
-    sum = sum + arr[i].age;
+    sumAge = sumAge + arr[i].age;
   }
-  let average = sum / arr.length;
-  return average;
+  let averageAge = sumAge / arr.length;
+  return averageAge;
 }
 let resultAverageAge = findAverageAge(students);
 console.log("Average age:", resultAverageAge);
 
 // bodlogo 4
 // nasand hursen suragchdiin dundaj balance -iig oldog function bich
-function findAverageBalanceOfAdultStudent(arr) {
-  let sum = 0;
+function findAvgBalanceOfAdultStudents(arr) {
+  let sumBalanceAdults = 0;
   let count = 0;
   for (i = 0; i < arr.length; i++) {
     if (arr[i].age >= 18) {
-      sum = sum + arr[i].balance;
+      sumBalanceAdults += arr[i].balance;
       count++;
-      //   console.log("sum" + count);
     }
   }
-  let average = sum / count;
-  return average;
+  let avgBalanceAdults = sumBalanceAdults / count;
+  return avgBalanceAdults;
 }
-let resultAverageBalance = findAverageBalanceOfAdultStudent(students);
-console.log("Average balance of adult students:", resultAverageBalance);
+let resultAvgBalanceAdults = findAvgBalanceOfAdultStudents(students);
+console.log("Average balance of adult students:", resultAvgBalanceAdults);
 
 // bodlogo 5
 // buh suragch object deer gender gesen property nem, "male" esvel "female" gesen utga ug
 // eregtei suragchdiig tooldog function ug
-function countMaleStudent(arr) {
+function countMaleStudents(arr) {
   let count = 0;
   for (i = 0; i < arr.length; i++) {
     if (arr[i].gender == "male") {
       count++;
-      //   console.log(j);
     }
   }
   return count;
 }
-let resultCountMaleStudent = countMaleStudent(students);
-console.log("Number of male students:", resultCountMaleStudent);
+let resultMaleStudentsCount = countMaleStudents(students);
+console.log("Count of male students:", resultMaleStudentsCount);
 
 // bodlogo6
 // emegtei suragch niit suragchdiin heden huvi baigaag tootsdog function bich
-function findPercentFemaleStudent(arr) {
+function findPercentageFemaleStudents(arr) {
   let count = 0;
   for (i = 0; i < arr.length; i++) {
     if (arr[i].gender == "female") {
       count++;
     }
   }
-  let percentFemale = (count / arr.length) * 100;
-  return percentFemale;
+  let femaleStudentsPercentage = (count / arr.length) * 100;
+  return femaleStudentsPercentage;
 }
-let resultPercentFemale = findPercentFemaleStudent(students);
-console.log("Percent of female studens:", resultPercentFemale, "%");
+let resultFemaleStudentsPercentage = findPercentageFemaleStudents(students);
+console.log(
+  "Percentage of female students:",
+  resultFemaleStudentsPercentage,
+  "%"
+);
 
 // "5" == 5;
 // 5 === "5";

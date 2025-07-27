@@ -31,13 +31,14 @@ const PI = 3.14;
 
 // 7.24 -nii object-array bodlogo let -iig const -aar bichih
 let students = [
-  { name: "boldo", age: 20, grade: 80, balance: 500, gender: "male" },
-  { name: "dorjo", age: 15, grade: 30, balance: 10000, gender: "male" },
-  { name: "zulaa", age: 28, grade: 90, balance: 3500, gender: "female" },
-  { name: "tsetsgee", age: 30, grade: 100, balance: 700, gender: "female" },
-  { name: "bata", age: 10, grade: 50, balance: 7000, gender: "male" },
+  { name: "boldo", age: 20, grade: 80, balance: 1500, gender: "male" },
+  { name: "boldo", age: 40, grade: 40, balance: 150000, gender: "male" },
+  { name: "dorjo", age: 15, grade: 30, balance: 1000, gender: "male" },
+  { name: "zulaa", age: 28, grade: 90, balance: 35000, gender: "female" },
+  { name: "tsetsgee", age: 30, grade: 100, balance: 27700, gender: "female" },
+  { name: "bata", age: 10, grade: 50, balance: 17000, gender: "male" },
   { name: "zulaa", age: 18, grade: 60, balance: 3500, gender: "female" },
-  { name: "zulaa", age: 38, grade: 70, balance: 3500, gender: "female" },
+  { name: "zulaa", age: 38, grade: 70, balance: 103500, gender: "female" },
 ];
 
 // бодлого 3
@@ -101,7 +102,7 @@ const calculatePercentageFemaleStudents = (students) => {
   return (count / students.length) * 100;
 };
 const femaleStudentsPercentage = calculatePercentageFemaleStudents(students);
-console.log("Percentage of female students: ", femaleStudentsPercentage, "%");
+console.log("Percentage of female students = ", femaleStudentsPercentage, "%");
 
 // 7.25 bodlogo
 let animals = [
@@ -142,7 +143,7 @@ const find4LeggedAnimals = (aasd) => {
   return filteredAnimals;
 };
 const filteredAnimals = find4LeggedAnimals(animals);
-console.log(filteredAnimals);
+console.log("4 Legged animals", filteredAnimals);
 
 // Бодлого 1
 // Өгөгдсөн сурагчдын жагсаалтаас хамгийн бага оноотой сурагчийг олж буцаадаг функц бич.
@@ -162,7 +163,6 @@ console.log("Student with min grade: ", resultMinGradeStudent);
 // Нас нь 18-аас доош бүх сурагчдыг шинэ массив болгон ялгаж буцаадаг функц бич.
 const findMinorStudent = (students) => {
   let filteredMinorStudent = [];
-  console.log(students);
   let count = 0;
   for (i = 0; i < students.length; i++) {
     if (students[i].age < 18) {
@@ -173,51 +173,96 @@ const findMinorStudent = (students) => {
   return filteredMinorStudent;
 };
 const filteredMinorStudent = findMinorStudent(students);
-console.log(filteredMinorStudent);
+console.log("Minor students: ", filteredMinorStudent);
 
-// bodlogo 3
-// buh suragchdiin niit onoonii niilberiig butsaadag function bich
-const findSumGradeOfAllStudent = (arr) => {
-  let sum = 0;
+// Бодлого 3
+// Бүх сурагчдын нийт онооны нийлбэрийг буцаадаг функц бич.
+const findSumGradesOfAllStudents = (arr) => {
+  let sumOfGrades = 0;
   for (i = 0; i < arr.length; i++) {
-    sum = sum + arr[i].grade;
+    sumOfGrades += arr[i].grade;
   }
-  return sum;
+  return sumOfGrades;
 };
-const sumOfGrade = findSumGradeOfAllStudent(students);
-console.log(sumOfGrade);
+const sumOfGrades = findSumGradesOfAllStudents(students);
+console.log("Sum of students's grades = ", sumOfGrades);
 
-// bodlogo 4
-// ugugdsun nertei (name) buh suragchdiig butsaadag function bich
-// jishee ni: findStudentsByName(students, "boldo")
+// Бодлого 4
+// Өгөгдсөн нэртэй (name) бүх сурагчдыг буцаадаг функц бич.
+// Жишээ нь: findStudentsByName(students, "boldo").
+
 const findStudentsByName = (students, name) => {
   let filteredStudentsByName = [];
   let count = 0;
   for (i = 0; i < students.length; i++) {
-    if (students[i].name == name) {
+    if (students[i].name === name) {
       filteredStudentsByName[count] = students[i];
       count++;
     }
   }
   return filteredStudentsByName;
 };
-const filteredStudent = findStudentsByName(students, "zulaa");
-console.log(filteredStudent);
+const filteredStudentsByName = findStudentsByName(students, "zulaa");
+console.log("Students filtered by name: ", filteredStudentsByName);
 
-// bodlogo 5
-// buh suragchdiig onoonii daraalalaar ihees baga-ruu erembeldeg function bich (sort ashiglah)
-const sortStudentsByGrade = (students) => {
-  let sortedStudentsByGrade = [];
-  let count = 0;
-  for (i = 0; i < students.length; i++) {
-    students[i].grade.sort(function (a, b) {
-      return a - b;
-    });
-    sortStudentsByGrade[count] = students[i];
-  }
+// Бодлого 5
+// Бүх сурагчдыг онооны дарааллаар ихээс бага руу эрэмбэлдэг функц бич. (sort ашиглах)
+const sortByGradeDescending = (students) => {
+  students.sort((a, b) => b.grade - a.grade);
+  return students;
 };
-const sortedSudents = sortStudentsByGrade(students);
-console.log(sortedSudents);
+let sortedStudentsByGrade = sortByGradeDescending(students);
+console.log("Students sorted by descending grade: ", sortedStudentsByGrade);
 
-// bodlogo 6
-// balance ni 10000-aas ih suragchdiig richStudents gj nerleed, zuvhun ner bolon balance-iin medeelelteigeer shine massiv (array) uusgej butsaa
+// // Бодлого 5-1 ner -eer ni sortloh // blohgui bga
+// const sortByNameAZ = (students) => {
+//   students.sort((a, b) => a.name.localCompare(b.name));
+//   return students;
+// };
+// let sortedStudentsByName = sortByNameAZ(students);
+// console.log("Students sorted by name: ", sortedStudentsByName);
+
+// Бодлого 6
+// balance нь 10000-аас их сурагчдыг richStudents гэж нэрлээд,
+// зөвхөн нэр болон балансын мэдээлэлтэйгээр шинэ массив үүсгэж буцаа.
+const findRichStudents = (arr) => {
+  let richStudents = [];
+  let count = 0;
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i].balance >= 10000) {
+      richStudents[count] = {
+        name: arr[i].name,
+        balance: arr[i].balance,
+      };
+      count++;
+    }
+  }
+  return richStudents;
+};
+const richStudents = findRichStudents(students);
+console.log("Rich students: ", richStudents);
+
+// Бодлого 7
+// Нэр бүрээр хэчнээн сурагч байгаа тоог тоолж, дараах хэлбэртэй объект буцаа:
+// { boldo: 3, dorjo: 1, bataa: 1 }
+const countStudentsByName = (arr) => {
+  let nameFrequency = [];
+  let count = 0;
+
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i].name == "boldo") {
+      nameFrequency[count] = arr[i];
+      count++;
+    } else if (arr[i].name == "dorjo") {
+      nameFrequency[count] = arr[i];
+      count++;
+    }
+  }
+  return count;
+};
+const studentNameFrequency = countStudentsByName(students);
+console.log(studentNameFrequency);
+// Бодлого 8
+// Сурагчдын gender тус бүрээр онооны дундаж хэд байгааг тооцоолж буцаадаг функц бич.
+// Жишээ:
+// { male: 30, female: 60 }
