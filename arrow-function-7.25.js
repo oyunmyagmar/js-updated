@@ -266,22 +266,36 @@ console.log(studentNameFrequency);
 // Бодлого 8
 // Сурагчдын gender тус бүрээр онооны дундаж хэд байгааг тооцоолж буцаадаг функц бич.
 // Жишээ: { male: 30, female: 60 }
+
 const findAvgGradeByGender = (arr) => {
-  let filteredByFemale = {};
-  let sumGradeFemale = 0;
-  let sumGradeMale = 0;
+  let filteredByFemale = [];
+  let filteredByMale = [];
   let countFemale = 0;
   let countMale = 0;
+  let sumGradeFemale = 0;
+  let sumGradeMale = 0;
+  let avgGradeFemale = 0;
 
   for (i = 0; i < arr.length; i++) {
     if (arr[i].gender === "female") {
       filteredByFemale[countFemale] = {
-        female: arr[i].grade,
+        grade: arr[i].grade,
       };
       countFemale++;
+      sumGradeFemale += arr[i].grade;
+      avgGradeFemale = sumGradeFemale / countFemale;
+      let female = avgGradeFemale;
+    } else if (arr[i].gender === "male") {
+      filteredByMale[countMale] = {
+        grade: arr[i].grade,
+      };
+      countMale++;
+      sumGradeMale += arr[i].grade;
+      avgGradeMale = sumGradeMale / countMale;
+      let male = avgGradeMale;
     }
-    return filteredByFemale;
   }
+  return { avgGradeFemale, avgGradeMale };
 };
-const filteredByFemale = findAvgGradeByGender(students);
-console.log(filteredByFemale);
+const avgGradeByGender = findAvgGradeByGender(students);
+console.log(avgGradeByGender);
