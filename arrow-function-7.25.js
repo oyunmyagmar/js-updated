@@ -275,6 +275,9 @@ const findAvgGradeByGender = (arr) => {
   let sumGradeFemale = 0;
   let sumGradeMale = 0;
   let avgGradeFemale = 0;
+  let avgGradeMale =0;
+  let female =0
+  let male =0
 
   for (i = 0; i < arr.length; i++) {
     if (arr[i].gender === "female") {
@@ -284,7 +287,7 @@ const findAvgGradeByGender = (arr) => {
       countFemale++;
       sumGradeFemale += arr[i].grade;
       avgGradeFemale = sumGradeFemale / countFemale;
-      let female = avgGradeFemale;
+      female = avgGradeFemale;
     } else if (arr[i].gender === "male") {
       filteredByMale[countMale] = {
         grade: arr[i].grade,
@@ -292,10 +295,10 @@ const findAvgGradeByGender = (arr) => {
       countMale++;
       sumGradeMale += arr[i].grade;
       avgGradeMale = sumGradeMale / countMale;
-      let male = avgGradeMale;
-    }
+      male = avgGradeMale;
+    } 
   }
-  return { avgGradeFemale, avgGradeMale };
+  return {male , female};
 };
 const avgGradeByGender = findAvgGradeByGender(students);
 console.log(avgGradeByGender);
