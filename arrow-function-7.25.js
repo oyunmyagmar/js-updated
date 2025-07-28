@@ -245,60 +245,109 @@ console.log("Rich students: ", richStudents);
 // Бодлого 7
 // Нэр бүрээр хэчнээн сурагч байгаа тоог тоолж, дараах хэлбэртэй объект буцаа:
 // { boldo: 3, dorjo: 1, bataa: 1 }
-const countStudentsByName = (arr) => {
-  let nameFrequency = [];
+
+const filterStudentByName = (students) => {
+  let filteredOnlyByNames = [];
   let count = 0;
 
-  for (i = 0; i < arr.length; i++) {
-    if (arr[i].name == "boldo") {
-      nameFrequency[count] = arr[i];
-      count++;
-    } else if (arr[i].name == "dorjo") {
-      nameFrequency[count] = arr[i];
-      count++;
+  for (i = 0; i < students.length; i++) {
+    filteredOnlyByNames[count] = {
+      name: students[i].name,
+    };
+    count++;
+    if (students[0].name === students[i].name) {
+      students[i].name += 1;
     }
   }
-  return count;
+  return filteredOnlyByNames;
 };
-const studentNameFrequency = countStudentsByName(students);
-console.log(studentNameFrequency);
+let studentName = filterStudentByName(students);
+console.log(studentName);
+
+// bodlogo 7 umnuh huvilbar
+// const countStudentsByName = (arr) => {
+//   let boldo = 0;
+//   let dorjo = 0;
+//   let zulaa = 0;
+//   let tsetsgee = 0;
+//   let bata = 0;
+
+//   for (i = 0; i < arr.length; i++) {
+//     if (arr[i].name === "boldo") {
+//       boldo++;
+//     } else if (arr[i].name === "dorjo") {
+//       dorjo++;
+//     } else if (arr[i].name === "zulaa") {
+//       zulaa++;
+//     } else if (arr[i].name === "tsetsgee") {
+//       tsetsgee++;
+//     } else if (arr[i].name === "bata") {
+//       bata++;
+//     }
+//   }
+//   return { boldo, dorjo, zulaa, tsetsgee, bata };
+// };
+// const studentNameFrequency = countStudentsByName(students);
+// console.log(studentNameFrequency);
 
 // Бодлого 8
 // Сурагчдын gender тус бүрээр онооны дундаж хэд байгааг тооцоолж буцаадаг функц бич.
 // Жишээ: { male: 30, female: 60 }
 
 const findAvgGradeByGender = (arr) => {
-  let filteredByFemale = [];
-  let filteredByMale = [];
-  let countFemale = 0;
-  let countMale = 0;
-  let sumGradeFemale = 0;
-  let sumGradeMale = 0;
-  let avgGradeFemale = 0;
-  let avgGradeMale =0;
-  let female =0
-  let male =0
+  let maleGradeSum = 0;
+  let femaleGradeSum = 0;
+  let maleCount = 0;
+  let femaleCount = 0;
 
   for (i = 0; i < arr.length; i++) {
     if (arr[i].gender === "female") {
-      filteredByFemale[countFemale] = {
-        grade: arr[i].grade,
-      };
-      countFemale++;
-      sumGradeFemale += arr[i].grade;
-      avgGradeFemale = sumGradeFemale / countFemale;
-      female = avgGradeFemale;
+      femaleCount++;
+      femaleGradeSum += arr[i].grade;
     } else if (arr[i].gender === "male") {
-      filteredByMale[countMale] = {
-        grade: arr[i].grade,
-      };
-      countMale++;
-      sumGradeMale += arr[i].grade;
-      avgGradeMale = sumGradeMale / countMale;
-      male = avgGradeMale;
-    } 
+      maleCount++;
+      maleGradeSum += arr[i].grade;
+    }
   }
-  return {male , female};
+  let female = femaleGradeSum / femaleCount;
+  let male = maleGradeSum / maleCount;
+
+  return { male, female };
 };
 const avgGradeByGender = findAvgGradeByGender(students);
 console.log(avgGradeByGender);
+
+// bodlogo 8 umnuh
+// const findAvgGradeByGender = (arr) => {
+//   let filteredByFemale = [];
+//   let filteredByMale = [];
+//   let countFemale = 0;
+//   let countMale = 0;
+//   let sumGradeFemale = 0;
+//   let sumGradeMale = 0;
+//   let avgGradeFemale = 0;
+//   let avgGradeMale = 0;
+//   let female = 0;
+//   let male = 0;
+
+//   if (arr[i].gender === "female") {
+//     filteredByFemale[countFemale] = {
+//       grade: arr[i].grade,
+//     };
+//     countFemale++;
+//     sumGradeFemale += arr[i].grade;
+//     avgGradeFemale = sumGradeFemale / countFemale;
+//     female = avgGradeFemale;
+//   } else if (arr[i].gender === "male") {
+//     filteredByMale[countMale] = {
+//       grade: arr[i].grade,
+//     };
+//     countMale++;
+//     sumGradeMale += arr[i].grade;
+//     avgGradeMale = sumGradeMale / countMale;
+//     male = avgGradeMale;
+//   }
+//   return { male, female };
+// };
+// const avgGradeByGender = findAvgGradeByGender(students);
+// console.log(avgGradeByGender);
