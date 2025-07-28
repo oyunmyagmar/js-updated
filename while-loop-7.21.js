@@ -147,13 +147,12 @@ while (sp4row > 0) {
 }
 
 // 9. Mirrored Right Triangle Star Pattern
-
 //  12345
-//1     * 1-1
-//2    ** 2-2
-//3   *** 3-3
-//4  **** 4-4
-//5 ***** 5-5
+//1 ----* 1-4
+//2 ---** 2-3
+//3 --*** 3-3
+//4 -**** 4-2
+//5 ***** 5-0
 
 let sp9size = 5;
 let sp9row = 1;
@@ -189,13 +188,18 @@ while (s11row > 0) {
   let s11Result = "";
   while (s11column > 0) {
     if (s11column <= s11row) {
-      s11Result = s11Result + "*" + s11row;
+      s11Result = s11Result + "*";
     }
     s11column = s11column - 1;
   }
   console.log(s11Result);
   s11row = s11row - 1;
 }
+// *5*4*3*2*1
+// *4*3*2*1
+// *3*2*1
+// *2*1
+// *1
 
 // option 2
 let sp11Size = 5;
@@ -210,9 +214,13 @@ while (sp11row > 0) {
   console.log(sp11Result);
   sp11row = sp11row - 1;
 }
+// *5*4*3*2*1
+// *4*3*2*1
+// *3*2*1
+// *2*1
+// *1
 
 // option 3
-
 //  12345
 //1 ***** 1-5
 //2 ****  2-4
@@ -232,3 +240,8 @@ while (row11 <= size11) {
   console.log(Result11);
   row11 = row11 + 1;
 }
+// *1*2*3*4*5
+// *1*2*3*4
+// *1*2*3
+// *1*2
+// *1
