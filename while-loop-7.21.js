@@ -128,23 +128,23 @@ while (row > 0) {
 //2  *****
 //1 *****
 
-let sp4Size = 5;
-let sp4row = sp4Size;
-while (sp4row > 0) {
-  let sp4column = sp4Size;
-  let sp4Result = "";
-  while (sp4column + sp4Size > 0) {
-    if (sp4column <= sp4row) {
-      sp4Result = sp4Result + "*";
-    } else {
-      sp4Result = sp4Result + " ";
-    }
+// let sp4Size = 5;
+// let sp4row = sp4Size;
+// while (sp4row > 0) {
+//   let sp4column = sp4Size;
+//   let sp4Result = "";
+//   while (sp4column + sp4Size > 0) {
+//     if (sp4column <= sp4row) {
+//       sp4Result = sp4Result + "*";
+//     } else {
+//       sp4Result = sp4Result + " ";
+//     }
 
-    sp4column = sp4column - 1;
-  }
-  console.log(sp4Result);
-  sp4row = sp4row - 1;
-}
+//     sp4column = sp4column - 1;
+//   }
+//   console.log(sp4Result);
+//   sp4row = sp4row - 1;
+// }
 
 // 9. Mirrored Right Triangle Star Pattern
 //  12345
@@ -157,8 +157,8 @@ while (sp4row > 0) {
 let sp9size = 5;
 let sp9row = 1;
 while (sp9row <= sp9size) {
-  let sp9column = 1;
   let sp9Result = "";
+  let sp9column = 1;
   while (sp9column <= sp9size - sp9row) {
     sp9Result = sp9Result + " ";
     sp9column = sp9column + 1;
@@ -166,11 +166,21 @@ while (sp9row <= sp9size) {
   let starCount = sp9row;
   while (starCount > 0) {
     sp9Result = sp9Result + "*";
-    starCount = starCount + 1;
+    starCount = starCount - 1;
   }
   console.log(sp9Result);
   sp9row = sp9row + 1;
 }
+// ----*1
+// ---*2*1
+// --*3*2*1
+// -*4*3*2*1
+// *5*4*3*2*1
+// ----*
+// ---**
+// --***
+// -****
+// *****
 
 // 11. Inverted Right Triangle Star Pattern
 //  54321
