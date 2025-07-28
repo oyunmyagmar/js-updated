@@ -6,7 +6,7 @@
 //2 *****
 //1 *****
 
-let sp1Size = 7;
+let sp1Size = 5;
 let sp1mur = sp1Size;
 
 while (sp1mur > 0) {
@@ -17,18 +17,19 @@ while (sp1mur > 0) {
     sp1bagana = sp1bagana - 1;
   }
   console.log(sp1Result);
+  // sp1Result = "";
+  // sp1bagana = sp1Size;
   sp1mur = sp1mur - 1;
 }
 
 // 2. Hollow Square Star Pattern
-
 // *****
 // *   *
 // *   *
 // *   *
 // *****
 
-let sp2Size = 8;
+let sp2Size = 5;
 let sp2row = sp2Size;
 
 while (sp2row > 0) {
@@ -59,7 +60,7 @@ while (sp2row > 0) {
 //2 *  ** 2 - 2
 //1 *****
 
-let sp3Size = 6;
+let sp3Size = 5;
 let sp3row = sp3Size;
 
 while (sp3row > 0) {
@@ -84,7 +85,6 @@ while (sp3row > 0) {
 }
 
 // 3-1. Hollow Square Star Pattern with LEFT Diagonal
-
 //  |
 //  V
 //  column
@@ -107,7 +107,7 @@ while (row > 0) {
       row == size ||
       column == 1 ||
       column == size ||
-      column - 1 == size - row // 1-iig hasch ugsniig dahin bichij uzeh!!!
+      column == size - row + 1 // 1-iig hasch ugsniig dahin bichij uzeh!!!
     ) {
       result = result + "*";
     } else {
@@ -174,7 +174,6 @@ while (sp9row <= sp9size) {
 }
 
 // 11. Inverted Right Triangle Star Pattern
-
 //  54321
 //5 *****
 //4 ****
@@ -189,8 +188,8 @@ while (s11row > 0) {
   let s11column = s11Size;
   let s11Result = "";
   while (s11column > 0) {
-    if (s11row >= s11column) {
-      s11Result = s11Result + "*";
+    if (s11column <= s11row) {
+      s11Result = s11Result + "*" + s11row;
     }
     s11column = s11column - 1;
   }
