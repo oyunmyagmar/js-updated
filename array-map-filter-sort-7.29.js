@@ -1,26 +1,55 @@
 // Map method
-// array map array-g uuriig ni uurchluhgui
-// array map neg function avna, tuhain function bas neg utga avna
+// array-g uuriig ni uurchluhgui
+// map neg function avna, tuhain function bas neg utga avna
 // // // map method = for loop gj oilgoj bolno <- alban yosnii tod bish
-// map method shine array uusgej ugnu, shine array ni huuchin array-tei ijil length-tei bn
+// map method shine array uusgej ugnu, shine array ni huuchin array-tei length ijil bn
 // yamar array uusgehee map-iin return -eer shidne
 // shine array usgej ugne shine huuchin array length ijil bna
 
 // arr.map((tuhain function avah utga) => {});
+// ages.map(()=>{}) function -iig zaaval bichne
+
+console.log("ARRAY-MAP-METHOD");
 
 let ages = [10, 203, 43, 30, 50];
 
-let egch = ages.map((a) => {
-  // console.log(a);
-  return 10;
+for (i = 0; i < ages.length; i++) {
+  console.log("ages[i]", ages[i]);
+}
+// deerh bichiglel doorh bichigleltei adil
+// door orj irj bga a element maani ages[i] buyu array -iin element 1, 1 -eeree orj irj bn
+ages.map((a) => {
+  console.log(a);
 });
-console.log(egch);
+// ingej element bolgon deer guij bgag iteration gdeg
+// guisen element -ee a gej nerlej bga gehdee uuruur nerlej bolno
+// uchir ni function der orj irj bga utgiig function uuruu yu gj nerlej avmaar bn duraaraa nerlej avna
 
+// shine array uusgej bgag let duu -eer barina
 let duu = ages.map((a) => {
-  // console.log(a);
-  return 10 * a;
+  console.log(a);
 });
-console.log(duu);
+console.log(duu); // ene function yu butsana tsuglullad array usged butsagad ugdug
+
+let duu1 = ages.map((a) => {
+  return 10; // yamar array uusgehee map-iin return -eer shidne
+});
+console.log(duu1); // return yu ugnu tuuniig tsuglulad array bolgoj ugnu
+
+let duu2 = ages.map((b) => {
+  return 10 * b;
+});
+console.log(duu2);
+// degur ni for loop irged element bolgoniig nadaa gantshan function -ii utga bolgood ugsun
+// teruger yaj l bol yaj boloh ged bn
+
+let duu3 = ages.map((b) => {
+  return {
+    value: 10 * b,
+  };
+});
+console.log(duu3);
+// ingej bas bolno
 
 let data = [
   { name: "boldo", age: 20, grade: 11, balance: 1500, gender: "male" },
@@ -33,57 +62,101 @@ let data = [
   { name: "zulaa", age: 38, grade: 11, balance: 103500, gender: "female" },
 ];
 
-// let newStudents = students.map((student) => {
-//   return {
-//     name: student.name,
-//     age: student.age,
-//     grade: student.grade + 1,
-//   };
-// });
-// console.log(students);
-// console.log(newStudents);
+let newStudents = data.map((student) => {
+  return {
+    name: student.name,
+    age: student.age,
+    grade: student.grade + 1,
+  };
+});
+console.log("grades-original", data);
+console.log("grades-year after", newStudents);
 
 // filter method
 // filter uuriig ni uuurchluhgui
 // shine array uusgene ugnu
 // filter method neg function avna, tuhain function neg utga avna
-// return deer true bh buh element-iig tsugluulaad array butsana
+// return deer true bh buh element -iig tsugluulaad array butsana
 
-// console.log("filter method");
+console.log("ARRAY-FILTER-METHOD");
 
-// const filteredAges = ages.filter((age) => {
-//   return age % 2 === 0;
-// });
-// console.log(ages);
-// console.log(filteredAges);
+const filteredByEven = ages.filter((age) => {
+  return age % 2 === 0;
+});
+console.log("ages-original", ages);
+console.log("ages-filtered even", filteredByEven);
 
-// map ni yug l butsana tedgeeriig bugdiig ni tsugluulaad butsaana
-// let evenAge = ages.map((age) => {
-//   return age % 2 === 0;
-// });
-// console.log(evenAge);
+// map ontslog ni yug l butsana tedgeeriig bugdiig ni tsugluulaad array uusged butsaana
+// filter arai uur bn
+// return ni 1 bol true avna 1 bol false avna
+// filter ni age yamar tohioldold true avch bg yum, ter bolgoniig ni tsuglulad butsana
+let duu4 = ages.map((age) => {
+  return age % 2 === 0;
+});
+console.log(duu4);
 
 // sort method
 // sort method function avna
 // avj bga function ni 2 utga orj irne
 // return deer + esvel - too butsaana
-//
-// console.log("sort method");
+// sort method ni array -iig uuriig ni uurchilnu
+// map bolon filter ni array -iig uuriig ni uurchluhgui
 
-// ages.sort();
-// console.log(ages);
+console.log("ARRAY SORT METHOD");
 
-// ages.sort((a, b) => {
-//   return 1;
-// });
-// console.log(ages);
+console.log("ages-original", ages);
 
-// ages.sort((a, b) => {
-//   return -1;
-// });
-// console.log(ages);
+ages.sort((a, b) => {
+  return 1; // heveeree
+});
+console.log("ages return +1 ued", ages);
 
-// console.log("bodlogo-uud");
+ages.sort((a, b) => {
+  return -1; // reverse hiisen
+});
+console.log("ages return -1 ued", ages);
+
+ages.sort((a, b) => {
+  console.log("a = ", a);
+  console.log("b = ", b);
+  return 1;
+});
+console.log("a bolon b -g hevlehed", ages);
+
+// age 1 -> b age 2 -> a bgad bn
+ages.sort((age2, age1) => {
+  return age2 - age1;
+});
+console.log("bagas ni ihruu sortloh", ages);
+
+// Jishee bodlogo angid
+// Suragchdiig nasnii erembeer ni sortloh
+data.sort((student2, student1) => {
+  return student2.age - student1.age;
+});
+console.log("Students sorted by age order", data);
+
+// Suragchdiig eregtei emegtei -eer sortloh
+data.sort((student2, student1) => {
+  if (student1.gender > student2.gender) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+console.log("Student sorted by gender", data);
+
+// Suragchdiig ner -eer sortloh
+data.sort((student2, student1) => {
+  if (student1.name > student2.name) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+console.log("Student sorted by name", data);
+
+console.log("BODLOGO");
 
 // Bodlogo #1
 // nasand hursen suragchdiig filterlej oloh function bich
@@ -94,7 +167,7 @@ function findAdultStudents(students) {
   return filtered;
 }
 const resultAdultStudents = findAdultStudents(data);
-console.log(resultAdultStudents);
+console.log("Students filtered by an age of 18 and plus", resultAdultStudents);
 
 // Bodlogo #2
 // // gender ugunguut tuhain gendereer filterlej uguh function bich
@@ -106,29 +179,39 @@ function filterByGender(students, gender) {
   });
   return filtered;
 }
-const resultFilteredStudentsByGender = filterByGender(data, "male");
-console.log("Filtered students by gender", resultFilteredStudentsByGender);
+const resultStudentsFilteredByGender = filterByGender(data, "female");
+console.log("Students filtered by gender", resultStudentsFilteredByGender);
 
 // Bodlogo #3
 // nasaar ni sortloh function bich
 
+function sortByAge(students) {
+  let sortedByAge = students.sort((student2, student1) => {
+    return student2.age - student1.age;
+  });
+  return sortedByAge;
+}
+const resultStudentsSortedByAge = sortByAge(data);
+console.log("Students sorted by age", resultStudentsSortedByAge);
+
 // Bodlogo #4
 // neg too ugunguut tuhain toonoos ih balance-tai suragchdiig yalgaj uguh function bich
 function filterByBalance(students, balance) {
-  let filtered = students.filter((student) => {
+  let filteredByBalance = students.filter((student) => {
     return student.balance > balance;
   });
-  return filtered;
+  return filteredByBalance;
 }
-const resultFilteredStudentsByBalance = filterByBalance(data, 20000);
-console.log("Filtered students by balance", resultFilteredStudentsByBalance);
+const resultStudentsFilteredByBalance = filterByBalance(data, 20000);
+console.log("Students filtered by balance", resultStudentsFilteredByBalance);
 
 // Bodlogo #5
 // classCode gesen field nemeh function bich
 // eg: addClassCodeToStudents(students, "3A") => [{name: "boldo, age: 3, grade: 11, gender: "male", balance: 1231, classCode: "3A"},...]
 
+// option 1
 // function addClassCodeToStudents(students, classCode) {
-//   let addedField = data.map((student) => {
+//   let classCodeFieldadded = data.map((student) => {
 //     return {
 //       name: student.name,
 //       age: student.age,
@@ -138,16 +221,125 @@ console.log("Filtered students by balance", resultFilteredStudentsByBalance);
 //       classCode,
 //     };
 //   });
-//   return addedField;
+//   return classCodeFieldadded;
 // }
-// const resultStudentsClassCodeAdded = addClassCodeToStudents(data, "3A");
-// console.log("classCode added", resultStudentsClassCodeAdded);
-``;
+// const resultClassCodeAdded = addClassCodeToStudents(data, "3A");
+// console.log("classCode added", resultClassCodeAdded);
+
+// option 2
+// function addClassCodeToStudents(students, classCode) {
+//   for (i = 0; i < students.length; i++) {
+//     students[i].classCode = classCode;
+//   }
+//   return students;
+// }
+// const resultClassCodeAdded = addClassCodeToStudents(data, "3A");
+// console.log("classCode added", resultClassCodeAdded);
+
+// option 3
 function addClassCodeToStudents(students, classCode) {
-  for (i = 0; i < students.length; i++) {
-    students[i].classCode;
-  }
-  return students;
+  let classCodeFieldadded = data.map((student) => {
+    return {
+      ...student,
+      classCode: classCode,
+    };
+  });
+  return classCodeFieldadded;
 }
-const resultStudentsClassCodeAdded = addClassCodeToStudents(data, "3A");
-console.log("classCode added", resultStudentsClassCodeAdded);
+const resultClassCodeAdded = addClassCodeToStudents(data, "3A");
+console.log("classCode added", resultClassCodeAdded);
+
+// bodlogo #6
+// removeGenders from student array function bich
+
+// option 1
+// function removeGendersFromStudents(students) {
+//   let genderFieldRemoved = students.map((student) => {
+//     return {
+//       name: student.name,
+//       age: student.age,
+//       grade: student.grade,
+//       balance: student.balance,
+//       classCode: student.classCode,
+//     };
+//   });
+//   return genderFieldRemoved;
+// }
+// let resultGenderRemoved = removeGendersFromStudents(data);
+// console.log("gender removed", resultGenderRemoved);
+
+// option 2
+function removeGendersFromStudents(students) {
+  let genderFieldRemoved = students.map((student) => {
+    const newStudent = { ...student };
+    delete newStudent.gender;
+    return newStudent;
+  });
+  return genderFieldRemoved;
+}
+const resultGenderRemoved = removeGendersFromStudents(data);
+console.log("gender removed", resultGenderRemoved);
+
+// Нэг л products массив дээр ажиллана
+let data1 = [
+  {
+    name: "iPhone 13",
+    category: "Electronics",
+    price: 1200000,
+    stock: 10,
+    brand: "Apple",
+    rating: 4.8,
+    isDiscounted: true,
+    discountPercent: 10,
+    supplier: "MobiCom",
+    weight: 0.3,
+  },
+  {
+    name: "Samsung Galaxy S22",
+    category: "Electronics",
+    price: 950000,
+    stock: 5,
+    brand: "Samsung",
+    rating: 4.5,
+    isDiscounted: false,
+    discountPercent: 0,
+    supplier: "Unitel",
+    weight: 0.28,
+  },
+  {
+    name: "Dell XPS 13",
+    category: "Computers",
+    price: 2800000,
+    stock: 3,
+    brand: "Dell",
+    rating: 4.7,
+    isDiscounted: true,
+    discountPercent: 15,
+    supplier: "PCMall",
+    weight: 1.2,
+  },
+  {
+    name: "Mouse Logitech M590",
+    category: "Accessories",
+    price: 85000,
+    stock: 20,
+    brand: "Logitech",
+    rating: 4.3,
+    isDiscounted: true,
+    discountPercent: 5,
+    supplier: "PCMall",
+    weight: 0.1,
+  },
+  {
+    name: "MacBook Air M2",
+    category: "Computers",
+    price: 3200000,
+    stock: 0,
+    brand: "Apple",
+    rating: 4.9,
+    isDiscounted: false,
+    discountPercent: 0,
+    supplier: "MobiCom",
+    weight: 1.1,
+  },
+];
