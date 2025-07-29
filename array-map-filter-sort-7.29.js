@@ -51,7 +51,7 @@ let duu3 = ages.map((b) => {
 console.log(duu3);
 // ingej bas bolno
 
-let data = [
+let datas = [
   { name: "boldo", age: 20, grade: 11, balance: 1500, gender: "male" },
   { name: "boldo", age: 40, grade: 11, balance: 150000, gender: "male" },
   { name: "dorjo", age: 15, grade: 11, balance: 1000, gender: "male" },
@@ -62,14 +62,14 @@ let data = [
   { name: "zulaa", age: 38, grade: 11, balance: 103500, gender: "female" },
 ];
 
-let newStudents = data.map((student) => {
+let newStudents = datas.map((student) => {
   return {
     name: student.name,
     age: student.age,
     grade: student.grade + 1,
   };
 });
-console.log("grades-original", data);
+console.log("grades-original", datas);
 console.log("grades-year after", newStudents);
 
 // filter method
@@ -131,30 +131,30 @@ console.log("bagas ni ihruu sortloh", ages);
 
 // Jishee bodlogo angid
 // Suragchdiig nasnii erembeer ni sortloh
-data.sort((student2, student1) => {
+datas.sort((student2, student1) => {
   return student2.age - student1.age;
 });
-console.log("Students sorted by age order", data);
+console.log("Students sorted by age order", datas);
 
 // Suragchdiig eregtei emegtei -eer sortloh
-data.sort((student2, student1) => {
+datas.sort((student2, student1) => {
   if (student1.gender > student2.gender) {
     return -1;
   } else {
     return 1;
   }
 });
-console.log("Student sorted by gender", data);
+console.log("Student sorted by gender", datas);
 
 // Suragchdiig ner -eer sortloh
-data.sort((student2, student1) => {
+datas.sort((student2, student1) => {
   if (student1.name > student2.name) {
     return -1;
   } else {
     return 1;
   }
 });
-console.log("Student sorted by name", data);
+console.log("Student sorted by name", datas);
 
 console.log("BODLOGO");
 
@@ -166,7 +166,7 @@ function findAdultStudents(students) {
   });
   return filtered;
 }
-const resultAdultStudents = findAdultStudents(data);
+const resultAdultStudents = findAdultStudents(datas);
 console.log("Students filtered by an age of 18 and plus", resultAdultStudents);
 
 // Bodlogo #2
@@ -179,7 +179,7 @@ function filterByGender(students, gender) {
   });
   return filtered;
 }
-const resultStudentsFilteredByGender = filterByGender(data, "female");
+const resultStudentsFilteredByGender = filterByGender(datas, "female");
 console.log("Students filtered by gender", resultStudentsFilteredByGender);
 
 // Bodlogo #3
@@ -191,7 +191,7 @@ function sortByAge(students) {
   });
   return sortedByAge;
 }
-const resultStudentsSortedByAge = sortByAge(data);
+const resultStudentsSortedByAge = sortByAge(datas);
 console.log("Students sorted by age", resultStudentsSortedByAge);
 
 // Bodlogo #4
@@ -202,7 +202,7 @@ function filterByBalance(students, balance) {
   });
   return filteredByBalance;
 }
-const resultStudentsFilteredByBalance = filterByBalance(data, 20000);
+const resultStudentsFilteredByBalance = filterByBalance(datas, 20000);
 console.log("Students filtered by balance", resultStudentsFilteredByBalance);
 
 // Bodlogo #5
@@ -223,7 +223,7 @@ console.log("Students filtered by balance", resultStudentsFilteredByBalance);
 //   });
 //   return classCodeFieldadded;
 // }
-// const resultClassCodeAdded = addClassCodeToStudents(data, "3A");
+// const resultClassCodeAdded = addClassCodeToStudents(datas, "3A");
 // console.log("classCode added", resultClassCodeAdded);
 
 // option 2
@@ -233,12 +233,12 @@ console.log("Students filtered by balance", resultStudentsFilteredByBalance);
 //   }
 //   return students;
 // }
-// const resultClassCodeAdded = addClassCodeToStudents(data, "3A");
+// const resultClassCodeAdded = addClassCodeToStudents(datas, "3A");
 // console.log("classCode added", resultClassCodeAdded);
 
 // option 3
 function addClassCodeToStudents(students, classCode) {
-  let classCodeFieldadded = data.map((student) => {
+  let classCodeFieldadded = datas.map((student) => {
     return {
       ...student,
       classCode: classCode,
@@ -246,7 +246,7 @@ function addClassCodeToStudents(students, classCode) {
   });
   return classCodeFieldadded;
 }
-const resultClassCodeAdded = addClassCodeToStudents(data, "3A");
+const resultClassCodeAdded = addClassCodeToStudents(datas, "3A");
 console.log("classCode added", resultClassCodeAdded);
 
 // bodlogo #6
@@ -265,7 +265,7 @@ console.log("classCode added", resultClassCodeAdded);
 //   });
 //   return genderFieldRemoved;
 // }
-// let resultGenderRemoved = removeGendersFromStudents(data);
+// let resultGenderRemoved = removeGendersFromStudents(datas);
 // console.log("gender removed", resultGenderRemoved);
 
 // option 2
@@ -277,11 +277,11 @@ function removeGendersFromStudents(students) {
   });
   return genderFieldRemoved;
 }
-const resultGenderRemoved = removeGendersFromStudents(data);
+const resultGenderRemoved = removeGendersFromStudents(datas);
 console.log("gender removed", resultGenderRemoved);
 
 // Нэг л products массив дээр ажиллана
-let data1 = [
+let data = [
   {
     name: "iPhone 13",
     category: "Electronics",
@@ -343,3 +343,250 @@ let data1 = [
     weight: 1.1,
   },
 ];
+
+// 1. Хямдралтай бүтээгдэхүүнүүдийг шүүж буцаадаг функц бич.
+function getDiscountedProducts(products) {
+  let discountedProducts = products.filter((product) => {
+    return product.isDiscounted === true;
+  });
+  return discountedProducts;
+}
+const resultDiscountedProducts = getDiscountedProducts(data);
+console.log("Discounted Products: ", resultDiscountedProducts);
+
+// 2. Нөөц дууссан (stock === 0) бүтээгдэхүүнүүдийг буцаадаг функц бич.
+function getOutOfStockProducts(products) {
+  let productsOutOfStock = products.filter((product) => {
+    return product.stock === 0;
+  });
+  return productsOutOfStock;
+}
+let resultProductsOutOfStock = getDiscountedProducts(data);
+console.log("Products Out Of Stock: ", resultProductsOutOfStock);
+
+// 3. Үнэ нь 1 сая төгрөгөөс дээш бүтээгдэхүүнүүдийг буцаадаг функц бич.
+function getExpensiveProducts(products) {
+  let expensiveProducts = products.filter((product) => {
+    return product.price > 1000000;
+  });
+  return expensiveProducts;
+}
+const resultExpensiveProducts = getExpensiveProducts(data);
+console.log("Expensive Products: ", resultExpensiveProducts);
+
+// 4. "Computers" категорийн бүтээгдэхүүнүүдийг буцаадаг функц бич.
+function getComputers(products) {
+  let categoryComputers = products.filter((product) => {
+    return product.category === "Computers";
+  });
+  return categoryComputers;
+}
+const resultCategoryComputers = getComputers(data);
+console.log("Category: Computers ", resultCategoryComputers);
+
+// 5. Тухайн брэндийн нэрээр бүтээгдэхүүнүүдийг шүүдэг функц бич.
+function filterByBrand(products, brandName) {
+  let productsFilteredByBrandName = products.filter((product) => {
+    return product.brand == brandName;
+  });
+  return productsFilteredByBrandName;
+}
+const resultProductsFilteredByBrandName = filterByBrand(data, "Apple");
+console.log(
+  "Products Filtered By Brand Name",
+  resultProductsFilteredByBrandName
+);
+
+// 6. Бүх бүтээгдэхүүн дээр `isHeavy: true/false` гэсэн талбар нэмдэг функц бич (жин 1 кг-аас их бол).
+function addIsHeavyFlag(products) {
+  let productsHeavyOrNot = products.map((product) => {
+    if (product.weight > 1) {
+      return {
+        ...product,
+        isHeavy: true,
+      };
+    } else if (product.weight < 1) {
+      return {
+        ...product,
+        isHeavy: false,
+      };
+    }
+  });
+  return productsHeavyOrNot;
+}
+const resultProductsHeavyOrNot = addIsHeavyFlag(data);
+console.log("Products Weight Heavy Or Not: ", resultProductsHeavyOrNot);
+
+// 7. Бүх бүтээгдэхүүний үнэд 10% нэмдэг функц бич.
+function increasePriceByTenPercent(products) {
+  let productsIncreasedPriceByTenPercent = products.map((product) => {
+    return {
+      ...product,
+      price: parseInt(product.price * 1.1),
+    };
+  });
+  return productsIncreasedPriceByTenPercent;
+}
+const resultProductsIncreasedPriceByTenPercent =
+  increasePriceByTenPercent(data);
+console.log(
+  "Products Price Increased By 10%: ",
+  resultProductsIncreasedPriceByTenPercent
+);
+
+// 8. Хямдралын дараах үнэтэй `finalPrice` талбарыг тооцож нэмдэг функц бич.
+function addFinalPrice(products) {
+  let productsFinalPriceAdded = products.map((product) => {
+    return {
+      ...product,
+      finalPrice:
+        product.price - (product.price * product.discountPercent) / 100,
+    };
+  });
+  return productsFinalPriceAdded;
+}
+const resultProductsFinalPriceAdded = addFinalPrice(data);
+console.log("Products Final Price Added: ", resultProductsFinalPriceAdded);
+
+// 9. Үнэлгээ хамгийн өндөртэй бүтээгдэхүүнийг буцаадаг функц бич.
+function getTopRatedProduct(products) {
+  let topRatedProduct = products[0];
+  for (i = 0; i < products.length; i++) {
+    if (products[0].rating < products[i].rating) {
+      topRatedProduct = products[i];
+    }
+  }
+  return topRatedProduct;
+}
+const resultTopRatedProduct = getTopRatedProduct(data);
+console.log("Top Rated Product: ", resultTopRatedProduct);
+
+// 10. Үнэ хамгийн бага бүтээгдэхүүнийг буцаадаг функц бич.
+function getCheapestProduct(products) {
+  let cheapestProduct = products[0];
+  for (i = 0; i < products.length; i++) {
+    if (products[0].price > products[i].price) {
+      cheapestProduct = products[i];
+    }
+  }
+  return cheapestProduct;
+}
+const resultCheapestProduct = getCheapestProduct(data);
+console.log("Cheapest Product: ", resultCheapestProduct);
+
+// 11. Бүх бүтээгдэхүүний нийт нөөц (stock)-ийг тооцдог функц бич.
+function getTotalStock(products) {
+  let totalStockAllProducts = 0;
+  for (i = 0; i < products.length; i++) {
+    totalStockAllProducts += products[i].stock;
+  }
+  return totalStockAllProducts;
+}
+const resultTotalStock = getTotalStock(data);
+console.log("Total Stock Of All Products: ", resultTotalStock);
+
+// 12. Бүх бүтээгдэхүүний нийлбэр үнийг тооцдог функц бич.
+function getTotalPrice(products) {
+  let totalPriceAllProducts = 0;
+  for (i = 0; i < products.length; i++) {
+    totalPriceAllProducts += products[i].price;
+  }
+  return totalPriceAllProducts;
+}
+const resultTotalPriceAllProducts = getTotalPrice(data);
+console.log("Total Price Of All Products: ", resultTotalPriceAllProducts);
+
+// 13. Тухайн supplier-аар шүүж бүтээгдэхүүнүүдийг буцаадаг функц бич.
+function filterBySupplier(products, supplierName) {
+  let productsFilteredBySupplier = products.filter((product) => {
+    return product.supplier === supplierName;
+  });
+  return productsFilteredBySupplier;
+}
+const resultProductsFilteredBySupplier = filterBySupplier(data, "MobiCom");
+console.log(
+  "Products Filtered By Supplier: ",
+  resultProductsFilteredBySupplier
+);
+
+// 14. Бүх бүтээгдэхүүний нэрсийг массив болгон буцаадаг функц бич.
+function getProductNames(products) {
+  let arrOfProductNames = products.map((product) => {
+    return product.name;
+  });
+  return arrOfProductNames;
+}
+const resultArrOfProductNames = getProductNames(data);
+console.log("Array Of Product Names: ", resultArrOfProductNames);
+
+// 15. Бүтээгдэхүүнүүдийг үнээр нь өсөхөөр эрэмбэлж буцаадаг функц бич.
+function sortByPriceAscending(products) {
+  let productsSortedByPriceAscending = products.sort((product2, product1) => {
+    return product2.price - product1.price;
+  });
+  return productsSortedByPriceAscending;
+}
+const resultProductsSortedByPriceAscending = sortByPriceAscending(data);
+console.log(
+  "Products Sorted By Price Ascending: ",
+  resultProductsSortedByPriceAscending
+);
+
+// 16. Нөөц багатай (≤ 5) бүтээгдэхүүнүүдийг шүүж буцаадаг функц бич.
+function getLowStockProducts(products) {
+  let productsLowInStock = products.filter((product) => {
+    return product.stock <= 5;
+  });
+  return productsLowInStock;
+}
+const resultProductsLowInStock = getLowStockProducts(data);
+console.log("Products Low In Stock; ", resultProductsLowInStock);
+
+// 17. Давхардалгүй нийлүүлэгчийн нэрсийн массив буцаадаг функц бич.
+function getUniqueSuppliers(products) {
+  let arrSuppliers = products.map((product) => {
+    return product.supplier;
+  });
+  return arrSuppliers;
+}
+const resultUniqueSuppliers = getUniqueSuppliers(data);
+console.log("Array Of Unique Suppliers", resultUniqueSuppliers);
+
+// 18. Зөвхөн name ба price талбартай шинэ массив үүсгэдэг функц бич.
+function getNameAndPriceList(products) {
+  let arrProductsWithNameAndPrice = products.map((product) => {
+    return {
+      name: product.name,
+      price: product.price,
+    };
+  });
+  return arrProductsWithNameAndPrice;
+}
+const resultArrProductsWithNameAndPrice = getNameAndPriceList(data);
+console.log(
+  "Array Of Products With Name And Price",
+  resultArrProductsWithNameAndPrice
+);
+
+// 19. Үнэлгээ нь 4.5-аас их бүх бүтээгдэхүүнүүдийг буцаадаг функц бич.
+function getHighlyRatedProducts(products) {
+  let highlyRatedProducts = products.filter((product) => {
+    return product.rating > 4.5;
+  });
+  return highlyRatedProducts;
+}
+const resultHighlyRatedProducts = getHighlyRatedProducts(data);
+console.log("Highly Rated Products", resultHighlyRatedProducts);
+
+// 20. Бүх бүтээгдэхүүнд `id` талбар нэмж өгдөг функц бич (жишээ нь 1, 2, 3...).
+function addIdToProducts(products) {
+  let idAddedProducts = products.map((product) => {
+    return {
+      ...product,
+      id: 0 + 1,
+    };
+  });
+  return idAddedProducts;
+}
+const resultIdAddedProducts = addIdToProducts(data);
+console.log("Id Added Products:", resultIdAddedProducts);
