@@ -232,10 +232,10 @@ while (row11 <= size11) {
 
 // 4. Rhombus Star Pattern
 //  54321
-//5     *****
-//4    *****
-//3   *****
-//2  *****
+//5 ----*****
+//4 ---*****
+//3 --*****
+//2 -*****
 //1 *****
 
 let sp4Size = 5;
@@ -244,7 +244,17 @@ while (sp4row > 0) {
   let sp4column = sp4Size;
   let sp4Result = "";
   while (sp4column > 0) {
-    sp4Result = +"*";
+    if (sp4column > sp4Size - sp4row + 1) {
+      sp4Result = sp4Result + "-";
+    }
+    // else {
+    //   sp4Result = sp4Result + "*";
+    // }
+    sp4column = sp4column - 1;
+  }
+
+  while (sp4column > 0) {
+    sp4Result = sp4Result + "*";
     sp4column = sp4column - 1;
   }
   console.log(sp4Result);
