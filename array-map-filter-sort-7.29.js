@@ -344,7 +344,7 @@ let data = [
   },
 ];
 
-// 1. Хямдралтай бүтээгдэхүүнүүдийг шүүж буцаадаг функц бич.
+// 1. Хямдралтай бүтээгдэхүүнүүдийг шүүж буцаадаг функц бич. OK
 function getDiscountedProducts(products) {
   let discountedProducts = products.filter((product) => {
     return product.isDiscounted === true;
@@ -364,7 +364,7 @@ function getOutOfStockProducts(products) {
 let resultProductsOutOfStock = getDiscountedProducts(data);
 console.log("Products Out Of Stock: ", resultProductsOutOfStock);
 
-// 3. Үнэ нь 1 сая төгрөгөөс дээш бүтээгдэхүүнүүдийг буцаадаг функц бич.
+// 3. Үнэ нь 1 сая төгрөгөөс дээш бүтээгдэхүүнүүдийг буцаадаг функц бич. OK
 function getExpensiveProducts(products) {
   let expensiveProducts = products.filter((product) => {
     return product.price > 1000000;
@@ -374,7 +374,7 @@ function getExpensiveProducts(products) {
 const resultExpensiveProducts = getExpensiveProducts(data);
 console.log("Expensive Products: ", resultExpensiveProducts);
 
-// 4. "Computers" категорийн бүтээгдэхүүнүүдийг буцаадаг функц бич.
+// 4. "Computers" категорийн бүтээгдэхүүнүүдийг буцаадаг функц бич. OK
 function getComputers(products) {
   let categoryComputers = products.filter((product) => {
     return product.category === "Computers";
@@ -384,10 +384,10 @@ function getComputers(products) {
 const resultCategoryComputers = getComputers(data);
 console.log("Category: Computers ", resultCategoryComputers);
 
-// 5. Тухайн брэндийн нэрээр бүтээгдэхүүнүүдийг шүүдэг функц бич.
+// 5. Тухайн брэндийн нэрээр бүтээгдэхүүнүүдийг шүүдэг функц бич. OK
 function filterByBrand(products, brandName) {
   let productsFilteredByBrandName = products.filter((product) => {
-    return product.brand == brandName;
+    return product.brand === brandName;
   });
   return productsFilteredByBrandName;
 }
@@ -397,7 +397,7 @@ console.log(
   resultProductsFilteredByBrandName
 );
 
-// 6. Бүх бүтээгдэхүүн дээр `isHeavy: true/false` гэсэн талбар нэмдэг функц бич (жин 1 кг-аас их бол).
+// 6. Бүх бүтээгдэхүүн дээр `isHeavy: true/false` гэсэн талбар нэмдэг функц бич (жин 1 кг-аас их бол). OK
 function addIsHeavyFlag(products) {
   let productsHeavyOrNot = products.map((product) => {
     if (product.weight > 1) {
@@ -417,7 +417,7 @@ function addIsHeavyFlag(products) {
 const resultProductsHeavyOrNot = addIsHeavyFlag(data);
 console.log("Products Weight Heavy Or Not: ", resultProductsHeavyOrNot);
 
-// 7. Бүх бүтээгдэхүүний үнэд 10% нэмдэг функц бич.
+// 7. Бүх бүтээгдэхүүний үнэд 10% нэмдэг функц бич. OK
 function increasePriceByTenPercent(products) {
   let productsIncreasedPriceByTenPercent = products.map((product) => {
     return {
@@ -434,7 +434,7 @@ console.log(
   resultProductsIncreasedPriceByTenPercent
 );
 
-// 8. Хямдралын дараах үнэтэй `finalPrice` талбарыг тооцож нэмдэг функц бич.
+// 8. Хямдралын дараах үнэтэй `finalPrice` талбарыг тооцож нэмдэг функц бич. OK
 function addFinalPrice(products) {
   let productsFinalPriceAdded = products.map((product) => {
     return {
@@ -448,68 +448,136 @@ function addFinalPrice(products) {
 const resultProductsFinalPriceAdded = addFinalPrice(data);
 console.log("Products Final Price Added: ", resultProductsFinalPriceAdded);
 
-// 9. Үнэлгээ хамгийн өндөртэй бүтээгдэхүүнийг буцаадаг функц бич.
+// 9. Үнэлгээ хамгийн өндөртэй бүтээгдэхүүнийг буцаадаг функц бич. OK
+
+// option 3 at class
 function getTopRatedProduct(products) {
-  let topRatedProduct = products[0];
-  for (i = 0; i < products.length; i++) {
-    if (products[0].rating < products[i].rating) {
-      topRatedProduct = products[i];
+  let maxRatedProduct = products[0];
+  products.forEach((product) => {
+    if (maxRatedProduct.rating < product.rating) {
+      maxRatedProduct = product;
     }
-  }
-  return topRatedProduct;
+  });
+  return maxRatedProduct;
 }
-const resultTopRatedProduct = getTopRatedProduct(data);
-console.log("Top Rated Product: ", resultTopRatedProduct);
+const resultMaxRatedProduct = getTopRatedProduct(data);
+console.log("Top Rated Product: ", resultMaxRatedProduct);
 
-// 10. Үнэ хамгийн бага бүтээгдэхүүнийг буцаадаг функц бич.
+// option 2 at class by bagsh
+// function getTopRatedProduct(products) {
+//   let maxProduct = products[0];
+//   products.forEach((el) => {
+//     if (maxProduct.price < el.price) {
+//       maxProduct = el;
+//     }
+//   });
+//   return;
+// }
+// const resultTopRatedProduct = getTopRatedProduct(products);
+// console.log(resultTopRatedProduct);
+
+// option 1 at home
+// function getTopRatedProduct(products) {
+//   let topRatedProduct = products[0];
+//   for (i = 0; i < products.length; i++) {
+//     if (products[0].rating < products[i].rating) {
+//       topRatedProduct = products[i];
+//     }
+//   }
+//   return topRatedProduct;
+// }
+// const resultTopRatedProduct = getTopRatedProduct(data);
+// console.log("Top Rated Product: ", resultTopRatedProduct);
+
+// 10. Үнэ хамгийн бага бүтээгдэхүүнийг буцаадаг функц бич. OK
+
+// option 2 at class
 function getCheapestProduct(products) {
-  let cheapestProduct = products[0];
-  for (i = 0; i < products.length; i++) {
-    if (products[0].price > products[i].price) {
-      cheapestProduct = products[i];
+  let minPriceProduct = products[0];
+  products.forEach((product) => {
+    if (minPriceProduct.price > product.price) {
+      minPriceProduct = product;
     }
-  }
-  return cheapestProduct;
+  });
+  return minPriceProduct;
 }
-const resultCheapestProduct = getCheapestProduct(data);
-console.log("Cheapest Product: ", resultCheapestProduct);
+const resultMinPriceProduct = getCheapestProduct(data);
+console.log("Cheapest Product: ", resultMinPriceProduct);
 
-// 11. Бүх бүтээгдэхүүний нийт нөөц (stock)-ийг тооцдог функц бич.
+// option 1 at home
+// function getCheapestProduct(products) {
+//   let cheapestProduct = products[0];
+//   for (i = 0; i < products.length; i++) {
+//     if (products[0].price > products[i].price) {
+//       cheapestProduct = products[i];
+//     }
+//   }
+//   return cheapestProduct;
+// }
+// const resultCheapestProduct = getCheapestProduct(data);
+// console.log("Cheapest Product: ", resultCheapestProduct);
+
+// 11. Бүх бүтээгдэхүүний нийт нөөц (stock)-ийг тооцдог функц бич. OK
+
+// option 2 at class
 function getTotalStock(products) {
-  let totalStockAllProducts = 0;
-  for (i = 0; i < products.length; i++) {
-    totalStockAllProducts += products[i].stock;
-  }
-  return totalStockAllProducts;
+  let sumStock = 0;
+  products.forEach((product) => {
+    sumStock += product.stock;
+  });
+  return sumStock;
 }
-const resultTotalStock = getTotalStock(data);
-console.log("Total Stock Of All Products: ", resultTotalStock);
+const resultSumStock = getTotalStock(data);
+console.log("Total Stock Of All Products", resultSumStock);
 
-// 12. Бүх бүтээгдэхүүний нийлбэр үнийг тооцдог функц бич.
+// option 1 at home
+// function getTotalStock(products) {
+//   let totalStockAllProducts = 0;
+//   for (i = 0; i < products.length; i++) {
+//     totalStockAllProducts += products[i].stock;
+//   }
+//   return totalStockAllProducts;
+// }
+// const resultTotalStock = getTotalStock(data);
+// console.log("Total Stock Of All Products: ", resultTotalStock);
+
+// 12. Бүх бүтээгдэхүүний нийлбэр үнийг тооцдог функц бич. OK
 function getTotalPrice(products) {
-  let totalPriceAllProducts = 0;
-  for (i = 0; i < products.length; i++) {
-    totalPriceAllProducts += products[i].price;
-  }
-  return totalPriceAllProducts;
+  let sumPrice = 0;
+  products.forEach((product) => {
+    sumPrice += product.price;
+  });
+  return sumPrice;
 }
-const resultTotalPriceAllProducts = getTotalPrice(data);
-console.log("Total Price Of All Products: ", resultTotalPriceAllProducts);
+const resultSumPrice = getTotalPrice(data);
+console.log("Total Price Of All Products", resultSumPrice);
+// option 2 at class
 
-// 13. Тухайн supplier-аар шүүж бүтээгдэхүүнүүдийг буцаадаг функц бич.
+// option 1 at home
+// function getTotalPrice(products) {
+//   let totalPriceAllProducts = 0;
+//   for (i = 0; i < products.length; i++) {
+//     totalPriceAllProducts += products[i].price;
+//   }
+//   return totalPriceAllProducts;
+// }
+// const resultTotalPriceAllProducts = getTotalPrice(data);
+// console.log("Total Price Of All Products: ", resultTotalPriceAllProducts);
+
+// 13. Тухайн supplier-аар шүүж бүтээгдэхүүнүүдийг буцаадаг функц бич. OK
 function filterBySupplier(products, supplierName) {
   let productsFilteredBySupplier = products.filter((product) => {
     return product.supplier === supplierName;
   });
   return productsFilteredBySupplier;
 }
-const resultProductsFilteredBySupplier = filterBySupplier(data, "MobiCom");
+const resultProductsFilteredBySupplier = filterBySupplier(data, "PCMall");
 console.log(
   "Products Filtered By Supplier: ",
   resultProductsFilteredBySupplier
 );
 
-// 14. Бүх бүтээгдэхүүний нэрсийг массив болгон буцаадаг функц бич.
+// 14. Бүх бүтээгдэхүүний нэрсийг массив болгон буцаадаг функц бич. OK
 function getProductNames(products) {
   let arrOfProductNames = products.map((product) => {
     return product.name;
@@ -519,7 +587,7 @@ function getProductNames(products) {
 const resultArrOfProductNames = getProductNames(data);
 console.log("Array Of Product Names: ", resultArrOfProductNames);
 
-// 15. Бүтээгдэхүүнүүдийг үнээр нь өсөхөөр эрэмбэлж буцаадаг функц бич.
+// 15. Бүтээгдэхүүнүүдийг үнээр нь өсөхөөр эрэмбэлж буцаадаг функц бич. OK
 function sortByPriceAscending(products) {
   let productsSortedByPriceAscending = products.sort((product2, product1) => {
     return product2.price - product1.price;
@@ -532,7 +600,7 @@ console.log(
   resultProductsSortedByPriceAscending
 );
 
-// 16. Нөөц багатай (≤ 5) бүтээгдэхүүнүүдийг шүүж буцаадаг функц бич.
+// 16. Нөөц багатай (≤ 5) бүтээгдэхүүнүүдийг шүүж буцаадаг функц бич. OK
 function getLowStockProducts(products) {
   let productsLowInStock = products.filter((product) => {
     return product.stock <= 5;
@@ -547,28 +615,42 @@ function getUniqueSuppliers(products) {
   let arrSuppliers = products.map((product) => {
     return product.supplier;
   });
-  return arrSuppliers;
+  let uniqueSuppliers = [];
+  arrSuppliers.forEach((supplier) => {
+    if (uniqueSuppliers.includes(supplier)) {
+    } else {
+      uniqueSuppliers.push(supplier);
+    }
+  });
+  return uniqueSuppliers;
+
+  // for (i = 0; i < arrSuppliers.length; i++) {
+  //   if (arrSuppliers[0] !== arrSuppliers[i]) {
+  //     return arrSuppliers[i];
+  //   }
+  // }
+  // return arrSuppliers;
 }
 const resultUniqueSuppliers = getUniqueSuppliers(data);
 console.log("Array Of Unique Suppliers", resultUniqueSuppliers);
 
-// 18. Зөвхөн name ба price талбартай шинэ массив үүсгэдэг функц бич.
+// 18. Зөвхөн name ба price талбартай шинэ массив үүсгэдэг функц бич. OK
 function getNameAndPriceList(products) {
-  let arrProductsWithNameAndPrice = products.map((product) => {
+  let newArrProductsWithNameAndPrice = products.map((product) => {
     return {
       name: product.name,
       price: product.price,
     };
   });
-  return arrProductsWithNameAndPrice;
+  return newArrProductsWithNameAndPrice;
 }
-const resultArrProductsWithNameAndPrice = getNameAndPriceList(data);
+const resultNewArrProductsWithNameAndPrice = getNameAndPriceList(data);
 console.log(
-  "Array Of Products With Name And Price",
-  resultArrProductsWithNameAndPrice
+  "New Array Of Products With Name And Price",
+  resultNewArrProductsWithNameAndPrice
 );
 
-// 19. Үнэлгээ нь 4.5-аас их бүх бүтээгдэхүүнүүдийг буцаадаг функц бич.
+// 19. Үнэлгээ нь 4.5-аас их бүх бүтээгдэхүүнүүдийг буцаадаг функц бич. OK
 function getHighlyRatedProducts(products) {
   let highlyRatedProducts = products.filter((product) => {
     return product.rating > 4.5;
@@ -578,12 +660,12 @@ function getHighlyRatedProducts(products) {
 const resultHighlyRatedProducts = getHighlyRatedProducts(data);
 console.log("Highly Rated Products", resultHighlyRatedProducts);
 
-// 20. Бүх бүтээгдэхүүнд `id` талбар нэмж өгдөг функц бич (жишээ нь 1, 2, 3...).
+// 20. Бүх бүтээгдэхүүнд `id` талбар нэмж өгдөг функц бич (жишээ нь 1, 2, 3...). OK
 function addIdToProducts(products) {
-  let idAddedProducts = products.map((product) => {
+  let idAddedProducts = products.map((product, i) => {
     return {
       ...product,
-      id: 0 + 1,
+      id: i,
     };
   });
   return idAddedProducts;
