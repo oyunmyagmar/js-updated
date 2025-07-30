@@ -64,6 +64,19 @@ let cars = [
     supplier: "AutoJapan",
     engineSize: 2.4,
   },
+  {
+    model: "Hyundai Sonata",
+    type: "Sedan",
+    price: 29000000,
+    mileage: 95000,
+    brand: "Hyundai",
+    year: 2017,
+    isAvailable: false,
+    fuelEfficiency: 6.5,
+    color: "silver",
+    supplier: "AutoJapan",
+    engineSize: 2.4,
+  },
 ];
 
 // 1. Нөөцөд байгаа (isAvailable === true) машинуудыг буцаадаг функц бич.
@@ -79,7 +92,7 @@ console.log("Available Cars: ", resultAvailableCars);
 // 2. 2018 оноос хойш үйлдвэрлэгдсэн машинуудыг буцаадаг функц бич.
 function getRecentCars(cars) {
   let recentCars = cars.filter((car) => {
-    return car.year >= 2018;
+    return car.year > 2018;
   });
   return recentCars;
 }
@@ -202,40 +215,112 @@ console.log("Total Mileage Of All Cars: ", resultSumMileageOfAllCars);
 
 // 13. Supplier нэрээр машинуудыг шүүж буцаадаг функц бич.
 function filterBySupplier(cars, supplierName) {
-  // ...
+  let carsFilteredBySupplier = cars.filter((car) => {
+    return car.supplier.toLowerCase() === supplierName.toLowerCase();
+  });
+  return carsFilteredBySupplier;
 }
+const resultCarsFilteredBySupplier = filterBySupplier(cars, "autojapan");
+console.log("Cars Filtered By Supplier Name: ", resultCarsFilteredBySupplier);
 
 // 14. Машины model нэрсийг массив болгож буцаадаг функц бич.
 function getCarModels(cars) {
-  // ...
+  let arrCarModels = cars.map((car) => {
+    return car.model;
+  });
+  return arrCarModels;
 }
+const resultArrCarModels = getCarModels(cars);
+console.log("Array Of Car Models: ", resultArrCarModels);
 
 // 15. Машинуудыг үнийн өсөхөөр эрэмбэлж буцаадаг функц бич.
 function sortByPriceAscending(cars) {
-  // ...
+  let carsSortedByPriceAscending = cars.sort((car2, car1) => {
+    return car2.price - car1.price;
+  });
+  return carsSortedByPriceAscending;
 }
+const resultCarsSortedByPriceAscending = sortByPriceAscending(cars);
+console.log(
+  "Cars Sorted By Price Ascending: ",
+  resultCarsSortedByPriceAscending
+);
 
 // 16. Engine size нь 2.0-аас их машинуудыг буцаадаг функц бич.
 function getLargeEngineCars(cars) {
-  // ...
+  let carsWithLargeEngine = cars.filter((car) => {
+    return car.engineSize > 2;
+  });
+  return carsWithLargeEngine;
 }
+const resultCarsWithLargeEngine = getLargeEngineCars(cars);
+console.log("Cars With Large Engine: ", resultCarsWithLargeEngine);
 
 // 17. Давхардалгүй брэндийн нэрсийг массив болгон буцаадаг функц бич.
 function getUniqueBrands(cars) {
-  // ...
+  let arrCarBrands = cars.map((car) => {
+    return car.brand;
+  });
+  let uniqueBrands = [];
+  arrCarBrands.forEach((brand) => {
+    if (uniqueBrands.includes(brand)) {
+    } else {
+      uniqueBrands.push(brand);
+    }
+  });
+  return uniqueBrands;
 }
+const resultUniqueBrands = getUniqueBrands(cars);
+console.log("Array Of Unique Brands: ", resultUniqueBrands);
 
 // 18. Зөвхөн model ба year талбартай шинэ массив үүсгэдэг функц бич.
 function getModelAndYearList(cars) {
-  // ...
+  let arrCarsWithModelAndYear = cars.map((car) => {
+    return {
+      model: car.model,
+      year: car.year,
+    };
+  });
+  return arrCarsWithModelAndYear;
 }
+const resultArrCarsWithModelAndYear = getModelAndYearList(cars);
+console.log(
+  "Array Of Cars With Model And Year: ",
+  resultArrCarsWithModelAndYear
+);
 
 // 19. 4.0-с бага fuel efficiency-тай машинуудыг "super efficient" гэж тэмдэглэдэг функц бич.
 function tagSuperEfficientCars(cars) {
-  // ...
+  let carsTaggedWithSuperEfficient = cars.map((car) => {
+    if (car.fuelEfficiency <= 4) {
+      return {
+        ...car,
+        superEfficient: true,
+      };
+    } else if (car.fuelEfficiency > 4) {
+      return {
+        ...car,
+        superEfficient: false,
+      };
+    }
+  });
+  return carsTaggedWithSuperEfficient;
 }
+const resultCarsTaggedWithSuperEfficient = tagSuperEfficientCars(cars);
+console.log(
+  "Cars Tagged With Super Efficient: ",
+  resultCarsTaggedWithSuperEfficient
+);
 
 // 20. Бүх машинд `id` талбар нэмдэг функц бич (1-с эхэлнэ).
 function addIdToCars(cars) {
-  // ...
+  let carsWithAddedId = cars.map((car, i) => {
+    return {
+      ...car,
+      id: i,
+    };
+  });
+  return carsWithAddedId;
 }
+const resultCarsWithAddedId = addIdToCars(cars);
+console.log("Cars With Added Id: ", resultCarsWithAddedId);

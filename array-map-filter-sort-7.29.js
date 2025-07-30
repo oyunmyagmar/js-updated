@@ -542,6 +542,8 @@ console.log("Total Stock Of All Products", resultSumStock);
 // console.log("Total Stock Of All Products: ", resultTotalStock);
 
 // 12. Бүх бүтээгдэхүүний нийлбэр үнийг тооцдог функц бич. OK
+
+// option 2 at class
 function getTotalPrice(products) {
   let sumPrice = 0;
   products.forEach((product) => {
@@ -551,7 +553,6 @@ function getTotalPrice(products) {
 }
 const resultSumPrice = getTotalPrice(data);
 console.log("Total Price Of All Products", resultSumPrice);
-// option 2 at class
 
 // option 1 at home
 // function getTotalPrice(products) {
@@ -611,6 +612,8 @@ const resultProductsLowInStock = getLowStockProducts(data);
 console.log("Products Low In Stock; ", resultProductsLowInStock);
 
 // 17. Давхардалгүй нийлүүлэгчийн нэрсийн массив буцаадаг функц бич.
+
+// option 2 at class
 function getUniqueSuppliers(products) {
   let arrSuppliers = products.map((product) => {
     return product.supplier;
@@ -623,16 +626,17 @@ function getUniqueSuppliers(products) {
     }
   });
   return uniqueSuppliers;
-
-  // for (i = 0; i < arrSuppliers.length; i++) {
-  //   if (arrSuppliers[0] !== arrSuppliers[i]) {
-  //     return arrSuppliers[i];
-  //   }
-  // }
-  // return arrSuppliers;
 }
 const resultUniqueSuppliers = getUniqueSuppliers(data);
 console.log("Array Of Unique Suppliers", resultUniqueSuppliers);
+
+// option 1 at class
+// for (i = 0; i < arrSuppliers.length; i++) {
+//   if (arrSuppliers[0] !== arrSuppliers[i]) {
+//     return arrSuppliers[i];
+//   }
+// }
+// return arrSuppliers;
 
 // 18. Зөвхөн name ба price талбартай шинэ массив үүсгэдэг функц бич. OK
 function getNameAndPriceList(products) {
