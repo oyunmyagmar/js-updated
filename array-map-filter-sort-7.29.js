@@ -228,7 +228,7 @@ console.log("Students filtered by balance", resultStudentsFilteredByBalance);
 
 // option 2
 // function addClassCodeToStudents(students, classCode) {
-//   for (i = 0; i < students.length; i++) {
+//   for (let i = 0; i < students.length; i++) {
 //     students[i].classCode = classCode;
 //   }
 //   return students;
@@ -479,7 +479,7 @@ console.log("Top Rated Product: ", resultMaxRatedProduct);
 // option 1 at home
 // function getTopRatedProduct(products) {
 //   let topRatedProduct = products[0];
-//   for (i = 0; i < products.length; i++) {
+//   for (let i = 0; i < products.length; i++) {
 //     if (products[0].rating < products[i].rating) {
 //       topRatedProduct = products[i];
 //     }
@@ -507,7 +507,7 @@ console.log("Cheapest Product: ", resultMinPriceProduct);
 // option 1 at home
 // function getCheapestProduct(products) {
 //   let cheapestProduct = products[0];
-//   for (i = 0; i < products.length; i++) {
+//   for (let i = 0; i < products.length; i++) {
 //     if (products[0].price > products[i].price) {
 //       cheapestProduct = products[i];
 //     }
@@ -533,7 +533,7 @@ console.log("Total Stock Of All Products", resultSumStock);
 // option 1 at home
 // function getTotalStock(products) {
 //   let totalStockAllProducts = 0;
-//   for (i = 0; i < products.length; i++) {
+//   for (let i = 0; i < products.length; i++) {
 //     totalStockAllProducts += products[i].stock;
 //   }
 //   return totalStockAllProducts;
@@ -557,7 +557,7 @@ console.log("Total Price Of All Products", resultSumPrice);
 // option 1 at home
 // function getTotalPrice(products) {
 //   let totalPriceAllProducts = 0;
-//   for (i = 0; i < products.length; i++) {
+//   for (let i = 0; i < products.length; i++) {
 //     totalPriceAllProducts += products[i].price;
 //   }
 //   return totalPriceAllProducts;
@@ -631,7 +631,7 @@ const resultUniqueSuppliers = getUniqueSuppliers(data);
 console.log("Array Of Unique Suppliers", resultUniqueSuppliers);
 
 // option 1 at class
-// for (i = 0; i < arrSuppliers.length; i++) {
+// for (let i = 0; i < arrSuppliers.length; i++) {
 //   if (arrSuppliers[0] !== arrSuppliers[i]) {
 //     return arrSuppliers[i];
 //   }
