@@ -26,3 +26,5 @@ let building = {
   floor: 6,
   color: "black",
 };
+
+console.log(building);

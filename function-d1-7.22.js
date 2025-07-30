@@ -17,10 +17,10 @@ function problem1(size) {
 // function -iig ajilluulahiin tuld uildel hiih/duudah heregtei
 // function dangaaraa iim uildel hiih chadamjtai gj bga blohos bish uildel hideg zuil bish
 // tuhain uildliig duudaj bj hiine
-// duudahiin tuld tuhain function -nii nergiig bichlee ard ni () tavij duudna
+// duudahiin tuld tuhain function -nii neriig bichlee ard ni () tavij duudna
 // tuhain function ni yum avah yostoi tuuniig ni uguugui bol hichneen duudaad blohgui
 problem1(5);
-problem1(9); // (duudahad ugch uavulj bui zuil)
+problem1(9); // (duudahad ugch yavulj bui zuil)
 // size ni ugaasaa hussen utga bailgah zorilgtoigoor ugsun huvisagch boldog zuil
 // 1 function -g hed l bol hed yaj l bol yaj duudaj bolno
 // code -oo dahin dahin bichih shardlagagui, 1 l udaa bichehed bolno
