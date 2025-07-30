@@ -249,7 +249,7 @@ function addClassCodeToStudents(students, classCode) {
 const resultClassCodeAdded = addClassCodeToStudents(datas, "3A");
 console.log("classCode added", resultClassCodeAdded);
 
-// bodlogo #6
+// bodlogo #6???????????????????????????????
 // removeGenders from student array function bich
 
 // option 1
@@ -357,11 +357,11 @@ console.log("Discounted Products: ", resultDiscountedProducts);
 // 2. Нөөц дууссан (stock === 0) бүтээгдэхүүнүүдийг буцаадаг функц бич.
 function getOutOfStockProducts(products) {
   let productsOutOfStock = products.filter((product) => {
-    return product.stock === 0;
+    return product.stock == 0;
   });
   return productsOutOfStock;
 }
-let resultProductsOutOfStock = getDiscountedProducts(data);
+const resultProductsOutOfStock = getDiscountedProducts(data);
 console.log("Products Out Of Stock: ", resultProductsOutOfStock);
 
 // 3. Үнэ нь 1 сая төгрөгөөс дээш бүтээгдэхүүнүүдийг буцаадаг функц бич. OK
@@ -400,7 +400,7 @@ console.log(
 // 6. Бүх бүтээгдэхүүн дээр `isHeavy: true/false` гэсэн талбар нэмдэг функц бич (жин 1 кг-аас их бол). OK
 function addIsHeavyFlag(products) {
   let productsHeavyOrNot = products.map((product) => {
-    if (product.weight > 1) {
+    if (product.weight >= 1) {
       return {
         ...product,
         isHeavy: true,
@@ -612,7 +612,7 @@ const resultProductsLowInStock = getLowStockProducts(data);
 console.log("Products Low In Stock; ", resultProductsLowInStock);
 
 // 17. Давхардалгүй нийлүүлэгчийн нэрсийн массив буцаадаг функц бич.
-
+// ???????????????????????
 // option 2 at class
 function getUniqueSuppliers(products) {
   let arrSuppliers = products.map((product) => {
