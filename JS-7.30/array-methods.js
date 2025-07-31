@@ -212,6 +212,19 @@ let cars = [
     engineSize: 0,
   },
   {
+    model: "Tesla Model 3",
+    type: "Electric",
+    price: 85000000,
+    mileage: 30000,
+    brand: "Tesla",
+    year: 2021,
+    isAvailable: true,
+    fuelEfficiency: 0,
+    color: "red",
+    supplier: "E-Car Dealer",
+    engineSize: 0,
+  },
+  {
     model: "Ford Ranger",
     type: "Truck",
     price: 57000000,
@@ -252,65 +265,6 @@ let cars = [
   },
 ];
 
-// 1. Нөөцөд байгаа (isAvailable === true) машинуудыг буцаадаг функц бич.
-function getAvailableCars(cars) {
-  let availableCars = cars.filter((car) => {
-    return car.isAvailable === true;
-  });
-  return availableCars;
-}
-const resultAvailableCars = getAvailableCars(cars);
-console.log("1. Available Cars: ", resultAvailableCars);
-
-// 2. 2018 оноос хойш үйлдвэрлэгдсэн машинуудыг буцаадаг функц бич.
-function getRecentCars(cars) {
-  let recentCars = cars.filter((car) => {
-    return car.year > 2018;
-  });
-  return recentCars;
-}
-const resultRecentCars = getRecentCars(cars);
-console.log("2. Recent Cars: ", resultRecentCars);
-// 3. 5 саяас дээш үнэтэй машинуудыг буцаадаг функц бич.
-function getExpensiveCars(cars) {
-  let expensiveCars = cars.filter((car) => {
-    return car.price > 5000000;
-  });
-  return expensiveCars;
-}
-const resultExpensiveCars = getExpensiveCars(cars);
-console.log("3. Expensive Cars:", resultExpensiveCars);
-
-// 4. "Sedan" төрөлтэй машинуудыг буцаадаг функц бич.
-function getSedans(cars) {
-  let sedanTypeCars = cars.filter((car) => {
-    return car.type === "Sedan";
-  });
-  return sedanTypeCars;
-}
-const resultSedanTypeCars = getSedans(cars);
-console.log("4. Sedan Type Cars: ", resultSedanTypeCars);
-
-// 5. Брэндээр шүүж буцаадаг функц бич.
-function filterByBrand(cars, brandName) {
-  let carsFilteredByBrand = cars.filter((car) => {
-    return car.brand === brandName;
-  });
-  return carsFilteredByBrand;
-}
-const resultCarsFilteredByBrand = filterByBrand(cars, "Toyota");
-console.log("5. Cars Filtered By Brand: ", resultCarsFilteredByBrand);
-
-// 6. 100,000 км-ээс их явсан машинуудыг буцаадаг функц бич.
-function getHighMileageCars(cars) {
-  let carsWithHighMileage = cars.filter((car) => {
-    return car.mileage > 100000;
-  });
-  return carsWithHighMileage;
-}
-const resultCarsWithHighMileage = getHighMileageCars(cars);
-console.log("6. Cars With High Mileage:", resultCarsWithHighMileage);
-
 // 7. Машины түлш зарцуулалтаар fuelEfficiency талбарт `efficient: true/false` нэмдэг функц бич (5.0-аас бага бол efficient).
 function addEfficiencyFlag(cars) {
   cars.map((car) => {
@@ -323,8 +277,8 @@ function addEfficiencyFlag(cars) {
   });
   return cars;
 }
-const resultCarEfficiencyFlag = addEfficiencyFlag(cars);
-console.log("7. Car Efficiency Flag Added: ", resultCarEfficiencyFlag);
+const resultCarsWithEfficiencyFlag = addEfficiencyFlag(cars);
+console.log("7. Car Efficiency Flag Added: ", resultCarsWithEfficiencyFlag);
 
 // 8. Бүх машины үнийг 15% нэмдэг функц бич.
 function increaseCarPrices(cars) {
