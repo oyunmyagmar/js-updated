@@ -39,19 +39,6 @@ let cars = [
     engineSize: 0,
   },
   {
-    model: "Tesla Model 3",
-    type: "Electric",
-    price: 85000000,
-    mileage: 30000,
-    brand: "Tesla",
-    year: 2021,
-    isAvailable: true,
-    fuelEfficiency: 0,
-    color: "red",
-    supplier: "E-Car Dealer",
-    engineSize: 0,
-  },
-  {
     model: "Ford Ranger",
     type: "Truck",
     price: 57000000,
@@ -77,17 +64,14 @@ let cars = [
     supplier: "AutoJapan",
     engineSize: 2.4,
   },
-  {
-    model: "Hyundai Sonata",
-    type: "Sedan",
-    price: 29000000,
-    mileage: 95000,
-    brand: "Hyundai",
-    year: 2017,
-    isAvailable: false,
-    fuelEfficiency: 6.5,
-    color: "silver",
-    supplier: "AutoJapan",
-    engineSize: 2.4,
-  },
 ];
+
+// 16. Engine size нь 2.0-аас их машинуудыг буцаадаг функц бич.
+function getLargeEngineCars(cars) {
+  let carsWithLargeEngine = cars.filter((car) => {
+    return car.engineSize > 2;
+  });
+  return carsWithLargeEngine;
+}
+const resultCarsWithLargeEngine = getLargeEngineCars(cars);
+console.log("17. Cars With Large Engine: ", resultCarsWithLargeEngine);

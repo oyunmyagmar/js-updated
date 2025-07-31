@@ -39,19 +39,6 @@ let cars = [
     engineSize: 0,
   },
   {
-    model: "Tesla Model 3",
-    type: "Electric",
-    price: 85000000,
-    mileage: 30000,
-    brand: "Tesla",
-    year: 2021,
-    isAvailable: true,
-    fuelEfficiency: 0,
-    color: "red",
-    supplier: "E-Car Dealer",
-    engineSize: 0,
-  },
-  {
     model: "Ford Ranger",
     type: "Truck",
     price: 57000000,
@@ -77,17 +64,16 @@ let cars = [
     supplier: "AutoJapan",
     engineSize: 2.4,
   },
-  {
-    model: "Hyundai Sonata",
-    type: "Sedan",
-    price: 29000000,
-    mileage: 95000,
-    brand: "Hyundai",
-    year: 2017,
-    isAvailable: false,
-    fuelEfficiency: 6.5,
-    color: "silver",
-    supplier: "AutoJapan",
-    engineSize: 2.4,
-  },
 ];
+
+// 14. Машины model нэрсийг массив болгож буцаадаг функц бич.
+function getCarModels(cars) {
+  let arrCarModels = cars.map((car) => {
+    return car.model;
+  });
+  return arrCarModels;
+}
+const resultArrCarModels = getCarModels(cars);
+console.log("14. Array Of Car Models: ", resultArrCarModels);
+
+// array bolgoj butsaj bga -> map

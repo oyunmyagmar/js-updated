@@ -91,3 +91,36 @@ let cars = [
     engineSize: 2.4,
   },
 ];
+
+// 17. Давхардалгүй брэндийн нэрсийг массив болгон буцаадаг функц бич.
+
+// option 2 at class
+function getUniqueBrands(cars) {
+  let arrCarBrands = cars.map((car) => {
+    return car.brand;
+  });
+  let uniqueBrands = {};
+  arrCarBrands.forEach((brand) => {
+    uniqueBrands[brand] = true;
+  });
+  return Object.keys(uniqueBrands);
+}
+const resultUniqueBrands = getUniqueBrands(cars);
+console.log("17. Unique Brands: ", resultUniqueBrands);
+
+// option 1 at home
+// function getUniqueBrands(cars) {
+//   let arrCarBrands = cars.map((car) => {
+//     return car.brand;
+//   });
+//   let uniqueBrands = [];
+//   arrCarBrands.forEach((brand) => {
+//     if (uniqueBrands.includes(brand)) {
+//     } else {
+//       uniqueBrands.push(brand);
+//     }
+//   });
+//   return uniqueBrands;
+// }
+// const resultUniqueBrands = getUniqueBrands(cars);
+// console.log("Array Of Unique Brands: ", resultUniqueBrands);

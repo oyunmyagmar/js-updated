@@ -91,3 +91,32 @@ let cars = [
     engineSize: 2.4,
   },
 ];
+
+// 8. Бүх машины үнийг 15% нэмдэг функц бич.
+
+// option 1
+function increaseCarPrices(cars) {
+  let carsWithIncreasedPrices = cars.map((car) => {
+    return {
+      ...car,
+      price: Math.floor(car.price * 1.15),
+    };
+  });
+  return carsWithIncreasedPrices;
+}
+const resultCarsWithIncreasedPrices = increaseCarPrices(cars);
+console.log("8. Cars With Increased Prices: ", resultCarsWithIncreasedPrices);
+
+// price modify hiigeed array -iin shine huvilbar uusgej bga
+// price modify hiihed umnuh price -aa darj bichij bga
+// object ... haaltaa neegeed umnuh field deeree modified field -ee oruulj ugch bga ni zuv
+
+// option 2 -> ???yagad zuvhun price garch irj bga??? -> uchir ni burjgar haaltad return hiihdee zuvhun modified car.price -aa hiij bga uchras
+// function increaseCarPrices1(cars) {
+//   let carsWithIncreasedPrices = cars.map((car) => {
+//     return Math.floor(car.price * 1.15);
+//   });
+//   return carsWithIncreasedPrices;
+// }
+// const resultCarsWithIncreasedPrices1 = increaseCarPrices1(cars);
+// console.log("8. Cars With Increased Prices1: ", resultCarsWithIncreasedPrices1);

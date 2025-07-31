@@ -39,19 +39,6 @@ let cars = [
     engineSize: 0,
   },
   {
-    model: "Tesla Model 3",
-    type: "Electric",
-    price: 85000000,
-    mileage: 30000,
-    brand: "Tesla",
-    year: 2021,
-    isAvailable: true,
-    fuelEfficiency: 0,
-    color: "red",
-    supplier: "E-Car Dealer",
-    engineSize: 0,
-  },
-  {
     model: "Ford Ranger",
     type: "Truck",
     price: 57000000,
@@ -77,17 +64,20 @@ let cars = [
     supplier: "AutoJapan",
     engineSize: 2.4,
   },
-  {
-    model: "Hyundai Sonata",
-    type: "Sedan",
-    price: 29000000,
-    mileage: 95000,
-    brand: "Hyundai",
-    year: 2017,
-    isAvailable: false,
-    fuelEfficiency: 6.5,
-    color: "silver",
-    supplier: "AutoJapan",
-    engineSize: 2.4,
-  },
 ];
+
+// 18. Зөвхөн model ба year талбартай шинэ массив үүсгэдэг функц бич.
+function getModelAndYearList(cars) {
+  let arrCarsWithModelAndYear = cars.map((car) => {
+    return {
+      model: car.model,
+      year: car.year,
+    };
+  });
+  return arrCarsWithModelAndYear;
+}
+const resultArrCarsWithModelAndYear = getModelAndYearList(cars);
+console.log(
+  "18. Array Of Cars With Model And Year: ",
+  resultArrCarsWithModelAndYear
+);

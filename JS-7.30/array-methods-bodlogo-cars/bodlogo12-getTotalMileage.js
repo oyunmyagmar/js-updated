@@ -13,19 +13,6 @@ let cars = [
     engineSize: 1.8,
   },
   {
-    model: "Toyota Prius",
-    type: "Hybrid",
-    price: 85000000,
-    mileage: 120000,
-    brand: "Toyota",
-    year: 2016,
-    isAvailable: true,
-    fuelEfficiency: 4.2,
-    color: "white",
-    supplier: "AutoJapan",
-    engineSize: 1.8,
-  },
-  {
     model: "Honda Civic",
     type: "Sedan",
     price: 32000000,
@@ -79,30 +66,24 @@ let cars = [
   },
 ];
 
-// 11. Хамгийн өндөр үнэтэй машиныг буцаадаг функц бич.
-function getMostExpensiveCar(cars) {
-  let mostExpensiveCar = cars[0];
-  cars.forEach((car) => {
-    if (mostExpensiveCar.price < car.price) {
-      mostExpensiveCar = car;
-    }
-  });
-  return mostExpensiveCar;
-}
-const resultMostExpensiveCar = getMostExpensiveCar(cars);
-console.log("11. Most Expensive Car: ", resultMostExpensiveCar);
-
-// price ni ijil hamgiin undur bh 2 mashin bval hamgiin ehniihiig ni gargaj bga uchit map -aar hiiv -> ???zuv eseh???
-function getMostExpensiveCar1(cars) {
-  let mostExpensiveCar = cars[0];
+// 12. Бүх машины нийлбэр mileage-г буцаадаг функц бич.
+function getTotalMileage(cars) {
+  let sumMileage = 0;
   cars.map((car) => {
-    if (mostExpensiveCar.price < car.price) {
-      mostExpensiveCar = car;
-    }
+    sumMileage += car.mileage;
   });
-  return mostExpensiveCar;
+  return sumMileage;
 }
-const resultMostExpensiveCar1 = getMostExpensiveCar1(cars);
-console.log("11. Most Expensive Car1: ", resultMostExpensiveCar1);
+const resultSumMileageOfAllCars = getTotalMileage(cars);
+console.log("12. Total Mileage Of All Cars: ", resultSumMileageOfAllCars);
 
-// ???filter-eer bas bloh ni???
+// forEach -eer hiivel
+function getTotalMileage1(cars) {
+  let sumMileage = 0;
+  cars.forEach((car) => {
+    sumMileage += car.mileage;
+  });
+  return sumMileage;
+}
+const resultSumMileageOfAllCars1 = getTotalMileage1(cars);
+console.log("12. Total Mileage Of All Cars1: ", resultSumMileageOfAllCars1);

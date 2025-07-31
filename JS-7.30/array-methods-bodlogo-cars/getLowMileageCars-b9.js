@@ -39,6 +39,19 @@ let cars = [
     engineSize: 0,
   },
   {
+    model: "Tesla Model 3",
+    type: "Electric",
+    price: 85000000,
+    mileage: 30000,
+    brand: "Tesla",
+    year: 2021,
+    isAvailable: true,
+    fuelEfficiency: 0,
+    color: "red",
+    supplier: "E-Car Dealer",
+    engineSize: 0,
+  },
+  {
     model: "Ford Ranger",
     type: "Truck",
     price: 57000000,
@@ -66,12 +79,12 @@ let cars = [
   },
 ];
 
-// 3. 50 саяас дээш үнэтэй машинуудыг буцаадаг функц бич.
-function getExpensiveCars(cars) {
-  let expensiveCars = cars.filter((car) => {
-    return car.price > 50000000;
+// 9. Шинэ талдаа (50,000 км-ээс бага явсан) машинуудыг буцаадаг функц бич.
+function getLowMileageCars(cars) {
+  let carsWithLowMileage = cars.filter((car) => {
+    return car.mileage < 50000;
   });
-  return expensiveCars;
+  return carsWithLowMileage;
 }
-const resultExpensiveCars = getExpensiveCars(cars);
-console.log("3. Expensive Cars:", resultExpensiveCars);
+const resultCarsWithLowMileage = getLowMileageCars(cars);
+console.log("9. Cars With Low Mileage: ", resultCarsWithLowMileage);

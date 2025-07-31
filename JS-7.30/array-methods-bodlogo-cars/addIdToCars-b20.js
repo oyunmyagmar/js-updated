@@ -39,19 +39,6 @@ let cars = [
     engineSize: 0,
   },
   {
-    model: "Tesla Model 3",
-    type: "Electric",
-    price: 85000000,
-    mileage: 30000,
-    brand: "Tesla",
-    year: 2021,
-    isAvailable: true,
-    fuelEfficiency: 0,
-    color: "red",
-    supplier: "E-Car Dealer",
-    engineSize: 0,
-  },
-  {
     model: "Ford Ranger",
     type: "Truck",
     price: 57000000,
@@ -77,17 +64,17 @@ let cars = [
     supplier: "AutoJapan",
     engineSize: 2.4,
   },
-  {
-    model: "Hyundai Sonata",
-    type: "Sedan",
-    price: 29000000,
-    mileage: 95000,
-    brand: "Hyundai",
-    year: 2017,
-    isAvailable: false,
-    fuelEfficiency: 6.5,
-    color: "silver",
-    supplier: "AutoJapan",
-    engineSize: 2.4,
-  },
 ];
+
+// 20. Бүх машинд `id` талбар нэмдэг функц бич (1-с эхэлнэ).
+function addIdToCars(cars) {
+  let carsWithAddedId = cars.map((car, i) => {
+    return {
+      ...car,
+      id: i + 1,
+    };
+  });
+  return carsWithAddedId;
+}
+const resultCarsWithAddedId = addIdToCars(cars);
+console.log("20. Cars With Added Id: ", resultCarsWithAddedId);

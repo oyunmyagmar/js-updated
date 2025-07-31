@@ -66,12 +66,15 @@ let cars = [
   },
 ];
 
-// 6. 100,000 км-ээс их явсан машинуудыг буцаадаг функц бич.
-function getHighMileageCars(cars) {
-  let carsWithHighMileage = cars.filter((car) => {
-    return car.mileage > 100000;
+// 13. Supplier нэрээр машинуудыг шүүж буцаадаг функц бич.
+function filterBySupplier(cars, supplierName) {
+  let carsFilteredBySupplier = cars.filter((car) => {
+    return car.supplier.toLowerCase() === supplierName.toLowerCase();
   });
-  return carsWithHighMileage;
+  return carsFilteredBySupplier;
 }
-const resultCarsWithHighMileage = getHighMileageCars(cars);
-console.log("6. Cars With High Mileage:", resultCarsWithHighMileage);
+const resultCarsFilteredBySupplier = filterBySupplier(cars, "autojapan");
+console.log(
+  "13. Cars Filtered By Supplier Name: ",
+  resultCarsFilteredBySupplier
+);

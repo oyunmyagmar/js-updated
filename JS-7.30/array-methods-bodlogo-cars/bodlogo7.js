@@ -69,29 +69,52 @@ let cars = [
 // 7. Машины түлш зарцуулалтаар fuelEfficiency талбарт `efficient: true/false` нэмдэг функц бич (5.0-аас бага бол efficient).
 
 // option 1
-// function addEfficiencyFlag(cars) {
-//   cars.map((car) => {
-//     if (car.fuelEfficiency < 5) {
-//       car.efficient = true;
-//     } else {
-//       car.efficient = false;
-//     }
-//   });
-//   return cars;
-// }
-// const resultCarsWithEfficiencyFlag = addEfficiencyFlag(cars);
-// console.log(
-//   "7. Cars With Efficiency Flag Added: ",
-//   resultCarsWithEfficiencyFlag
-// );
-
-// option 2
 function addEfficiencyFlag(cars) {
-  let carsWithEfficiencyFlag = cars.map((car) => {
+  cars.map((car) => {
     if (car.fuelEfficiency < 5) {
+      car.efficient = true;
+    } else {
+      car.efficient = false;
     }
   });
-  return carsWithEfficiencyFlag;
+  return cars;
 }
 const resultCarsWithEfficiencyFlag = addEfficiencyFlag(cars);
-console.log("7. Cars With Efficiency Flag: ", resultCarsWithEfficiencyFlag);
+console.log(
+  "7. Cars With Efficiency Flag Added: ",
+  resultCarsWithEfficiencyFlag
+);
+
+// fuelEfficiency talbart toonii orond `efficient: true/false` gj nemeh geheer umnuh utgaa darah blohoor deerh argar bodohod bolno
+
+// option 2 -> ???carsWithEfficiencyFlagAdded ged huvisagch zarlad return hiiiher undefined gj garch irj bga???
+function addEfficiencyFlag1(cars) {
+  let carsWithEfficiencyFlagAdded = cars.map((car) => {
+    if (car.fuelEfficiency < 5) {
+      car.efficient = true;
+    } else {
+      car.efficient = false;
+    }
+  });
+  return carsWithEfficiencyFlagAdded;
+}
+const resultCarsWithEfficiencyFlag1 = addEfficiencyFlag1(cars);
+console.log(
+  "7. Cars With Efficiency Flag Added1: ",
+  resultCarsWithEfficiencyFlag1
+);
+
+// option 3 -> ???carsWithEfficiencyFlagAdded huvisagch avaad return hiiher nolj bga???
+function addEfficiencyFlag2(cars) {
+  let carsWithEfficiencyFlagAdded = cars.map((car) => {
+    if (car.fuelEfficiency < 5) {
+      car.efficient = true;
+    } else {
+      car.efficient = false;
+    }
+    return car;
+  });
+  return carsWithEfficiencyFlagAdded;
+}
+const resultCarsWithEfficiencyFlag2 = addEfficiencyFlag2(cars);
+console.log("7. Car Efficiency Flag Added2: ", resultCarsWithEfficiencyFlag2);

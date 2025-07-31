@@ -91,3 +91,39 @@ let cars = [
     engineSize: 2.4,
   },
 ];
+
+// 19. 4.0-с бага fuel efficiency-тай машинуудыг "super efficient" гэж тэмдэглэдэг функц бич.
+
+// option 1 at class
+function tagSuperEfficientCars(cars) {
+  let filteredCars = cars.filter((car) => {
+    return car.fuelEfficiency < 4;
+  });
+  filteredCars.map((superEfficientCar) => {
+    return {
+      ...superEfficientCar,
+      tag: "super efficient",
+    };
+  });
+  return filteredCars;
+}
+const resultCarsTaggedWithSuperEfficient = tagSuperEfficientCars(cars);
+console.log(
+  "19. Cars Tagged With Super Efficient: ",
+  resultCarsTaggedWithSuperEfficient
+);
+
+// option 2
+function tagSuperEfficientCars1(cars) {
+  let carsFilteredByEfficiency = cars
+    .filter((car) => car.fuelEfficiency < 4)
+    .map((car) => {
+      return { ...car, tag: "super efficient" };
+    });
+  return carsFilteredByEfficiency;
+}
+const resultCarsTaggedWithSuperEfficient1 = tagSuperEfficientCars1(cars);
+console.log(
+  "19. Cars Tagged With Super Efficient1: ",
+  resultCarsTaggedWithSuperEfficient1
+);

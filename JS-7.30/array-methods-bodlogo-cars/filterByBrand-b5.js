@@ -26,17 +26,17 @@ let cars = [
     engineSize: 2.0,
   },
   {
-    model: "Tesla Model 3",
-    type: "Electric",
-    price: 85000000,
-    mileage: 30000,
-    brand: "Tesla",
-    year: 2021,
-    isAvailable: true,
-    fuelEfficiency: 0,
-    color: "red",
-    supplier: "E-Car Dealer",
-    engineSize: 0,
+    model: "Honda Civic",
+    type: "Sedan",
+    price: 32000000,
+    mileage: 85000,
+    brand: "Honda",
+    year: 2018,
+    isAvailable: false,
+    fuelEfficiency: 5.8,
+    color: "blue",
+    supplier: "CityMotors",
+    engineSize: 2.0,
   },
   {
     model: "Tesla Model 3",
@@ -65,17 +65,17 @@ let cars = [
     engineSize: 3.2,
   },
   {
-    model: "Hyundai Sonata",
-    type: "Sedan",
-    price: 29000000,
-    mileage: 95000,
-    brand: "Hyundai",
-    year: 2017,
-    isAvailable: false,
-    fuelEfficiency: 6.5,
-    color: "silver",
-    supplier: "AutoJapan",
-    engineSize: 2.4,
+    model: "Ford Ranger",
+    type: "Truck",
+    price: 57000000,
+    mileage: 110000,
+    brand: "Ford",
+    year: 2019,
+    isAvailable: true,
+    fuelEfficiency: 9.5,
+    color: "black",
+    supplier: "MongolAuto",
+    engineSize: 3.2,
   },
   {
     model: "Hyundai Sonata",
@@ -91,3 +91,13 @@ let cars = [
     engineSize: 2.4,
   },
 ];
+
+// 5. Брэндээр шүүж буцаадаг функц бич.
+function filterByBrand(cars, brandName) {
+  let carsFilteredByBrand = cars.filter((car) => {
+    return car.brand === brandName;
+  });
+  return carsFilteredByBrand;
+}
+const resultCarsFilteredByBrand = filterByBrand(cars, "Honda");
+console.log("5. Cars Filtered By Brand: ", resultCarsFilteredByBrand);

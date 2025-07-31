@@ -39,19 +39,6 @@ let cars = [
     engineSize: 0,
   },
   {
-    model: "Tesla Model 3",
-    type: "Electric",
-    price: 85000000,
-    mileage: 30000,
-    brand: "Tesla",
-    year: 2021,
-    isAvailable: true,
-    fuelEfficiency: 0,
-    color: "red",
-    supplier: "E-Car Dealer",
-    engineSize: 0,
-  },
-  {
     model: "Ford Ranger",
     type: "Truck",
     price: 57000000,
@@ -77,17 +64,17 @@ let cars = [
     supplier: "AutoJapan",
     engineSize: 2.4,
   },
-  {
-    model: "Hyundai Sonata",
-    type: "Sedan",
-    price: 29000000,
-    mileage: 95000,
-    brand: "Hyundai",
-    year: 2017,
-    isAvailable: false,
-    fuelEfficiency: 6.5,
-    color: "silver",
-    supplier: "AutoJapan",
-    engineSize: 2.4,
-  },
 ];
+
+// 15. Машинуудыг үнийн өсөхөөр эрэмбэлж буцаадаг функц бич.
+function sortByPriceAscending(cars) {
+  let carsSortedByPriceAscending = cars.sort((car2, car1) => {
+    return car2.price - car1.price;
+  });
+  return carsSortedByPriceAscending;
+}
+const resultCarsSortedByPriceAscending = sortByPriceAscending(cars);
+console.log(
+  "15. Cars Sorted By Price Ascending: ",
+  resultCarsSortedByPriceAscending
+);
