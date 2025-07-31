@@ -64,7 +64,7 @@ let data = [
 
 // 6. Бүх бүтээгдэхүүн дээр `isHeavy: true/false` гэсэн талбар нэмдэг функц бич (жин 1 кг-аас их бол). OK
 
-// option 1
+// option 1 -> uuriig ni uurchluud bga, products -aa butsaj bga <- forEach bsn ch bolno
 function addIsHeavyFlag(products) {
   products.map((product) => {
     if (product.weight > 1) {
@@ -78,7 +78,7 @@ function addIsHeavyFlag(products) {
 const resultProductsAddedIsHeavyFlag = addIsHeavyFlag(data);
 console.log("Products Added Is Heavy Flag: ", resultProductsAddedIsHeavyFlag);
 
-// option 2
+// option 2 -> shine array uusgeed bga, shine array -gaa butsaj bga
 function addIsHeavyFlag2(products) {
   let productsAddedIsHeavyFlag = products.map((product) => {
     if (product.weight >= 1) {
