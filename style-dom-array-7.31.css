@@ -1,0 +1,31 @@
+.card {
+  width: 800px;
+  height: 350px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+}
+.card_img {
+}
+.carImg {
+  object-fit: contain;
+  height: 350px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.card_text {
+  margin: 30px;
+}
+.carPrice {
+}
+.carName {
+}
+.carYear {
+}
+.carMileage {
+}
+.carEngineSize {
+}
+.carFuelEfficiency {
+}
