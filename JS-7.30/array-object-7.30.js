@@ -68,12 +68,12 @@ let products = [
 // array.map() ni array -iin elementuudiig butsaana gehdee:
 // array.map() ni array -iin element tus buriig todorhoi hemjeger uurchluh, ustgah, nemeh tohioldold ashiglana
 // jishelbel busad field -iig ustgaad zuvhun supplier uldeh heregtei bol hereglene
-//  array.map() return deer array -iin yamar element ustgah ve? nemeh ve? gedgee bichne
+// array.map() return deer array -iin yamar element ustgah ve? nemeh ve? gedgee bichne
 
 const suppliers = products.map((product) => {
-  return product.supplier; //array -iin 1 element product -iin zuvhun category -iig avmar bn gej ugnu
+  return product.supplier; //array -iin 1 element buyu product -iin zuvhun supplier -iig avmar bn gej ugnu
 });
-const uniqueSuppliers = []; // shine array uusgene
+const uniqueSuppliers = []; // shine array uusgene, hooson
 // oilgomjtoi bhin tuld ehled for loop -eer bichle, suppliers -aa davtana
 for (let i = 0; i < suppliers.length; i++) {
   if (!uniqueSuppliers.includes(suppliers[i])) {
@@ -82,39 +82,43 @@ for (let i = 0; i < suppliers.length; i++) {
 }
 // element tus buriig uniqueSuppliers array -ruu push hiine
 // push hiihes umnu suppliers[i] buyu suppliers -iin i -dahi element maani uniqueSuppliers array -d bnu? -g shalgana
-// teriig shalgadag array method -iin belen function bga boolean butsdag
+// teriig shalgadag array method -iin belen function bga, boolean butsaadag
 // array.includes() <- (dotroo shalgah yostoi utgaa ugnu)
 // uniqueSuppliers.includes(suppliers[i]) -> suppliers[i] bval true butsana bhgui bol false butsana
-// if boolean utga avdag uchir true bval ajillana false bval ajillahgui
-// tgvel false bh ued buyu suppliers[i] bhgui bh ued push -lmaar bn, bval push -leh shardlagagui
+// if ni boolean utga avdag uchir true bval ajillana false bval ajillahgui
+// tgvel false bh ued buyu suppliers[i] bhgui bh ued push -lmaar bn, true bval push -leh shardlagagui
 // !uniqueSuppliers.includes(suppliers[i]) -> urd ni ! temdeg taviad
-// esregeeree false bol true bolgood true bol false bolgono
+// ! ni esregeeree, false bol true bolgood true bol false bolgono
 // false -iig esregeer bolgohoor true bolgod ter ued code maani ajillana
 // ter ued uniqueSuppliers -ruu push hiine suppliers[i] buyu tuhain element -iig pushlene
 // uniqueSuppliers.push(suppliers[i])
 console.log(uniqueSuppliers);
-console.log(suppliers); // <- odoo eniig davhardagui Unique bolgoh gd bn
+console.log(suppliers); // <- 74 -deh murnii console.log, eniig davharddaggui uniqueSuppliers bolgoh gd bn
+
 // array.sort ni erembledeg zuil -> sort hereglehgui
 
 // ymarch element orj irsen, heden ch element -tei bsn hamaagui
 // ajilladag code bichih ni chuhal
-// olon dahih ashiglagdah bolomjtoi generic code bolno
+// olon dahih ashiglagdah bolomjtoi generic code bichihiig hicheeh
 // generic code bichih ni sain chadvar/engineer/
 // deerh code ni beginner level tuvshind
 
+// deerh huvilbaraar bichsen function -aas harval
 // array.includes() function ni suppliers[i] -iig bga esehiig shalgaj bn gdeg ni
 // uniqueSuppliers array dotroo bga buh element -eer guij bga gsen ug
 // tgeher udan ajillaj bga gsen ug
+
 // iim ued objects gedgiig sain ashiglaj surah heregtei
+
 // object -ruu element hiih or field nemeh
 
 const data = {}; // data gsen hooson object uusgeed yaj field nemeh ve?
-data.category = "food";
+data.category = "food"; // ene baidlaar field nemne
 console.log(data);
 
-// object ni array-aas yamar davuu taltai?
+// object ni array-aas yamar davuu taltai ve?
 // dotroo heden field -tei bh ni hamagui shuud direct nereer ni barij avah haih bolomjtoi
-// object ni array.includes shig buh element -eer haij guih shardlagagui shuud uuruu olj avch chadna
+// object ni array.includes() shig buh element -eer haij guih shardlagagui shuud uuruu olj avch chadna
 
 data.test1 = 1;
 console.log(data);
@@ -127,8 +131,9 @@ data["category"];
 console.log(data["category"]);
 // ene food-iig gargaj irehed test1, test2 -iig davtahgui bga gsen ug
 
-// herev object bish array bsan bol ["food", "test1", "test2"] zaaval 3 -uulangaar davtaj 3 element 3 -uulang ni shalgaj bj meddeg
+// herev object bish ["food", "test1", "test2"] array bsan bol zaaval 3 -uulangaar davtaj 3 element 3 -uulang ni shalgaj bj meddeg
 // object bol tegdeggui, shud hussen element -ee barij avdag
+
 // code -nd yaj ashiglagdah ve?
 
 const categories = products.map((product) => {
@@ -145,7 +150,7 @@ categories.forEach((category) => {
 // uniqueCategories[category] = true -> uniqueCategories -ruu category -iig zgr true ged nemne
 
 console.log(uniqueCategories);
-// ene garch irsen object -iig array bolgoj hurvuldeg zuil function bdg
+// ene garch irsen object -iig array bolgoj hurvuldeg zuil buyu function bdg
 // Object gsen keyword bdag -> object -iin method -iig ashiglahad zoriulsan
 // Object.key bolon Object.value 2 songolttoi
 Object.values(uniqueCategories);

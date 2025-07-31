@@ -118,18 +118,3 @@ function addEfficiencyFlag2(cars) {
 }
 const resultCarsWithEfficiencyFlag2 = addEfficiencyFlag2(cars);
 console.log("7. Car Efficiency Flag Added2: ", resultCarsWithEfficiencyFlag2);
-
-// option 4
-function addEfficiencyFlag3(cars) {
-  let carsWithEfficiencyFlagAdded = cars.map((car) => {
-    if (car.fuelEfficiency < 5) {
-      car.efficient = true;
-    } else {
-      car.efficient = false;
-    }
-    return car;
-  });
-  return carsWithEfficiencyFlagAdded;
-}
-const resultCarsWithEfficiencyFlag3 = addEfficiencyFlag3(cars);
-console.log("7. Car Efficiency Flag Added3: ", resultCarsWithEfficiencyFlag3);
