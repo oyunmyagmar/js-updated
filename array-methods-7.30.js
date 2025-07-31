@@ -297,16 +297,11 @@ console.log("Cars With High Mileage:", resultCarsWithHighMileage);
 function addEfficiencyFlag(cars) {
   let carEfficiencyFlag = cars.map((car) => {
     if (car.fuelEfficiency < 5) {
-      return {
-        ...car,
-        efficient: true,
-      };
-    } else if (car.fuelEfficiency > 5) {
-      return {
-        ...car,
-        efficient: false,
-      };
+      car.efficient = true;
+    } else {
+      car.efficient = false;
     }
+    return car;
   });
   return carEfficiencyFlag;
 }
@@ -434,6 +429,7 @@ const resultUniqueBrands = getUniqueBrands(cars);
 console.log("Array Of Unique Brands: ", resultUniqueBrands);
 
 // 18. Зөвхөн model ба year талбартай шинэ массив үүсгэдэг функц бич.
+// 1 field hasay gvel tuhan field bhgui object dahij zohiono
 function getModelAndYearList(cars) {
   let arrCarsWithModelAndYear = cars.map((car) => {
     return {
