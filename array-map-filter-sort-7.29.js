@@ -352,7 +352,7 @@ function getDiscountedProducts(products) {
   return discountedProducts;
 }
 const resultDiscountedProducts = getDiscountedProducts(data);
-console.log("Discounted Products: ", resultDiscountedProducts);
+console.log("1. Discounted Products: ", resultDiscountedProducts);
 
 // 2. Нөөц дууссан (stock === 0) бүтээгдэхүүнүүдийг буцаадаг функц бич.
 function getOutOfStockProducts(products) {
@@ -362,7 +362,7 @@ function getOutOfStockProducts(products) {
   return productsOutOfStock;
 }
 const resultProductsOutOfStock = getDiscountedProducts(data);
-console.log("Products Out Of Stock: ", resultProductsOutOfStock);
+console.log("2. Products Out Of Stock: ", resultProductsOutOfStock);
 
 // 3. Үнэ нь 1 сая төгрөгөөс дээш бүтээгдэхүүнүүдийг буцаадаг функц бич. OK
 function getExpensiveProducts(products) {
@@ -372,7 +372,7 @@ function getExpensiveProducts(products) {
   return expensiveProducts;
 }
 const resultExpensiveProducts = getExpensiveProducts(data);
-console.log("Expensive Products: ", resultExpensiveProducts);
+console.log("3. Expensive Products: ", resultExpensiveProducts);
 
 // 4. "Computers" категорийн бүтээгдэхүүнүүдийг буцаадаг функц бич. OK
 function getComputers(products) {
@@ -382,7 +382,7 @@ function getComputers(products) {
   return categoryComputers;
 }
 const resultCategoryComputers = getComputers(data);
-console.log("Category: Computers ", resultCategoryComputers);
+console.log("4. Category: Computers ", resultCategoryComputers);
 
 // 5. Тухайн брэндийн нэрээр бүтээгдэхүүнүүдийг шүүдэг функц бич. OK
 function filterByBrand(products, brandName) {
@@ -393,7 +393,7 @@ function filterByBrand(products, brandName) {
 }
 const resultProductsFilteredByBrandName = filterByBrand(data, "Apple");
 console.log(
-  "Products Filtered By Brand Name",
+  "5. Products Filtered By Brand Name",
   resultProductsFilteredByBrandName
 );
 
@@ -430,7 +430,7 @@ function increasePriceByTenPercent(products) {
 const resultProductsIncreasedPriceByTenPercent =
   increasePriceByTenPercent(data);
 console.log(
-  "Products Price Increased By 10%: ",
+  "7. Products Price Increased By 10%: ",
   resultProductsIncreasedPriceByTenPercent
 );
 
@@ -446,7 +446,7 @@ function addFinalPrice(products) {
   return productsFinalPriceAdded;
 }
 const resultProductsFinalPriceAdded = addFinalPrice(data);
-console.log("Products Final Price Added: ", resultProductsFinalPriceAdded);
+console.log("8. Products Final Price Added: ", resultProductsFinalPriceAdded);
 
 // 9. Үнэлгээ хамгийн өндөртэй бүтээгдэхүүнийг буцаадаг функц бич. OK
 
@@ -461,7 +461,7 @@ function getTopRatedProduct(products) {
   return maxRatedProduct;
 }
 const resultMaxRatedProduct = getTopRatedProduct(data);
-console.log("Top Rated Product: ", resultMaxRatedProduct);
+console.log("9. Top Rated Product: ", resultMaxRatedProduct);
 
 // option 2 at class by bagsh
 // function getTopRatedProduct(products) {
@@ -502,7 +502,7 @@ function getCheapestProduct(products) {
   return minPriceProduct;
 }
 const resultMinPriceProduct = getCheapestProduct(data);
-console.log("Cheapest Product: ", resultMinPriceProduct);
+console.log("10. Cheapest Product: ", resultMinPriceProduct);
 
 // option 1 at home
 // function getCheapestProduct(products) {
@@ -528,7 +528,7 @@ function getTotalStock(products) {
   return sumStock;
 }
 const resultSumStock = getTotalStock(data);
-console.log("Total Stock Of All Products", resultSumStock);
+console.log("11. Total Stock Of All Products", resultSumStock);
 
 // option 1 at home
 // function getTotalStock(products) {
@@ -552,7 +552,7 @@ function getTotalPrice(products) {
   return sumPrice;
 }
 const resultSumPrice = getTotalPrice(data);
-console.log("Total Price Of All Products", resultSumPrice);
+console.log("12. Total Price Of All Products", resultSumPrice);
 
 // option 1 at home
 // function getTotalPrice(products) {
@@ -574,7 +574,7 @@ function filterBySupplier(products, supplierName) {
 }
 const resultProductsFilteredBySupplier = filterBySupplier(data, "PCMall");
 console.log(
-  "Products Filtered By Supplier: ",
+  "13. Products Filtered By Supplier: ",
   resultProductsFilteredBySupplier
 );
 
@@ -586,7 +586,7 @@ function getProductNames(products) {
   return arrOfProductNames;
 }
 const resultArrOfProductNames = getProductNames(data);
-console.log("Array Of Product Names: ", resultArrOfProductNames);
+console.log("14. Array Of Product Names: ", resultArrOfProductNames);
 
 // 15. Бүтээгдэхүүнүүдийг үнээр нь өсөхөөр эрэмбэлж буцаадаг функц бич. OK
 function sortByPriceAscending(products) {
@@ -597,7 +597,7 @@ function sortByPriceAscending(products) {
 }
 const resultProductsSortedByPriceAscending = sortByPriceAscending(data);
 console.log(
-  "Products Sorted By Price Ascending: ",
+  "15. Products Sorted By Price Ascending: ",
   resultProductsSortedByPriceAscending
 );
 
@@ -609,7 +609,7 @@ function getLowStockProducts(products) {
   return productsLowInStock;
 }
 const resultProductsLowInStock = getLowStockProducts(data);
-console.log("Products Low In Stock; ", resultProductsLowInStock);
+console.log("16. Products Low In Stock; ", resultProductsLowInStock);
 
 // 17. Давхардалгүй нийлүүлэгчийн нэрсийн массив буцаадаг функц бич.
 // ???????????????????????
@@ -628,7 +628,7 @@ function getUniqueSuppliers(products) {
   return uniqueSuppliers;
 }
 const resultUniqueSuppliers = getUniqueSuppliers(data);
-console.log("Array Of Unique Suppliers", resultUniqueSuppliers);
+console.log("17. Array Of Unique Suppliers", resultUniqueSuppliers);
 
 // option 1 at class
 // for (let i = 0; i < arrSuppliers.length; i++) {
@@ -650,19 +650,29 @@ function getNameAndPriceList(products) {
 }
 const resultNewArrProductsWithNameAndPrice = getNameAndPriceList(data);
 console.log(
-  "New Array Of Products With Name And Price",
+  "18. New Array Of Products With Name And Price",
   resultNewArrProductsWithNameAndPrice
 );
 
 // 19. Үнэлгээ нь 4.5-аас их бүх бүтээгдэхүүнүүдийг буцаадаг функц бич. OK
+
+// option 1
+// function getHighlyRatedProducts(products) {
+//   let highlyRatedProducts = products.filter((product) => {
+//     return product.rating > 4.5;
+//   });
+//   return highlyRatedProducts;
+// }
+// const resultHighlyRatedProducts = getHighlyRatedProducts(data);
+// console.log("Highly Rated Products", resultHighlyRatedProducts);
+
+// option 2
 function getHighlyRatedProducts(products) {
-  let highlyRatedProducts = products.filter((product) => {
-    return product.rating > 4.5;
-  });
+  let highlyRatedProducts = products.filter((product) => product.rating > 4.5);
   return highlyRatedProducts;
 }
 const resultHighlyRatedProducts = getHighlyRatedProducts(data);
-console.log("Highly Rated Products", resultHighlyRatedProducts);
+console.log("19. Highly Rated Products: ", resultHighlyRatedProducts);
 
 // 20. Бүх бүтээгдэхүүнд `id` талбар нэмж өгдөг функц бич (жишээ нь 1, 2, 3...). OK
 function addIdToProducts(products) {
@@ -675,4 +685,4 @@ function addIdToProducts(products) {
   return idAddedProducts;
 }
 const resultIdAddedProducts = addIdToProducts(data);
-console.log("Id Added Products:", resultIdAddedProducts);
+console.log("20. Id Added Products:", resultIdAddedProducts);

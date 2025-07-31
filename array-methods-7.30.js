@@ -199,6 +199,19 @@ let cars = [
     engineSize: 0,
   },
   {
+    model: "Tesla Model 3",
+    type: "Electric",
+    price: 85000000,
+    mileage: 30000,
+    brand: "Tesla",
+    year: 2021,
+    isAvailable: true,
+    fuelEfficiency: 0,
+    color: "red",
+    supplier: "E-Car Dealer",
+    engineSize: 0,
+  },
+  {
     model: "Ford Ranger",
     type: "Truck",
     price: 57000000,
@@ -247,7 +260,7 @@ function getAvailableCars(cars) {
   return availableCars;
 }
 const resultAvailableCars = getAvailableCars(cars);
-console.log("Available Cars: ", resultAvailableCars);
+console.log("1. Available Cars: ", resultAvailableCars);
 
 // 2. 2018 оноос хойш үйлдвэрлэгдсэн машинуудыг буцаадаг функц бич.
 function getRecentCars(cars) {
@@ -257,11 +270,16 @@ function getRecentCars(cars) {
   return recentCars;
 }
 const resultRecentCars = getRecentCars(cars);
-console.log("Recent Cars: ", resultRecentCars);
+console.log("2. Recent Cars: ", resultRecentCars);
 // 3. 5 саяас дээш үнэтэй машинуудыг буцаадаг функц бич.
 function getExpensiveCars(cars) {
-  // ...
+  let expensiveCars = cars.filter((car) => {
+    return car.price > 5000000;
+  });
+  return expensiveCars;
 }
+const resultExpensiveCars = getExpensiveCars(cars);
+console.log("3. Expensive Cars:", resultExpensiveCars);
 
 // 4. "Sedan" төрөлтэй машинуудыг буцаадаг функц бич.
 function getSedans(cars) {
@@ -271,7 +289,7 @@ function getSedans(cars) {
   return sedanTypeCars;
 }
 const resultSedanTypeCars = getSedans(cars);
-console.log("Sedan Type Cars: ", resultSedanTypeCars);
+console.log("4. Sedan Type Cars: ", resultSedanTypeCars);
 
 // 5. Брэндээр шүүж буцаадаг функц бич.
 function filterByBrand(cars, brandName) {
@@ -281,7 +299,7 @@ function filterByBrand(cars, brandName) {
   return carsFilteredByBrand;
 }
 const resultCarsFilteredByBrand = filterByBrand(cars, "Toyota");
-console.log("Cars Filtered By Brand: ", resultCarsFilteredByBrand);
+console.log("5. Cars Filtered By Brand: ", resultCarsFilteredByBrand);
 
 // 6. 100,000 км-ээс их явсан машинуудыг буцаадаг функц бич.
 function getHighMileageCars(cars) {
@@ -291,11 +309,11 @@ function getHighMileageCars(cars) {
   return carsWithHighMileage;
 }
 const resultCarsWithHighMileage = getHighMileageCars(cars);
-console.log("Cars With High Mileage:", resultCarsWithHighMileage);
+console.log("6. Cars With High Mileage:", resultCarsWithHighMileage);
 
 // 7. Машины түлш зарцуулалтаар fuelEfficiency талбарт `efficient: true/false` нэмдэг функц бич (5.0-аас бага бол efficient).
 function addEfficiencyFlag(cars) {
-  let carEfficiencyFlag = cars.map((car) => {
+  cars.map((car) => {
     if (car.fuelEfficiency < 5) {
       car.efficient = true;
     } else {
@@ -303,10 +321,10 @@ function addEfficiencyFlag(cars) {
     }
     return car;
   });
-  return carEfficiencyFlag;
+  return cars;
 }
 const resultCarEfficiencyFlag = addEfficiencyFlag(cars);
-console.log("Car Efficiency Flag Added: ", resultCarEfficiencyFlag);
+console.log("7. Car Efficiency Flag Added: ", resultCarEfficiencyFlag);
 
 // 8. Бүх машины үнийг 15% нэмдэг функц бич.
 function increaseCarPrices(cars) {
@@ -319,7 +337,7 @@ function increaseCarPrices(cars) {
   return carsWithIncreasedPrices;
 }
 const resultCarsWithIncreasedPrices = increaseCarPrices(cars);
-console.log("Cars With Increased Prices: ", resultCarsWithIncreasedPrices);
+console.log("8. Cars With Increased Prices: ", resultCarsWithIncreasedPrices);
 
 // 9. Шинэ талдаа (50,000 км-ээс бага явсан) машинуудыг буцаадаг функц бич.
 function getLowMileageCars(cars) {
@@ -329,7 +347,7 @@ function getLowMileageCars(cars) {
   return carsWithLowMileage;
 }
 const resultCarsWithLowMileage = getLowMileageCars(cars);
-console.log("Cars With Low Mileage: ", resultCarsWithLowMileage);
+console.log("9. Cars With Low Mileage: ", resultCarsWithLowMileage);
 
 // 10. Хамгийн бага түлш зарцуулалттай машиныг буцаадаг функц бич.
 function getMostEfficientCar(cars) {
@@ -342,7 +360,7 @@ function getMostEfficientCar(cars) {
   return mostEfficientCar;
 }
 const resultMostEfficientCar = getMostEfficientCar(cars);
-console.log("Most Efficient Car: ", resultMostEfficientCar);
+console.log("10. Most Efficient Car: ", resultMostEfficientCar);
 
 // 11. Хамгийн өндөр үнэтэй машиныг буцаадаг функц бич.
 function getMostExpensiveCar(cars) {
@@ -355,7 +373,7 @@ function getMostExpensiveCar(cars) {
   return mostExpensiveCar;
 }
 const resultMostExpensiveCar = getMostExpensiveCar(cars);
-console.log("Most Expensive Car: ", resultMostExpensiveCar);
+console.log("11. Most Expensive Car: ", resultMostExpensiveCar);
 
 // 12. Бүх машины нийлбэр mileage-г буцаадаг функц бич.
 function getTotalMileage(cars) {
@@ -366,7 +384,7 @@ function getTotalMileage(cars) {
   return sumMileage;
 }
 const resultSumMileageOfAllCars = getTotalMileage(cars);
-console.log("Total Mileage Of All Cars: ", resultSumMileageOfAllCars);
+console.log("12. Total Mileage Of All Cars: ", resultSumMileageOfAllCars);
 
 // 13. Supplier нэрээр машинуудыг шүүж буцаадаг функц бич.
 function filterBySupplier(cars, supplierName) {
@@ -376,7 +394,10 @@ function filterBySupplier(cars, supplierName) {
   return carsFilteredBySupplier;
 }
 const resultCarsFilteredBySupplier = filterBySupplier(cars, "autojapan");
-console.log("Cars Filtered By Supplier Name: ", resultCarsFilteredBySupplier);
+console.log(
+  "13. Cars Filtered By Supplier Name: ",
+  resultCarsFilteredBySupplier
+);
 
 // 14. Машины model нэрсийг массив болгож буцаадаг функц бич.
 function getCarModels(cars) {
@@ -386,7 +407,7 @@ function getCarModels(cars) {
   return arrCarModels;
 }
 const resultArrCarModels = getCarModels(cars);
-console.log("Array Of Car Models: ", resultArrCarModels);
+console.log("14. Array Of Car Models: ", resultArrCarModels);
 
 // 15. Машинуудыг үнийн өсөхөөр эрэмбэлж буцаадаг функц бич.
 function sortByPriceAscending(cars) {
@@ -397,7 +418,7 @@ function sortByPriceAscending(cars) {
 }
 const resultCarsSortedByPriceAscending = sortByPriceAscending(cars);
 console.log(
-  "Cars Sorted By Price Ascending: ",
+  "15. Cars Sorted By Price Ascending: ",
   resultCarsSortedByPriceAscending
 );
 
@@ -409,27 +430,42 @@ function getLargeEngineCars(cars) {
   return carsWithLargeEngine;
 }
 const resultCarsWithLargeEngine = getLargeEngineCars(cars);
-console.log("Cars With Large Engine: ", resultCarsWithLargeEngine);
+console.log("17. Cars With Large Engine: ", resultCarsWithLargeEngine);
 
 // 17. Давхардалгүй брэндийн нэрсийг массив болгон буцаадаг функц бич.
+
+// option 2 at class
 function getUniqueBrands(cars) {
   let arrCarBrands = cars.map((car) => {
     return car.brand;
   });
-  let uniqueBrands = [];
+  let uniqueBrands = {};
   arrCarBrands.forEach((brand) => {
-    if (uniqueBrands.includes(brand)) {
-    } else {
-      uniqueBrands.push(brand);
-    }
+    uniqueBrands[brand] = true;
   });
-  return uniqueBrands;
+  return Object.keys(uniqueBrands);
 }
 const resultUniqueBrands = getUniqueBrands(cars);
-console.log("Array Of Unique Brands: ", resultUniqueBrands);
+console.log("17. Unique Brands: ", resultUniqueBrands);
+
+// option 1 at home
+// function getUniqueBrands(cars) {
+//   let arrCarBrands = cars.map((car) => {
+//     return car.brand;
+//   });
+//   let uniqueBrands = [];
+//   arrCarBrands.forEach((brand) => {
+//     if (uniqueBrands.includes(brand)) {
+//     } else {
+//       uniqueBrands.push(brand);
+//     }
+//   });
+//   return uniqueBrands;
+// }
+// const resultUniqueBrands = getUniqueBrands(cars);
+// console.log("Array Of Unique Brands: ", resultUniqueBrands);
 
 // 18. Зөвхөн model ба year талбартай шинэ массив үүсгэдэг функц бич.
-// 1 field hasay gvel tuhan field bhgui object dahij zohiono
 function getModelAndYearList(cars) {
   let arrCarsWithModelAndYear = cars.map((car) => {
     return {
@@ -441,32 +477,45 @@ function getModelAndYearList(cars) {
 }
 const resultArrCarsWithModelAndYear = getModelAndYearList(cars);
 console.log(
-  "Array Of Cars With Model And Year: ",
+  "18. Array Of Cars With Model And Year: ",
   resultArrCarsWithModelAndYear
 );
 
 // 19. 4.0-с бага fuel efficiency-тай машинуудыг "super efficient" гэж тэмдэглэдэг функц бич.
+
+// option 2
 function tagSuperEfficientCars(cars) {
-  let carsTaggedWithSuperEfficient = cars.map((car) => {
-    if (car.fuelEfficiency <= 4) {
-      return {
-        ...car,
-        superEfficient: true,
-      };
-    } else if (car.fuelEfficiency > 4) {
-      return {
-        ...car,
-        superEfficient: false,
-      };
-    }
-  });
-  return carsTaggedWithSuperEfficient;
+  let carsFilteredByEfficiency = cars
+    .filter((car) => car.fuelEfficiency < 4)
+    .map((car) => {
+      return { ...car, tag: "super efficient" };
+    });
+  return carsFilteredByEfficiency;
 }
 const resultCarsTaggedWithSuperEfficient = tagSuperEfficientCars(cars);
 console.log(
-  "Cars Tagged With Super Efficient: ",
+  "19. Cars Tagged With Super Efficient: ",
   resultCarsTaggedWithSuperEfficient
 );
+
+// option 1 at class
+// function tagSuperEfficientCars(cars) {
+//   let filteredCars = cars.filter((car) => {
+//     return car.fuelEfficiency < 4;
+//   });
+//   filteredCars.map((superEfficientCar) => {
+//     return {
+//       ...superEfficientCar,
+//       superEfficient: true,
+//     };
+//   });
+//   return filteredCars;
+// }
+// const resultCarsTaggedWithSuperEfficient = tagSuperEfficientCars(cars);
+// console.log(
+//   "19. Cars Tagged With Super Efficient: ",
+//   resultCarsTaggedWithSuperEfficient
+// );
 
 // 20. Бүх машинд `id` талбар нэмдэг функц бич (1-с эхэлнэ).
 function addIdToCars(cars) {
@@ -479,4 +528,4 @@ function addIdToCars(cars) {
   return carsWithAddedId;
 }
 const resultCarsWithAddedId = addIdToCars(cars);
-console.log("Cars With Added Id: ", resultCarsWithAddedId);
+console.log("20. Cars With Added Id: ", resultCarsWithAddedId);
