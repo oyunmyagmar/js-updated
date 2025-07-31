@@ -77,35 +77,22 @@ let cars = [
     supplier: "AutoJapan",
     engineSize: 2.4,
   },
-  {
-    model: "Hyundai Sonata",
-    type: "Sedan",
-    price: 29000000,
-    mileage: 95000,
-    brand: "Hyundai",
-    year: 2017,
-    isAvailable: false,
-    fuelEfficiency: 6.5,
-    color: "silver",
-    supplier: "AutoJapan",
-    engineSize: 2.4,
-  },
 ];
 
 // 19. 4.0-с бага fuel efficiency-тай машинуудыг "super efficient" гэж тэмдэглэдэг функц бич.
 
-// option 1 at class
+// option 1
 function tagSuperEfficientCars(cars) {
-  let filteredCars = cars.filter((car) => {
+  let filteredSuperEfficientCars = cars.filter((car) => {
     return car.fuelEfficiency < 4;
   });
-  filteredCars.map((superEfficientCar) => {
+  filteredSuperEfficientCars.map((superEfficientCar) => {
     return {
       ...superEfficientCar,
       tag: "super efficient",
     };
   });
-  return filteredCars;
+  return filteredSuperEfficientCars;
 }
 const resultCarsTaggedWithSuperEfficient = tagSuperEfficientCars(cars);
 console.log(
@@ -126,4 +113,19 @@ const resultCarsTaggedWithSuperEfficient1 = tagSuperEfficientCars1(cars);
 console.log(
   "19. Cars Tagged With Super Efficient1: ",
   resultCarsTaggedWithSuperEfficient1
+);
+
+// option 3 -> ???huvisagch zarlaj return hiih shardlaga bhgui???
+function tagSuperEfficientCars2(cars) {
+  cars.map((car) => {
+    if (car.fuelEfficiency < 4) {
+      car.tag = "super efficient";
+    }
+  });
+  return cars;
+}
+const resultCarsTaggedWithSuperEfficient2 = tagSuperEfficientCars2(cars);
+console.log(
+  "19. Cars Tagged With Super Efficient2: ",
+  resultCarsTaggedWithSuperEfficient2
 );
