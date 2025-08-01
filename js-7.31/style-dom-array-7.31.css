@@ -12,13 +12,14 @@
 .card_img {
 }
 .carImg {
-  object-fit: contain;
+  object-fit: cover;
+  width: 530px;
   height: 100%;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 .card_text {
-  width: 530px;
+  width: 340px;
   height: 360px;
   padding: 20px;
   padding-top: 24px;
@@ -42,7 +43,13 @@
 }
 .carYear {
 }
-.carYear {
+.carDetails {
+  display: flex;
+  gap: 5px;
+  color: rgb(119, 119, 119);
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 18px;
 }
 .carMileage {
 }

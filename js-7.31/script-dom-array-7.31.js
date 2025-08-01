@@ -12,7 +12,7 @@ let cars = [
     supplier: "AutoJapan",
     engineSize: 1.8,
     image:
-      "https://media.ed.edmunds-media.com/honda/civic/2026/oem/2026_honda_civic_sedan_si_fq_oem_1_815.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Toyota_Prius_2016_%282%29.jpg/960px-Toyota_Prius_2016_%282%29.jpg",
   },
   {
     model: "Honda Civic",
@@ -27,7 +27,7 @@ let cars = [
     supplier: "CityMotors",
     engineSize: 2.0,
     image:
-      "https://media.ed.edmunds-media.com/honda/civic/2026/oem/2026_honda_civic_sedan_si_fq_oem_1_815.jpg",
+      "https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/ca8eb969-b7e6-4b99-8a2f-94c76583f31c/23b0d0d6-14d4-490c-8bcb-5dbe55b15666.png",
   },
   {
     model: "Tesla Model 3",
@@ -42,7 +42,7 @@ let cars = [
     supplier: "E-Car Dealer",
     engineSize: 0,
     image:
-      "https://media.ed.edmunds-media.com/honda/civic/2026/oem/2026_honda_civic_sedan_si_fq_oem_1_815.jpg",
+      "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/driveau/upload/cms/uploads/NhM3iXT7RZOIckqmuxJX",
   },
   {
     model: "Ford Ranger",
@@ -56,8 +56,7 @@ let cars = [
     color: "black",
     supplier: "MongolAuto",
     engineSize: 3.2,
-    image:
-      "https://media.ed.edmunds-media.com/honda/civic/2026/oem/2026_honda_civic_sedan_si_fq_oem_1_815.jpg",
+    image: "https://cms-i.autodaily.vn/du-lieu/2018/01/14/ford-ranger-5.jpg",
   },
   {
     model: "Hyundai Sonata", //
@@ -72,7 +71,7 @@ let cars = [
     sufpplier: "AutoJapan",
     engineSize: 2.4, //
     image:
-      "https://media.ed.edmunds-media.com/honda/civic/2026/oem/2026_honda_civic_sedan_si_fq_oem_1_815.jpg",
+      "https://pictures.dealer.com/r/reliablehyundaivtg/0525/cd3cfd49ccfb0b4b1e92a6fb0106279ax.jpg",
   },
 ];
 
@@ -94,17 +93,25 @@ cars.map((car) => {
     carNamePTags + '<p class="carName">' + car.model + "," + "</p>";
   carNamePTags = carNamePTags + '<p class="carYear">' + car.year + "</p>";
   carNamePTags = carNamePTags + "</div>";
+
+  carNamePTags = carNamePTags + '<div class="carDetails">';
   carNamePTags =
-    carNamePTags + '<p class="carMileage">' + car.mileage + " км" + "</p>";
+    carNamePTags +
+    '<p class="carMileage">' +
+    car.mileage +
+    " км" +
+    "*" +
+    "</p>";
   carNamePTags =
     carNamePTags + '<p class="carEngineSize">' + car.engineSize + " л" + "</p>";
-
   carNamePTags =
     carNamePTags +
     '<p class="carFuelEfficiency">' +
     car.fuelEfficiency +
     " сс" +
     "</p>";
+  carNamePTags = carNamePTags + "</div>";
+
   carNamePTags = carNamePTags + "</div>";
 
   carNamePTags = carNamePTags + "</div>";
