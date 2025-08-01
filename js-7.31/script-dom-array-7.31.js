@@ -2,7 +2,7 @@ let cars = [
   {
     model: "Toyota Prius",
     type: "Hybrid",
-    price: 35000000,
+    price: 35,
     mileage: 120000,
     brand: "Toyota",
     year: 2016,
@@ -17,7 +17,7 @@ let cars = [
   {
     model: "Honda Civic",
     type: "Sedan",
-    price: 32000000,
+    price: 32,
     mileage: 85000,
     brand: "Honda",
     year: 2018,
@@ -32,7 +32,7 @@ let cars = [
   {
     model: "Tesla Model 3",
     type: "Electric",
-    price: 85000000,
+    price: 85,
     mileage: 30000,
     brand: "Tesla",
     year: 2021,
@@ -47,7 +47,7 @@ let cars = [
   {
     model: "Ford Ranger",
     type: "Truck",
-    price: 57000000,
+    price: 57,
     mileage: 110000,
     brand: "Ford",
     year: 2019,
@@ -61,7 +61,7 @@ let cars = [
   {
     model: "Hyundai Sonata", //
     type: "Sedan", //
-    price: 29000000, //
+    price: 29, //
     mileage: 95000, //
     brand: "Hyundai", //
     year: 2017, //
@@ -96,12 +96,7 @@ cars.map((car) => {
 
   carNamePTags = carNamePTags + '<div class="carDetails">';
   carNamePTags =
-    carNamePTags +
-    '<p class="carMileage">' +
-    car.mileage +
-    " км" +
-    "*" +
-    "</p>";
+    carNamePTags + '<p class="carMileage">' + car.mileage + " км" + "</p>";
   carNamePTags =
     carNamePTags + '<p class="carEngineSize">' + car.engineSize + " л" + "</p>";
   carNamePTags =

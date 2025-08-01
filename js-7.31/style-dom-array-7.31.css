@@ -1,8 +1,7 @@
 .card {
   width: 870px;
   height: 360px;
-  box-shadow: 0, 0, 8px, 0, rgb(0, 0, 0, 0.12);
-  border: 1px solid black;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   margin-bottom: 24px;
   display: flex;
@@ -33,15 +32,21 @@
   font-size: 20px;
   line-height: 24px;
   color: rgb(0, 0, 0);
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
 .carNameAndYear {
   display: flex;
   font-size: 20px;
   line-height: 26px;
+  margin: 0;
 }
 .carName {
+  margin: 0;
 }
 .carYear {
+  margin: 0;
 }
 .carDetails {
   display: flex;
@@ -50,10 +55,14 @@
   margin-bottom: 4px;
   font-size: 14px;
   line-height: 18px;
+  height: 20px;
 }
 .carMileage {
+  margin: 0;
 }
 .carEngineSize {
+  margin: 0;
 }
 .carFuelEfficiency {
+  margin: 0;
 }
