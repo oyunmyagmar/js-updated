@@ -6,7 +6,7 @@
 //2 *  ** 2 - 2
 //1 *****
 
-console.log("ver1");
+console.log("ver0");
 
 let size = 5;
 let row = size;

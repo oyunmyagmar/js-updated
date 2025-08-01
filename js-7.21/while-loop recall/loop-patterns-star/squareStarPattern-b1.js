@@ -6,7 +6,7 @@
 //2 *****
 //1 *****
 
-console.log("ver1");
+console.log("ver0");
 
 let size = 5;
 let row = size;
@@ -31,7 +31,7 @@ while (row > 0) {
 //3 *****
 //4 *****
 
-console.log("ver2");
+console.log("ver1");
 
 let size1 = 5;
 let roww = 0;
