@@ -80,10 +80,10 @@ const carListDiv = document.getElementById("car-list");
 let carNamePTags = "";
 
 cars.map((car) => {
-  carNamePTags = carNamePTags + '<div class="card">';
+  carNamePTags ``= carNamePTags + '<div class="card">';
 
-  carNamePTags = carNamePTags + '<div class="card_img">'; //   "" //   '' //   ``
-  carNamePTags = carNamePTags + `<img class="carImg" src="${car.image}">`;
+  carNamePTags = carNamePTags + '<div class="card_img">'; //   "" //   '' //   `back-ticks` -> string dund huvisagch nemehed or ashiglahad
+  carNamePTags = carNamePTags + `<img class="carImg" src="${car.image}">`; // ${} -> string dotor variable oruulahad
   carNamePTags = carNamePTags + "</div>";
 
   carNamePTags = carNamePTags + '<div class="card_text">';
