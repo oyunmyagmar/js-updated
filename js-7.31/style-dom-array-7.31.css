@@ -7,28 +7,40 @@
   margin-bottom: 24px;
   display: flex;
   background-color: rgb(255, 255, 255);
-  margin: 0;
-  padding: 0;
   font-family: "Roboto";
 }
 .card_img {
 }
 .carImg {
   object-fit: contain;
-  height: 365px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 .card_text {
-  width: 340px;
+  width: 530px;
   height: 360px;
+  padding: 20px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+  justify-content: flex-start;
 }
 .carPrice {
   font-size: 20px;
   line-height: 24px;
   color: rgb(0, 0, 0);
 }
+.carNameAndYear {
+  display: flex;
+  font-size: 20px;
+  line-height: 26px;
+}
 .carName {
+}
+.carYear {
 }
 .carYear {
 }
