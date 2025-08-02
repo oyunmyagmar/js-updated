@@ -1,32 +1,4 @@
 // 9. Mirrored Right Triangle Star Pattern
-//  54321
-//5     *
-//4    **
-//3   ***
-//2  ****
-//1 *****
-
-console.log("ver0");
-
-let size = 5;
-let row = size;
-
-while (row > 0) {
-  let column = size;
-  let stars = "";
-
-  while (column > 0) {
-    if (column <= size - row + 1) {
-      stars = stars + "*";
-    } else {
-      stars = stars + " ";
-    }
-    column = column - 1;
-  }
-  console.log(stars);
-  row = row - 1;
-}
-
 //  01234
 //0     * 0-4
 //1    ** 1-3
@@ -34,25 +6,23 @@ while (row > 0) {
 //3  **** 3-1
 //4 ***** 4-0
 
-console.log("ver1");
+let size = 5;
+let row = 0;
 
-let size1 = 5;
-let roww = 0;
-
-while (roww < size1) {
-  let columnn = 0;
+while (row < size) {
+  let column = 0;
   let stars = "";
 
-  while (columnn < size1) {
-    if (columnn >= size1 - 1 - roww) {
+  while (column < size) {
+    if (column >= size - 1 - row) {
       stars = stars + "*";
     } else {
       stars = stars + " ";
     }
-    columnn = columnn + 1;
+    column = column + 1;
   }
   console.log(stars);
-  roww = roww + 1;
+  row = row + 1;
 }
 
 //  01234

@@ -120,6 +120,65 @@ while (row > 0) {
 }
 // end of - Hollow Square Star Pattern with LEFT Diagonal
 
+// 11. Inverted Right Triangle Star Pattern
+//  54321
+//5 *****
+//4 ****
+//3 ***
+//2 **
+//1 *
+
+// option 1
+let s11Size = 5;
+let s11row = s11Size;
+while (s11row > 0) {
+  let s11column = s11Size;
+  let s11Result = "";
+  while (s11column > 0) {
+    if (s11column <= s11row) {
+      s11Result = s11Result + "*";
+    }
+    s11column = s11column - 1;
+  }
+  console.log(s11Result);
+  s11row = s11row - 1;
+}
+
+// option 2
+let sp11Size = 5;
+let sp11row = sp11Size;
+while (sp11row > 0) {
+  let sp11column = sp11row;
+  let sp11Result = "";
+  while (sp11column > 0) {
+    sp11Result = sp11Result + "*";
+    sp11column = sp11column - 1;
+  }
+  console.log(sp11Result);
+  sp11row = sp11row - 1;
+}
+
+// option 3
+//  12345
+//1 ***** 1-5
+//2 ****  2-4
+//3 ***   3-3
+//4 **    4-2
+//5 *     5-1
+
+let size11 = 5;
+let row11 = 1;
+while (row11 <= size11) {
+  let column11 = 1;
+  let Result11 = "";
+  while (column11 <= size11 - row11 + 1) {
+    Result11 = Result11 + "*";
+    column11 = column11 + 1;
+  }
+  console.log(Result11);
+  row11 = row11 + 1;
+}
+
 // 9. Mirrored Right Triangle Star Pattern
 //  12345
 //1 ----* 1-4
@@ -155,125 +214,3 @@ while (sp9row <= sp9size) {
 // --***
 // -****
 // *****
-
-// 11. Inverted Right Triangle Star Pattern
-//  54321
-//5 *****
-//4 ****
-//3 ***
-//2 **
-//1 *
-
-// option 1
-let s11Size = 5;
-let s11row = s11Size;
-while (s11row > 0) {
-  let s11column = s11Size;
-  let s11Result = "";
-  while (s11column > 0) {
-    if (s11column <= s11row) {
-      s11Result = s11Result + "*";
-    }
-    s11column = s11column - 1;
-  }
-  console.log(s11Result);
-  s11row = s11row - 1;
-}
-// *5*4*3*2*1
-// *4*3*2*1
-// *3*2*1
-// *2*1
-// *1
-
-// option 2
-let sp11Size = 5;
-let sp11row = sp11Size;
-while (sp11row > 0) {
-  let sp11column = sp11row;
-  let sp11Result = "";
-  while (sp11column > 0) {
-    sp11Result = sp11Result + "*";
-    sp11column = sp11column - 1;
-  }
-  console.log(sp11Result);
-  sp11row = sp11row - 1;
-}
-// *5*4*3*2*1
-// *4*3*2*1
-// *3*2*1
-// *2*1
-// *1
-
-// option 3
-//  12345
-//1 ***** 1-5
-//2 ****  2-4
-//3 ***   3-3
-//4 **    4-2
-//5 *     5-1
-
-let size11 = 5;
-let row11 = 1;
-while (row11 <= size11) {
-  let column11 = 1;
-  let Result11 = "";
-  while (column11 <= size11 - row11 + 1) {
-    Result11 = Result11 + "*";
-    column11 = column11 + 1;
-  }
-  console.log(Result11);
-  row11 = row11 + 1;
-}
-// *1*2*3*4*5
-// *1*2*3*4
-// *1*2*3
-// *1*2
-// *1
-
-// 4. Rhombus Star Pattern
-//  54321
-//5 ----*****
-//4 ---*****
-//3 --*****
-//2 -*****
-//1 *****
-
-let sp4Size = 5;
-let sp4row = sp4Size;
-while (sp4row > 0) {
-  let sp4column = sp4Size;
-  let sp4Result = "";
-  while (sp4column > 0) {
-    if (sp4column > sp4Size - sp4row + 1) {
-      sp4Result = sp4Result + "-";
-    }
-    // else {
-    //   sp4Result = sp4Result + "*";
-    // }
-    sp4column = sp4column - 1;
-  }
-
-  while (sp4column > 0) {
-    sp4Result = sp4Result + "*";
-    sp4column = sp4column - 1;
-  }
-  console.log(sp4Result);
-  sp4row = sp4row - 1;
-}
-// let sp4Size = 5;
-// let sp4row = sp4Size;
-// while (sp4row > 0) {
-//   let sp4column = sp4Size;
-//   let sp4Result = "";
-//   while (sp4column + sp4Size > 0) {
-//     if (sp4column <= sp4row) {
-//       sp4Result = sp4Result + "*";
-//     } else {
-//       sp4Result = sp4Result + " ";
-//     }
-
-//     sp4column = sp4column - 1;
-//   }
-//   console.log(sp4Result);
-//   sp4row = sp4row - 1;
-// }

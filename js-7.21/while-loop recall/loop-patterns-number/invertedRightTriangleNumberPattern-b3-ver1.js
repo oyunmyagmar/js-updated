@@ -6,16 +6,19 @@
 //4 12
 //5 1
 
-let size = 5;
-let row = 1;
+let sizes = 5;
+let rows = 1;
 
-while (row <= size) {
+while (rows <= sizes) {
   let column = 1;
   let stars = "";
-  while (column <= size - row + 1) {
-    stars = stars + column;
+
+  while (column <= sizes) {
+    if (column <= sizes - rows + 1) {
+      stars = stars + column;
+    }
     column = column + 1;
   }
   console.log(stars);
-  row = row + 1;
+  rows = rows + 1;
 }
