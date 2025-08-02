@@ -11,14 +11,14 @@ let rows = 1;
 
 while (rows <= sizes) {
   let column = 1;
-  let stars = "";
+  let numbers = "";
 
   while (column <= sizes) {
     if (column <= sizes - rows + 1) {
-      stars = stars + column;
+      numbers = numbers + column;
     }
     column = column + 1;
   }
-  console.log(stars);
+  console.log(numbers);
   rows = rows + 1;
 }

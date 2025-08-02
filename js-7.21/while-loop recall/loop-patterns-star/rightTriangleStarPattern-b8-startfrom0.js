@@ -14,7 +14,9 @@ while (row < size) {
   let stars = "";
 
   while (column < size) {
-    stars = stars + "*";
+    if (column <= row) {
+      stars = stars + "*";
+    }
     column = column + 1;
   }
   console.log(stars);

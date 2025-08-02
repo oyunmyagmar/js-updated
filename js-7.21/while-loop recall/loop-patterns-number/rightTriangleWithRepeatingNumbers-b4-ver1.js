@@ -1,9 +1,10 @@
-// 1. Rectangle Number Pattern
+// 4. Right Triangle with Repeating Numbers
 // 12345
-// 12345
-// 12345
-// 12345
-// 12345
+// 1
+// 22
+// 333
+// 4444
+// 55555
 
 let size = 5;
 let row = 1;
@@ -11,8 +12,11 @@ let row = 1;
 while (row <= size) {
   let column = 1;
   let numbers = "";
+
   while (column <= size) {
-    numbers = numbers + column;
+    if (column <= row) {
+      numbers = numbers + row;
+    }
     column = column + 1;
   }
   console.log(numbers);

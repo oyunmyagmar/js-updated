@@ -1,9 +1,9 @@
-// 1. Rectangle Number Pattern
-// 12345
-// 12345
-// 12345
-// 12345
-// 12345
+// 2. Right Triangle Number Pattern
+//1 1
+//2 12
+//3 123
+//4 1234
+//5 12345
 
 let size = 5;
 let row = 1;
@@ -11,8 +11,11 @@ let row = 1;
 while (row <= size) {
   let column = 1;
   let numbers = "";
+
   while (column <= size) {
-    numbers = numbers + column;
+    if (column <= row) {
+      numbers = numbers + column;
+    }
     column = column + 1;
   }
   console.log(numbers);
