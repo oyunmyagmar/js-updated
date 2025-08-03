@@ -7,15 +7,17 @@ let students = [
   { name: "zulaa", age: 38, grade: 70, balance: 3500, gender: "female" },
 ];
 
-// find oldest student
-function findOldestStudent(arr) {
-  let oldestStudent = arr[0];
+// bodlogo 5
+// buh suragch object deer gender gesen property nem, "male" esvel "female" gesen utga ug
+// eregtei suragchdiig tooldog function ug
+function countMaleStudents(arr) {
+  let count = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (oldestStudent.age < arr[i].age) {
-      oldestStudent = arr[i];
+    if (arr[i].gender == "male") {
+      count++;
     }
   }
-  return oldestStudent;
+  return count;
 }
-let resultOldestStudent = findOldestStudent(students);
-console.log("Oldest student: ", resultOldestStudent);
+let resultMaleStudentsCount = countMaleStudents(students);
+console.log("5. Count of male students:", resultMaleStudentsCount);

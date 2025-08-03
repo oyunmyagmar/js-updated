@@ -7,21 +7,19 @@ let students = [
   { name: "zulaa", age: 38, grade: 70, balance: 3500, gender: "female" },
 ];
 
-// bodlogo6
-// emegtei suragch niit suragchdiin heden huvi baigaag tootsdog function bich
-function findPercentageFemaleStudents(arr) {
+// bodlogo 4
+// nasand hursen suragchdiin dundaj balance -iig oldog function bich
+function findAvgBalanceOfAdultStudents(arr) {
+  let sumBalanceAdults = 0;
   let count = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i].gender == "female") {
+    if (arr[i].age >= 18) {
+      sumBalanceAdults += arr[i].balance;
       count++;
     }
   }
-  let femaleStudentsPercentage = (count / arr.length) * 100;
-  return femaleStudentsPercentage;
+  let avgBalanceAdults = sumBalanceAdults / count;
+  return avgBalanceAdults;
 }
-let resultFemaleStudentsPercentage = findPercentageFemaleStudents(students);
-console.log(
-  "Percentage of female students: ",
-  resultFemaleStudentsPercentage,
-  "%"
-);
+let resultAvgBalanceAdults = findAvgBalanceOfAdultStudents(students);
+console.log("4.Average balance of adult students: ", resultAvgBalanceAdults);

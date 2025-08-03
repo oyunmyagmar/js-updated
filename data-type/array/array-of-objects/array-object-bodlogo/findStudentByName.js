@@ -7,15 +7,13 @@ let students = [
   { name: "zulaa", age: 38, grade: 70, balance: 3500, gender: "female" },
 ];
 
-// find oldest student
-function findOldestStudent(arr) {
-  let oldestStudent = arr[0];
+// findStudentByName function bich
+function findStudentByName(arr, name) {
   for (let i = 0; i < arr.length; i++) {
-    if (oldestStudent.age < arr[i].age) {
-      oldestStudent = arr[i];
+    if (arr[i].name === name) {
+      return arr[i];
     }
   }
-  return oldestStudent;
 }
-let resultOldestStudent = findOldestStudent(students);
-console.log("Oldest student: ", resultOldestStudent);
+let resultStudentFilteredByName = findStudentByName(students, "zulaa");
+console.log("Student filtered by NAME: ", resultStudentFilteredByName);

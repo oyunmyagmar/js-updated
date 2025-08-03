@@ -7,15 +7,15 @@ let students = [
   { name: "zulaa", age: 38, grade: 70, balance: 3500, gender: "female" },
 ];
 
-// find oldest student
-function findOldestStudent(arr) {
-  let oldestStudent = arr[0];
+// bodlogo 3
+// buh suragchdiin dundaj nas oldog function bich
+function findAverageAge(arr) {
+  let sumAge = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (oldestStudent.age < arr[i].age) {
-      oldestStudent = arr[i];
-    }
+    sumAge = sumAge + arr[i].age;
   }
-  return oldestStudent;
+  let averageAge = sumAge / arr.length;
+  return averageAge;
 }
-let resultOldestStudent = findOldestStudent(students);
-console.log("Oldest student: ", resultOldestStudent);
+let resultAverageAge = findAverageAge(students);
+console.log("3. Average age: ", resultAverageAge);
