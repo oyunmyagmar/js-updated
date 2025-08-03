@@ -10,15 +10,15 @@ let size = 5;
 let row = size;
 
 while (row > 0) {
-  let column = size;
   let stars = "";
+  let emptyAddedBefore = row - 1;
 
-  //   while (column > 0) {
-  //     if (column > size - row + 1) {
-  //       stars = stars + "-";
-  //     }
-  //     column = column - 1;
-  //   }
+  while (emptyAddedBefore > 0) {
+    stars = stars + " ";
+    emptyAddedBefore = emptyAddedBefore - 1;
+  }
+  let column = size;
+
   while (column > 0) {
     stars = stars + "*";
     column = column - 1;
