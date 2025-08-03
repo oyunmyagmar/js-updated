@@ -1,108 +1,33 @@
-// command var -iig ashiglahgui yavah // let bolon var scope -iin yalgatai
-// const - react deer ashiglagdana // uurchlugduj boldoggui huvisagchiig
-
 // console.log() ni hugjuulelt hiih yavtsad minii huvisagch yamar bolj huvirch ve gedgiig harah zorilgotoi
 // tiimd function dotor console.log() bichih ni utgagui
 // console.log() -doj ur dungee harah zorilgotoi
 
+// function -ng ingej bichij bolno
 function sayHello() {
   return "Hello World";
 }
-// huvisagch dotor function bj bolno // function ingej bichih
+console.log(sayHello());
+
+// mun function -ng doorhtoi adil bichij bolno
+// sayHello1 -iin ungu ni shar bn -> function
+// () => {} ene bichiglel ni uuruu function -ng ilerhiilj bga
+// huvisagch dotor function bj bolno
 let sayHello1 = () => {
   return "Hello World 1";
 };
+console.log(sayHello1());
+
 // function hezee ch uurchlugduhgui uchir let bish const gj bichne
 const sayHello2 = () => {
   return "Hello World 2";
 };
-console.log(sayHello());
-console.log(sayHello1());
 console.log(sayHello2());
 
 // age -iin huvid daraa jil gehed uurchlugduh uchraas let -eer yavahad bolno
-let age = () => {
-  return 16;
-};
-console.log(age());
+let age = 16;
 
 // hezee ch uurlugduhgui huvisagch -iig const -aar zarlaj bolno
 const PI = 3.14;
-
-// 7.24 -nii object-array bodlogo let -iig const -aar bichih
-let students = [
-  { name: "boldo", age: 20, grade: 80, balance: 1500, gender: "male" },
-  { name: "boldo", age: 40, grade: 40, balance: 150000, gender: "male" },
-  { name: "dorjo", age: 15, grade: 30, balance: 1000, gender: "male" },
-  { name: "zulaa", age: 28, grade: 90, balance: 35000, gender: "female" },
-  { name: "tsetsgee", age: 30, grade: 100, balance: 27700, gender: "female" },
-  { name: "bata", age: 10, grade: 50, balance: 17000, gender: "male" },
-  { name: "zulaa", age: 18, grade: 60, balance: 3500, gender: "female" },
-  { name: "zulaa", age: 38, grade: 70, balance: 103500, gender: "female" },
-];
-
-// бодлого 3
-// бүх сурагчдийн дундаж нас олдог function бич
-const findAgeAvg = (students) => {
-  let sum = 0;
-  for (i = 0; i < students.length; i++) {
-    sum = sum + students[i].age;
-  }
-  let average = sum / students.length;
-  return average;
-};
-// door studentAverageAge variable yagaad const bj boloh ve gvel:
-// student age uurchlugduhud ene muriig dahij shineer unshina,
-// tegehed dahij ene huvisagch shineer zarlagadad run code hiij bga blohoor
-const studentsAverageAge = findAgeAvg(students);
-console.log("Average age of students: ", studentsAverageAge);
-
-// бодлого 4
-// насанд хүрсэн сурагчийн дундаж balance-ийг олдог function бич
-const findAvgBalanceAdultStudents = (arr) => {
-  let sumBalanceAdults = 0;
-  let count = 0;
-  for (i = 0; i < arr.length; i++) {
-    if (arr[i].age >= 18) {
-      sumBalanceAdults += arr[i].balance;
-      count++;
-    }
-  }
-  return sumBalanceAdults / count;
-};
-const adultStudentsAvgBalance = findAvgBalanceAdultStudents(students);
-console.log("Average balance of adult students = ", adultStudentsAvgBalance);
-
-// бодлого 5
-// бүх сурагч object дээр gender гэсэн property нэм, 'male' эсвэл 'female' гэсэн утга өг
-// эрэгтэй сурагчдыг тоолдог function бич
-const countMaleStudents = (arr) => {
-  let count = 0;
-  for (i = 0; i < arr.length; i++) {
-    if (arr[i].gender === "male") {
-      count++;
-    }
-  }
-  return count;
-};
-const maleStudentsCount = countMaleStudents(students);
-// developer -uud nershilees ni haraad daraah baidlaar oilgono
-// maleStudentsCount -iig too bn, countMaleStudents -iig function bn gj
-console.log("Count of male students: ", maleStudentsCount);
-
-// бодлого 6
-// эмэгтэй сурагч нийт сурагчийн хэдэн хувь байгааг тооцдог function бич
-const calculatePercentageFemaleStudents = (students) => {
-  let count = 0;
-  for (i = 0; i < students.length; i++) {
-    if (students[i].gender === "female") {
-      count++;
-    }
-  }
-  return (count / students.length) * 100;
-};
-const femaleStudentsPercentage = calculatePercentageFemaleStudents(students);
-console.log("Percentage of female students = ", femaleStudentsPercentage, "%");
 
 // 7.25 bodlogo endees ehelj bgaa
 let animals = [
@@ -144,6 +69,17 @@ const find4LeggedAnimals = (aasd) => {
 };
 const filteredAnimals = find4LeggedAnimals(animals);
 console.log("4 Legged animals", filteredAnimals);
+
+let students = [
+  { name: "boldo", age: 20, grade: 80, balance: 1500, gender: "male" },
+  { name: "boldo", age: 40, grade: 40, balance: 150000, gender: "male" },
+  { name: "dorjo", age: 15, grade: 30, balance: 1000, gender: "male" },
+  { name: "zulaa", age: 28, grade: 90, balance: 35000, gender: "female" },
+  { name: "tsetsgee", age: 30, grade: 100, balance: 27700, gender: "female" },
+  { name: "bata", age: 10, grade: 50, balance: 17000, gender: "male" },
+  { name: "zulaa", age: 18, grade: 60, balance: 3500, gender: "female" },
+  { name: "zulaa", age: 38, grade: 70, balance: 103500, gender: "female" },
+];
 
 // Бодлого 1
 // Өгөгдсөн сурагчдын жагсаалтаас хамгийн бага оноотой сурагчийг олж буцаадаг функц бич.
