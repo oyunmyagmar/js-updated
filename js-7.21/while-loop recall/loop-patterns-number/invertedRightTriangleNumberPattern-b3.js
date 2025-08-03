@@ -12,6 +12,7 @@ let row = 1;
 while (row <= size) {
   let column = 1;
   let numbers = "";
+
   while (column <= size - row + 1) {
     numbers = numbers + column;
     column = column + 1;
