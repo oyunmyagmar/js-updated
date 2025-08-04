@@ -148,3 +148,22 @@ console.log(a + b);
 
 // node_modules -aa ustgaad -> dahiad install hihde npm i gehed bolno
 // node_modules dotroos 1 -iig ni ustgay gvel package.json -nii "dependencies" -ees bas ustgaj uguh yostoi
+
+// package -aa sulgahad gol zuil ni package.json deeree zaval 1 bairshiltai bh yostoi
+// ls hiiged harval package.json gdeg heseg garch irj bh yostoi
+// hrev package.json uur folder -t bgad bid ter folder -t oroogui bol -> npm install hiihed aldaa garna
+
+// lodash suulgaj uzye <- ih ashiglagddag
+// lodash ni uursin gsen site -tai -> ih hugjsun uchras
+// array der ashiglaj bloh, date der ashiglaj bloh g.m
+// js -iin belen bdag method -uudiig bur nariivchlan beldsen gsn ug
+
+// zarim package ajiilahgui bh tohioldol
+// react -> frontend der ashiglah framework
+// express -> backend der ashiglah framework
+// debug -> aldaa garval bug -aa haidag zuil
+// react-dom -> zuvhun react der l ashiglagdana <- dangar ni ashiglaj chadahgui gsn ug, zaval react -tai bj ashiglana
+
+// nodejs -iin command -aa ashiglad 3 bodlogo bodyo
+
+// leetcode -> Testcase -> nemeh der darval ijil logic -oor uursduu case zohioj nemeed ajilluulj bolno
