@@ -48,7 +48,7 @@ console.log(a + b);
 // zaavar garch irne -> yaj herhen sulgah ve?
 // install gsen command -iig huulad vscode terminal deeree paste hij bolno
 // esvel terminal deeree npm i packageName bichij bolno -> i ni install -iin tovchlol
-// amjilttai install hisen node modules gsn zuil uusne
+// amjilttai install hisen node_modules gsn zuil uusne
 // mun package-lock.json file garch irsen bh yostoi
 
 // install dussan bol package.json -nii dotor door ni "dependencies" gj zuil bga
@@ -92,22 +92,31 @@ console.log(a + b);
 // tgd npm start -> text ulan ungutei bolson
 
 // humusin bichsen belen function ashiglaj bga gsen ug
-// bidnii ashiglasan belen package -uud haashaa orj bga ve? -> node module gdg zuild orj irne
-// orvol read.me gsen hseg bn -> ydag package, yaj sulgah ve ged zavar, documentation -uud ni bga
-// src heseg der -> js ni yaj ajillaj bui code -uud ni bga
-// code -iig ni harval -> index.js file bn, color -uud orulj irsen bn, 1 object bn, Hex code -oor ungiig ni ugsun,
-// dooshoo console.log -iin text -iig urchulj bui gol code -uud bga
-// bidnii ashiglaj bga ni color gsn function
-// ene function ni parameter ni string bolon colortype gdeg zuil avdag ni haragdana
+// bidnii ashiglasan belen package -uud haashaa orj bga ve? -> node_modules gdg zuild orj irne
+// console-log-colors gsn hseg ni ene package der susan gsen ug
 
-// color gdeg function git fn gsn function ajillulj bn
-// git fn function ni deeree 1 function -tai, cls -ees list gdeg zuilees colortype -aar buyu bold italic avch bna
+// iishee orvol read.me gsen hseg bn -> ydag package, yaj sulgah ve ged zavar, documentation -uud ni bga
+// src heseg der -> js ni yaj ajillaj bui code -uud ni bga
+
+// code -iig ni harval -> index.js file bn, color -uud orulj irsen bn,
+// anzarval colorList gsne 1 object bn, Hex code -oor ungiig ni ugsun,
+
+// door ni huvisagchuud zarlaad iin tiim code biched
+// console.log -iin text -iig urchulj bui gol code -uud ni tuunii door ehelj bga
+
+// anzarval 108-r mur der bidnii ashiglaj bga ni color gsn function -> function color(str, colorType)
+// ene function ni parameter ni string bolon colorType gdeg zuil avdag ni haragdana
+// string -iin araas colorType ugch bolno gsen ug
+
+// color gdeg function getFn gsn function bas ajillulj bn -> function getFn(colorType)
+// getFn function ni deeree 1 function -tai,
+// cls -ees list gdeg zuilees colortype -aar buyu bold italic... avch bna -> clc.list[colorType];
 
 // inged source code -uud ni npm module dotor orj irne
 // ireduid react next uzed yavna
 // react ni uuruu package manager -t surilsan belen front-end -uuded zoriulsan sangud bga gsn ug
 
-// node modules gsen zuiliig github -ruu push -lehgui
+// node_modules gsen zuiliig github -ruu push -lehgui
 // yagd? -> ajillaj bga source code blohor ih zai ezelne, size undur
 // eniig push -leed bval github repo -iin size durne -> repo oiroltsogor 5GB file -iig hadgalah zoriulalttai
 
@@ -116,10 +125,10 @@ console.log(a + b);
 // repo usgenguut .gitignore gsen file garch irne
 // dotor ni orj harval ene ene file -uudiig ignore -dono ged ugsun bga
 
-// dooshoo guilgeed # Dependency directories ged -> node_modules/ ged bid nariin sulgasan sangiin folder bn
+// dooshoo guilgeed # Dependency directories ged -> node_modules/ ged bid nariin say sulgasan sangiin folder bn
 // ene folder -iig push -ledeggui gsn ug, uuruu ignore hiine
 
-// esvel garaaraa bichij bolno
+// 2. esvel garaaraa bichij bolno
 // .gitignore ged file usgele -> urdaa . -tei file ni nuts file bn
 // .gitignore dotroo node_modules/ ged bichne <- node modules -iig ignore -dono
 
@@ -128,3 +137,11 @@ console.log(a + b);
 
 // "dependencies" dotor bga hesgiig node modules -aa ustgala -> trash -ruga move hiile
 // ymar 1 zuil suulgahgui npm i hiine -> package.json dotor bichigdsen package -uudiig uuruu install hine
+// node_modules gsen folder dahiad garad irsen, turuun sulgasan package -uud uuruu suuchij bga
+// ene file maani git der bhad bid nar husseneeree npm i hiiged sulgad bj bolno gsen ug
+// clone hingutee computer deere npm i higed sulgana
+
+// ireduid react bolon nextjs framework gdeg zuil uzne -> orood harval mash ih documentation gdeg zuil bga
+// documentation -iig unshihad suraltsah yostoi
+
+// npm -ees random -oor 3 package haigaad documentation -iig unshaad ashiglaj uzye
