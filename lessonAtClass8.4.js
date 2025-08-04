@@ -145,3 +145,6 @@ console.log(a + b);
 // documentation -iig unshihad suraltsah yostoi
 
 // npm -ees random -oor 3 package haigaad documentation -iig unshaad ashiglaj uzye
+
+// node_modules -aa ustgaad -> dahiad install hihde npm i gehed bolno
+// node_modules dotroos 1 -iig ni ustgay gvel package.json -nii "dependencies" -ees bas ustgaj uguh yostoi
