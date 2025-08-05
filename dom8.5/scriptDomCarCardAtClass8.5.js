@@ -7,6 +7,7 @@
 // svg-algasah-div higed toirog gargah
 // 2. innerText bolon style class -iig uurchlud,
 // 3. neg negniih ni araas appendChild higed card -aa gargaj irne
+// svg - innerHTML der shud <svg> tag-iig copy -dod ugvul zgr
 
 const data = [
   {
@@ -70,7 +71,7 @@ function createCard(cardData) {
 
   img.src = cardData.image;
   img.alt = "image";
-  //   img.height = "360";
+  //   img.height = "360"; <- px bichihgui
 
   h6.innerText = cardData.price;
   p1.innerText = cardData.title;
