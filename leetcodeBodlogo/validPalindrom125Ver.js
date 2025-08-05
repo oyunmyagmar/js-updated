@@ -11,26 +11,42 @@ let s2 = " ";
  * @return {boolean}
  */
 const isPalindrome = function (s) {
-  let p = 0;
+  let palindrome = "";
+  let reversed = "";
   for (let i = 0; i < s.length; i++) {
-    p = s[i];
+    if (90 > s[i].charCodeAt(0) > 65 || 122 > s[i].charCodeAt > 97) {
+      palindrome += s[i];
+    }
   }
-  return p;
-  //   let reversedWord = "";
-
-  //   for (let i = s.length - 1; i >= 0; i--) {
-
-  //     let reversedChar = s[i];
-  //     reversedWord += reversedChar;
-  //   }
-  //   if (s !== reversedWord) {
-  //     return false;
-  //   } else {
-  //     return true;
-  //   }
-
-  //   // 90 > s[i].charAtCode(0) > 65;
-  //   // 122 > s[i].charAtCode(0) > 97
+  for (let i = palindrome.length - 1; i >= 0; i--) {
+    reversed += palindrome[i];
+  }
+  if (palindrome == reversed) {
+    return true;
+  } else {
+    return false;
+  }
 };
 let result = isPalindrome(s);
 console.log(result);
+
+let result1 = isPalindrome(s1);
+console.log(result1);
+
+let result2 = isPalindrome(s2);
+console.log(result2);
+//   let reversedWord = "";
+
+//   for (let i = s.length - 1; i >= 0; i--) {
+
+//     let reversedChar = s[i];
+//     reversedWord += reversedChar;
+//   }
+//   if (s !== reversedWord) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+
+//   // 90 > s[i].charAtCode(0) > 65;
+//   // 122 > s[i].charAtCode(0) > 97
