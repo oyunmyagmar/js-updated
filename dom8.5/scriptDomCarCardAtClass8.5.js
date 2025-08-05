@@ -1,4 +1,13 @@
-// 1. create elements img tag, h6, p-title, p-descrtiption, div
+// 1. create elements:
+// img tag,
+// h6 tag,
+// p-title,
+// p-descrtiption,
+// div,
+// svg-algasah-div higed toirog gargah
+// 2. innerText bolon style class -iig uurchlud,
+// 3. neg negniih ni araas appendChild higed card -aa gargaj irne
+
 const data = [
   {
     title: "Nissan Murano, 2004/2011",
@@ -51,6 +60,14 @@ function createCard(cardData) {
   const container = document.createElement("div");
   const body = document.getElementsByTagName("body")[0];
 
+  // zurag orulahad <img> tag uusgej bga
+  // <img> tag der attribute zoj ugch chdaj bga
+  // usgesen img.src ged link -iig ni ugnu
+  // src -eer <img> tag ugch bga bol html der <img> tag uguhud yadg bile gedgee sanana
+  // src attribute ugnu
+  // alt attribute -aa ugnu
+  // width bolon height ugnu <- bhgui bol zurag garch irehgui
+
   img.src = cardData.image;
   img.alt = "image";
   //   img.height = "360";
@@ -75,31 +92,3 @@ function createCard(cardData) {
   container.appendChild(textContainer);
   body.appendChild(container);
 }
-
-// const h1 = document.createElement("h1");
-// const body = document.getElementsByTagName("body")[0];
-// h1.innerText = "hello world";
-// // h1.className = "title";
-// // h1.className = h1.className + "red";
-// h1.classList.add("title");
-// h1.classList.add("red");
-
-// body.appendChild(h1);
-// console.log(body, "body");
-// console.log(h1, "h1");
-
-//<svg
-//   xmlns="http://www.w3.org/2000/svg"
-//   xmlns:xlink="http://www.w3.org/1999/xlink"
-//   fill="#000000"
-//   version="1.1"
-//   id="Capa_1"
-//   width="800px"
-//   height="800px"
-//   viewBox="0 0 378.94 378.94"
-//   xml:space="preserve"
-//>
-//  <g>
-//    <path d="M348.151,54.514c-19.883-19.884-46.315-30.826-74.435-30.826c-28.124,0-54.559,10.942-74.449,30.826l-9.798,9.8l-9.798-9.8   c-19.884-19.884-46.325-30.826-74.443-30.826c-28.117,0-54.56,10.942-74.442,30.826c-41.049,41.053-41.049,107.848,0,148.885   l147.09,147.091c2.405,2.414,5.399,3.892,8.527,4.461c1.049,0.207,2.104,0.303,3.161,0.303c4.161,0,8.329-1.587,11.498-4.764   l147.09-147.091C389.203,162.362,389.203,95.567,348.151,54.514z M325.155,180.404L189.47,316.091L53.782,180.404   c-28.368-28.364-28.368-74.514,0-102.893c13.741-13.739,32.017-21.296,51.446-21.296c19.431,0,37.702,7.557,51.438,21.296   l21.305,21.312c6.107,6.098,16.897,6.098,23.003,0l21.297-21.312c13.737-13.739,32.009-21.296,51.446-21.296   c19.431,0,37.701,7.557,51.438,21.296C353.526,105.89,353.526,152.039,325.155,180.404z" />
-//  </g>
-//</svg>;
