@@ -95,3 +95,35 @@ const resultLengthOfLastWordVer2 = lengthOfLastWordVer(s2);
 console.log(resultLengthOfLastWordVer2);
 
 // leetCode 125 Valid Palindrome
+
+let spal = "A man, a plan, a canal: Panama";
+let spal1 = "race a car";
+let spal2 = " ";
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+const isPalindrome = function (s) {
+  let nonAlphanumericChar = /[^a-zA-Z0-9_]/g;
+  let palindrome = s
+    .toLowerCase()
+    .replaceAll(nonAlphanumericChar, "")
+    .replaceAll("_", "");
+  let reversed = "";
+  for (let i = palindrome.length - 1; i >= 0; i--) {
+    reversed += palindrome[i];
+  }
+  if (palindrome == reversed) {
+    return true;
+  } else {
+    return false;
+  }
+};
+const result = isPalindrome(spal);
+console.log(result);
+
+const result1 = isPalindrome(spal1);
+console.log(result1);
+
+const result2 = isPalindrome(spal2);
+console.log(result2);
