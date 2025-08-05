@@ -8,8 +8,10 @@ const lengthOfLastWord = (s) => {
   // 1. find the last word
   // 2. return last word length
 
-  // 1. buh char log hiideg for loop bich
-  // 2. if(char !== " ") console.log(char)
+  // 1. buh char log hiideg for loop bich -> davtaltaa hoid talaas ni ehluleh
+  // 2. if(char !== " ") console.log(char) -> hooson bish ued char -iig hevleh
+  // suulees suuliin ug gedgig yaj mdeh ve? -> hooson string hurtel yavna -> hooson string bolbol suuliin ug duusna
+  // if char == " " bval ter ued return der davtaltiin toog ugnu, count huvisagch ugch bolno, esvel length -ees i -iig hasch bolno
   // 3. if(char === " ") return
   let lastWordLength = 0;
   let isFindLastWord = false;

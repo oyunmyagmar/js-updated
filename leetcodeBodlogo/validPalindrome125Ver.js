@@ -50,3 +50,21 @@ console.log(result2);
 
 //   // 90 > s[i].charAtCode(0) > 65;
 //   // 122 > s[i].charAtCode(0) > 97
+
+// arga
+// /**
+//  * @param {string} s
+//  * @return {boolean}
+//  */
+// const isPalindrome = function (s) {
+//   // 1. convert all uppercase letters into lowercase
+//   // 2. remove all non-alphanumeric characters
+//   // if s == palindrome -> : true
+//   // if s !== palindrome -> : false
+//   // s consists only of printable ASCII characters.
+//   let sLowerCase = s.toLowercase();
+//   console.log(sLowerCase);
+// };
+
+// 90 > s[i].charAtCode(0) > 65
+// 122 > s[i].charAtCode(0) > 97

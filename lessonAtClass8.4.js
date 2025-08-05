@@ -15,7 +15,7 @@ console.log(a + b);
 
 // nodejs -iig herhen yaj ashiglah ve?
 // terminal deeree -> node -v ged version -iig checkleh
-// js gile -iig ajilluulahdaa -> node index.js
+// js file -iig ajilluulahdaa -> node index.js
 
 // nodejs -iig package manager buyu npm gedg zuiltei horshulj ajillana
 // npm -> package -uud buyu yamar 1 zuil hideg belen sanguud bga <- teriig zohitsuldag sulgadag ustgadag zuiliig helne
@@ -36,7 +36,7 @@ console.log(a + b);
 // package.json dotor "scripts" gsen hseg bga
 // "scripts" -> package.json -iig ajilluulahad blen bolgoson command -uudiig nerlene
 // end uursdiin js file -aa ajilluldag command -aa hine
-// "start" gj nerled ih bichigleltei command -iig 1 ugeer ajilluulj boldog bolgono
+// "start" gj nerled ih bichigleltei command -iig npm start gsn bogino ugeer ajilluulj boldog bolgono
 
 // package
 // browser -aas npm gj haina -> npmjs
@@ -99,7 +99,7 @@ console.log(a + b);
 // src heseg der -> js ni yaj ajillaj bui code -uud ni bga
 
 // code -iig ni harval -> index.js file bn, color -uud orulj irsen bn,
-// anzarval colorList gsne 1 object bn, Hex code -oor ungiig ni ugsun,
+// anzarval colorList gsn 1 object bn, Hex code -oor ungiig ni ugsun,
 
 // door ni huvisagchuud zarlaad iin tiim code biched
 // console.log -iin text -iig urchulj bui gol code -uud ni tuunii door ehelj bga
