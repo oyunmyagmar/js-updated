@@ -38,7 +38,9 @@ const render = () => {
 //       return false;
 //     }
 //   });
+//   listData = newListData;
 // };
+
 const body = document.querySelector("body");
 // console.log(body);
 const input = document.createElement("input");
@@ -65,3 +67,45 @@ body.appendChild(button);
 
 // minii bichsen yumiig hadgalaad haruuldag bolson bhad l hamgin jijig logic ni bolson bn
 // daraa ni terige update hiinuu ustgana uu gdg ni daraachiin logic bn
+
+// To Do List yr ni yu hdg?
+// 1. write save
+// 2. read list
+// 3. isDone <- check
+// 4. update
+// 5. delete
+
+// todo list hilgedeg ve? <- company yariltslaga -d to do list hii gj mgadgui
+// to do list ni
+// ireduid hih yostoi yumnuudiin
+// backend logic
+// frontend gol logic
+// -uudin hamgin jijig helber POC bdlar buh zuiliig turshij uzeh bolomjtoi
+
+// backend -iin gol zuil ni, tsana yavj bga zuil ni
+// CRUD <- oilgovol ehnii eeljind junior tuvshind gaigui
+// C - create <- bichij shiner usgej bna
+// R - read <- nugu zuile unshad delgets der harulj bn
+// U - update
+// D - delete
+
+// ene 4 logic -g backend der 1 file system -ruu 1 array -ruu
+// shiner nemed, update -lad ustgad chadaj bval chadaj bn gj uzdeg
+// to do list der ene logic bdag
+
+// code -nii zarchim?
+// web site herhen ajildag?
+// client -> website
+// website -> server
+// server => <= database
+// server -> webpage
+// website ni client deree haragdaj bga
+
+// database ? <- bidnii sayiin hisen listData gj oilgoj bolno
+// uuniig tsaanaa database gsen uur 1 computer der hadgalj bga
+
+// backend gdeg zuil ni db -ee Read(CRUD) higed website -ruu yavulna
+// website ni teriig unshsaad render hij zurj harulna
+
+// ene logic -iig 6 sariin hugatsand oilgoh
+// anhnaasaa zuv daraalaltai zuv bichih ni zuv -> MVP
