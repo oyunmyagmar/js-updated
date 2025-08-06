@@ -69,14 +69,6 @@ function createCard(cardData) {
   // alt attribute -aa ugnu
   // width bolon height ugnu <- bhgui bol zurag garch irehgui
 
-  img.src = cardData.image;
-  img.alt = "image";
-  //   img.height = "360"; <- px bichihgui
-
-  h6.innerText = cardData.price;
-  p1.innerText = cardData.title;
-  p2.innerText = cardData.description;
-
   img.classList.add("imgStyle");
   h6.classList.add("price");
   p1.classList.add("title");
@@ -84,6 +76,14 @@ function createCard(cardData) {
   container.classList.add("outerBox");
   textContainer.classList.add("textBox");
   imgContainer.classList.add("imgBox");
+
+  img.src = cardData.image;
+  img.alt = "image";
+  //   img.height = "360"; <- px bichihgui
+
+  h6.innerText = cardData.price;
+  p1.innerText = cardData.title;
+  p2.innerText = cardData.description;
 
   imgContainer.appendChild(img);
   textContainer.appendChild(h6);

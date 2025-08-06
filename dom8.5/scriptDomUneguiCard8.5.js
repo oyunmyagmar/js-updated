@@ -56,18 +56,19 @@ function createCard(cardData) {
   const title = document.createElement("p");
   const description = document.createElement("span");
 
-  image.src = cardData.image;
-  image.alt = "image"; // zurag garj irehgui bga tohioldold garj ireh text
-  price.innerText = cardData.price;
-  title.innerText = cardData.title;
-  description.innerText = cardData.description;
-
   container.classList.add("container"); // className esvel classList ashiglaj bolno
   image.classList.add("image");
   priceContainer.classList.add("priceContainer");
   price.classList.add("price");
   title.classList.add("title");
   description.classList.add("description");
+
+  image.src = cardData.image;
+  image.alt = "image"; // zurag garj irehgui bga tohioldold garj ireh text
+
+  price.innerText = cardData.price;
+  title.innerText = cardData.title;
+  description.innerText = cardData.description;
 
   priceContainer.appendChild(price);
   priceContainer.innerHTML += `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><script xmlns=""/>
