@@ -53,3 +53,15 @@ button.innerText = "click me";
 
 body.appendChild(input);
 body.appendChild(button);
+
+// function dotor function duudahiig -> callback function
+
+// POC -> Proof Of Concept <- uursduduu logic -oo zuv ajillaj buig check hiih zorilgoor developer -uudin gargaj bui turshilt hij bui zuil
+// MVP -> Minimum Viable Product <- client esvel sponsor -uuddaa oilgomjtoi hamgin jijig baidlaar hiij bui zuiliig
+// poc bolon mvp hiih des daraalal bdg
+// hamgiin jijig hij bui hseg ch hurtel ajildag bol ter chin une tsenetei
+// yuma hihde hij bui yum mani ajildag bh yostoi
+// sanaagaa turshij uzeh gj bga bol hamgiin bagas ni ajildag yum hij yav
+
+// minii bichsen yumiig hadgalaad haruuldag bolson bhad l hamgin jijig logic ni bolson bn
+// daraa ni terige update hiinuu ustgana uu gdg ni daraachiin logic bn
