@@ -1,4 +1,4 @@
-const listData = [];
+let listData = [];
 const ul = document.querySelector("ul");
 
 const printInputValue = (value) => {
@@ -8,16 +8,37 @@ const printInputValue = (value) => {
 };
 
 const render = () => {
-  ``;
   //   console.log("working");
   ul.innerHTML = "";
-  listData.map((element) => {
+  listData.map((element, index) => {
     const li = document.createElement("li");
+    const liButton = document.createElement("button");
     li.innerText = element;
+    liButton.innerText = "x";
+
+    liButton.addEventListener("click", () => {
+      const newListData = listData.filter((el, i) => {
+        return i !== index;
+      });
+      listData = newListData;
+      render();
+      //   console.log(newListData), "data";
+    });
+
     ul.appendChild(li);
+    li.appendChild(liButton);
   });
 };
 
+// const deleteInputValue = (value) => {
+//   const newListData = listData.filter((element) => {
+//     if (element !== value) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   });
+// };
 const body = document.querySelector("body");
 // console.log(body);
 const input = document.createElement("input");
