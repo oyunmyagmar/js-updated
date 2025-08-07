@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .list {
+        display: flex;
+        justify-content: space-between;
+      }
+      .removeBtn {
+      }
+      .removeBtn::before {
+        background-image: url(download.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+      }
+      .btnIconContainer {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
     <ul></ul>
