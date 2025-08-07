@@ -16,10 +16,6 @@ const printInputValue = (value) => {
 };
 // printInputValue("hello")
 
-// const printIconInput = (value) => {
-//   const iconInput = document.createElement("input");
-// };
-
 const render = () => {
   //   console.log("working");
 
@@ -53,7 +49,7 @@ const render = () => {
         return i !== index;
       });
       listData = newListData;
-      // printIconInput(input);
+      //li der garch irj bui utgiig ustgad orond ni input gargad utga ni input dotor garahar bolgoh
       render();
     });
 
