@@ -29,7 +29,7 @@ let count = 0;
 button.addEventListener("click", () => {
   colorBox.style.backgroundColor = namedColors[count];
   if (count > namedColors.length - 1) count = 0;
-  Math.random();
+  console.log(Math.floor(Math.random() * 10));
   count++;
 });
 
