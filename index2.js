@@ -8,10 +8,10 @@ boxBlue.style.width = "50%";
 boxRed.classList.add("boxRed");
 boxBlue.classList.add("boxBlue");
 
-// boxRed.addEventListener("click", () => {
-//   boxRed.style.width = parseInt(boxRed.style.width) + 1 + "%";
-//   boxBlue.style.width = parseInt(boxBlue.style.width) - 1 + "%";
-// });
+boxRed.addEventListener("click", () => {
+  boxRed.style.width = parseInt(boxRed.style.width) + 1 + "%";
+  boxBlue.style.width = parseInt(boxBlue.style.width) - 1 + "%";
+});
 
 // boxBlue.addEventListener("click", () => {
 //   boxBlue.style.width = parseInt(boxBlue.style.width) + 1 + "%";
