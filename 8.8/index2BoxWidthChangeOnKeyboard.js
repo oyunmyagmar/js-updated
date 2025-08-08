@@ -1,3 +1,7 @@
+// herhen keyboard -nii event -iig barij avah ve, js-iin gj google -deed
+// herhen keyboard -iin tovchlur -iig barij avah ve gdgiig google -dene
+// 1 tovchluur darangut ulan esvel tsenher nemegddeg bolgono gsen ug
+
 const body = document.querySelector("body");
 const boxRed = document.createElement("div");
 const boxBlue = document.createElement("div");
@@ -8,26 +12,21 @@ boxBlue.style.width = "50%";
 boxRed.classList.add("boxRed");
 boxBlue.classList.add("boxBlue");
 
-boxRed.addEventListener("click", () => {
-  boxRed.style.width = parseInt(boxRed.style.width) + 1 + "%";
-  boxBlue.style.width = parseInt(boxBlue.style.width) - 1 + "%";
-});
+document.addEventListener("keydown", (event) => {
+  if (event.key == "Enter") {
+    boxRed.style.width = parseInt(boxRed.style.width) + 1 + "%";
+    boxBlue.style.width = parseInt(boxBlue.style.width) - 1 + "%";
 
-boxBlue.addEventListener("click", () => {
-  boxBlue.style.width = parseInt(boxBlue.style.width) + 1 + "%";
-  boxRed.style.width = parseInt(boxRed.style.width) - 1 + "%";
+    boxRed.innerText = boxRed.style.width;
+    boxBlue.innerText = boxBlue.style.width;
+  } else if (event.key == " ") {
+    boxBlue.style.width = parseInt(boxBlue.style.width) + 1 + "%";
+    boxRed.style.width = parseInt(boxRed.style.width) - 1 + "%";
+
+    boxBlue.innerText = boxBlue.style.width;
+    boxRed.innerText = boxRed.style.width;
+  }
 });
 
 body.appendChild(boxRed);
 body.appendChild(boxBlue);
-
-document.addEventListener("keydown", function (event) {
-  console.log("key pressed: " + event.key);
-  if (event.key == "Enter") {
-    boxRed.style.width = parseInt(boxRed.style.width) + 1 + "%";
-    boxBlue.style.width = parseInt(boxBlue.style.width) - 1 + "%";
-  } else if (event.key == " ") {
-    boxBlue.style.width = parseInt(boxBlue.style.width) + 1 + "%";
-    boxRed.style.width = parseInt(boxRed.style.width) - 1 + "%";
-  }
-});
