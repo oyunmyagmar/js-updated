@@ -14,7 +14,13 @@ button.innerText = "add";
 
 // input value log and listData array push
 const printInputValue = (value) => {
-  listData.push(value);
+  if (value !== "") {
+    listData.push(value);
+  } else {
+    alert("input empty");
+    prompt("name");
+    return null;
+  }
 };
 
 // ul empty
@@ -26,11 +32,17 @@ const render = () => {
   listData.map((element, index) => {
     const li = document.createElement("li");
     const removeBtn = document.createElement("button");
+    const image = document.createElement("img");
+
+    li.classList.add("li");
 
     li.innerText = element;
     removeBtn.innerText = "X";
+    image.src = "https://cdn-icons-png.flaticon.com/128/1250/1250615.png";
+    image.height = 22;
 
     removeBtn.addEventListener("click", () => {
+      li.innerText = "";
       const newListData = listData.filter((el, i) => {
         return i !== index;
       });
@@ -38,14 +50,28 @@ const render = () => {
       render();
     });
 
-    ul.appendChild(li);
+    image.addEventListener("click", () => {
+      const inputUpdate = document.createElement("input");
+      inputUpdate.value = element;
+      li.appendChild(inputUpdate);
+    });
+
+    li.appendChild(image);
     li.appendChild(removeBtn);
+    ul.appendChild(li);
   });
 };
 
 // onclick
 button.addEventListener("click", () => {
   printInputValue(input.value);
+  input.value = "";
+  //   if (input.value == "") {
+  //     alert("input empty");
+  //     prompt("name");
+  //     return null;
+  //   } else {
+  //   }
   render();
 });
 

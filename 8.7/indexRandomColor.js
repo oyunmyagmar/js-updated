@@ -7,7 +7,7 @@ colorBox.classList.add("colorBox");
 
 button.innerText = "change color";
 
-const nameColors = [
+const namedColors = [
   `AliceBlue`,
   `AntiqueWhite`,
   `Aqua`,
@@ -23,14 +23,14 @@ const nameColors = [
   `BurlyWood`,
 ];
 
-colorBox.style.backgroundColor = nameColors[0];
-let count = 1;
+colorBox.style.backgroundColor = namedColors[namedColors.length - 1];
+let count = 0;
+
 button.addEventListener("click", () => {
-  //   console.log("working");
-  colorBox.style.backgroundColor = nameColors[count];
+  colorBox.style.backgroundColor = namedColors[count];
+  if (count > namedColors.length - 1) count = 0;
+  Math.random();
   count++;
-  if (count == 1) {
-  }
 });
 
 body.appendChild(colorBox);

@@ -21,3 +21,5 @@ container.appendChild(grid21);
 container.appendChild(grid22);
 
 body.appendChild(container);
+
+[[], [], []], [[], [], []], [[], [], []];
