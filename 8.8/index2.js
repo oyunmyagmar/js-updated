@@ -13,10 +13,10 @@ boxRed.addEventListener("click", () => {
   boxBlue.style.width = parseInt(boxBlue.style.width) - 1 + "%";
 });
 
-// boxBlue.addEventListener("click", () => {
-//   boxBlue.style.width = parseInt(boxBlue.style.width) + 1 + "%";
-//   boxRed.style.width = parseInt(boxRed.style.width) - 1 + "%";
-// });
+boxBlue.addEventListener("click", () => {
+  boxBlue.style.width = parseInt(boxBlue.style.width) + 1 + "%";
+  boxRed.style.width = parseInt(boxRed.style.width) - 1 + "%";
+});
 
 body.appendChild(boxRed);
 body.appendChild(boxBlue);
