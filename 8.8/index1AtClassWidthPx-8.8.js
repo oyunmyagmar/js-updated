@@ -41,13 +41,18 @@ body.appendChild(boxBlue);
 // js ni DOM gdeg zuileer html -d l handdag
 
 // .css file uusgeed style der width: 50% ged ugvul js uuniig barij avch chdahgui
-// tgeher width ni null hooson string garj ired parseInt hiher NaN garj irj bn
+// tgeher width ni null hooson string garj ired parseInt hiher NaN garj irj bn NotaNumber
 // js deeree element -ee usged hemjeeg ni js deeree 50% ged ugvul asudalgui
-// liveServer Elements harval bichsen style ni
-// js der bichvel shud inline style -eer garj bn
 
+// js ni html -tei haritsah bolomjtoi
+// js ni css -tei haritsah bolomj bhgui
+
+// liveServer Elements harval minii bichsen style ni
+// shud js der bichehed
+// inline style -eer garj irj bn
 // inline css der bichseniig l barij avch chadna
+// ?
 // css file ni tusdaa file bga uchir barij avch chdahgui
 
 // tgher hemjeeg husseneeree customize esvel modify hih yostoi bsan bol
-// js esvel inline style -eer zaaval uguh yostoi
+// js der esvel inline style -eer zaaval uguh yostoi
