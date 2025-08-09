@@ -40,15 +40,11 @@ body.appendChild(boxBlue);
 
 // GPT-5
 // Taskmaster AI -> tom task -iig jijig bolgoj zadaldag
-// gpt -> code -iin task muu
-// gpt -> research bolon idea hiihed zoriulsan
-// gpt -> yaj surah talaar asuj bolno <- hel saijirna
 
 // !!!documentation unshij surah!!!
 // bichleg bitgii uz
 // QDD approach to learning programming -> turshij uzeh
+// surah arga baril
 
 // javascript 30 days
 // javascript documentation
-
-// infrastructure as code -> ip address, port
