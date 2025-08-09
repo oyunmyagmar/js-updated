@@ -12,10 +12,8 @@ boxRed.addEventListener("click", () => {
   const currentWidthBlue = parseInt(getComputedStyle(boxBlue).width);
   boxBlue.style.width = currentWidthBlue - 10 + "px";
 
-  console.log(currentWidthRed, "currentWidthRed");
-  console.log(boxRed.style.width, "boxRed.style.width");
-  console.log(currentWidthBlue, "currentWidthBlue");
-  console.log(boxBlue.style.width, " boxBlue.style.width");
+  boxRed.innerText = boxRed.style.width;
+  boxBlue.innerText = boxBlue.style.width;
 });
 
 boxBlue.addEventListener("click", () => {
@@ -23,6 +21,9 @@ boxBlue.addEventListener("click", () => {
   boxBlue.style.width = currentWidthBlue + 10 + "px";
   const currentWidthRed = parseInt(getComputedStyle(boxRed).width);
   boxRed.style.width = currentWidthRed - 10 + "px";
+
+  boxBlue.innerText = boxBlue.style.width;
+  boxRed.innerText = boxRed.style.width;
 });
 
 body.appendChild(boxRed);
@@ -33,8 +34,8 @@ body.appendChild(boxBlue);
 // 2 ungu ni 50% 50% bh yostoi bsn
 // gtel px -eer uur hemjeetei blod bn
 
-// px vw tulhur ugtei string der math uildel hij chdahgui
-// tgehr parseInt higed number bolgod too nemeed
+// px vw gh met tulhuur ugtei string der math uildel hij chdahgui
+// tgehr parseInt higed number bolgon hurvuuleed too nemeed
 // aras ni px tulhuur ugee ugud bn
 
 // js ni DOM gdeg zuileer html -d l handdag
