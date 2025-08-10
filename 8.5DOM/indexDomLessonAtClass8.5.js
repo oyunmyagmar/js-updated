@@ -25,12 +25,12 @@
 
 // DOM -iig yaj ashiglah ve?
 // Node -uudiig select hiij avdag selecter -uud bn
-// css -iin selector -uudiig js der barij avdj boldog belen function bdag
+// css -iin selector -uudiig js der barij avj boldog belen function bdag
 
-// getElementById() ==> id -aar barij avdag <- id bol unique gants l bdag davtagdah yosgui tgeher element
+// getElementById() ==> id -aar barij avdag <- id bol unique gants l bdag davtagdah yosgui
 // getElementsByClassName() ==> class -aar <-tiim class -tai buh elements -uudiig barij avna
-// getElementsByName() ==> name -eer
-// getElementsByTagName() ==> tag -aar <- div? p? h1?
+// getElementsByName() ==> name -eer <- name gdeg attribute -aar ni
+// getElementsByTagName() ==> tag -aar <- <div>? <p>? <h1>?
 // querySelector() ==> attribute -aar <- hussen utgaa ugch barij avna <- bid nariin yarij bga id, class, style maani uuruu attribute gdeg zuil bgad bga
 // querySelector() ==> -iin huvid tiim attribute -tai 1 element barij avna -> class gsen attribute -tai element barij avlaa gehed hamgiin ehnii oldson 1 element -iig barij avna gsen ug
 // querySelectorAll() ==> attribute -aar <- attribute der bga utgar ni barij avch bga <- tim attribute -tai buh element -iig barij avna
@@ -103,7 +103,7 @@ body.appendChild(h1);
 
 // h1 tag dotroo text -gui bn
 // odoo yaj text nemeh ve?
-h1.innerText = "hello world";
+h1.innerText = "hello world!";
 // tgd liveServer -ees harval text garaad irj bn
 
 // !!! anhaarah zuil !!!
@@ -125,7 +125,7 @@ h1.innerText = "hello world";
 // h1.style.color = "red"; orond class esvel id gdeg zuilee ugnu
 // ehled class -iig onooj ugj uzvel
 // .className = ged class -iinhaa neriig ugnu, h1 esvel title gdg ch yumu
-h1.className = "title";
+// h1.className = "title";
 // liveServer -ees harval html element -iin class ni title bolson bn
 
 // inged class ugsnii daraa html head dotor <style> tag deeree
@@ -159,7 +159,7 @@ h1.classList.add("red");
 
 // odoo component gj nerledeg 1 jijig hseg hiie
 // unegui -giin 1 mashinii card hiie
-// html -eer orj chadna odoo js -eer uryu
+// html -eer urj chadna odoo js -eer uryu
 
 // deed tald ni 1 zurag
 // dood tald ni bold text h5 esvel h6 // hoid tald ni 1 icon
