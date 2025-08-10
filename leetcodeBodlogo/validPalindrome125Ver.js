@@ -14,7 +14,7 @@ const isPalindrome = function (s) {
   let palindrome = "";
   let reversed = "";
   for (let i = 0; i < s.length; i++) {
-    if (90 > s[i].charCodeAt(0) > 65 || 122 > s[i].charCodeAt > 97) {
+    if (90 > s[i].charCodeAt() > 65 || 122 > s[i].charCodeAt() > 97) {
       palindrome += s[i];
     }
   }

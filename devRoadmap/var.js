@@ -23,6 +23,9 @@ console.log(user);
 let USER = "ganaa";
 console.log(USER);
 
+let User = "odnoo";
+console.log(User);
+
 // !!! reserved names !!!
 
 const myName = "myagmar";

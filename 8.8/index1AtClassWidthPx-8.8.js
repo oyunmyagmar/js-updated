@@ -1,33 +1,33 @@
 const body = document.querySelector("body");
-const boxRed = document.createElement("div");
-const boxBlue = document.createElement("div");
+const redBox = document.createElement("div");
+const blueBox = document.createElement("div");
 
-boxRed.classList.add("boxRed");
-boxBlue.classList.add("boxBlue");
+redBox.classList.add("redBox");
+blueBox.classList.add("blueBox");
 
-boxRed.addEventListener("click", () => {
-  //   boxRed.style.backgroundColor = "black";
-  const currentWidthRed = parseInt(getComputedStyle(boxRed).width);
-  boxRed.style.width = currentWidthRed + 10 + "px";
-  const currentWidthBlue = parseInt(getComputedStyle(boxBlue).width);
-  boxBlue.style.width = currentWidthBlue - 10 + "px";
+redBox.addEventListener("click", () => {
+  //   redBox.style.backgroundColor = "black";
+  const currentWidthRed = parseInt(getComputedStyle(redBox).width);
+  redBox.style.width = currentWidthRed + 10 + "px";
+  const currentWidthBlue = parseInt(getComputedStyle(blueBox).width);
+  blueBox.style.width = currentWidthBlue - 10 + "px";
 
-  boxRed.innerText = boxRed.style.width;
-  boxBlue.innerText = boxBlue.style.width;
+  redBox.innerText = redBox.style.width;
+  blueBox.innerText = blueBox.style.width;
 });
 
-boxBlue.addEventListener("click", () => {
-  const currentWidthBlue = parseInt(getComputedStyle(boxBlue).width);
-  boxBlue.style.width = currentWidthBlue + 10 + "px";
-  const currentWidthRed = parseInt(getComputedStyle(boxRed).width);
-  boxRed.style.width = currentWidthRed - 10 + "px";
+blueBox.addEventListener("click", () => {
+  const currentWidthBlue = parseInt(getComputedStyle(blueBox).width);
+  blueBox.style.width = currentWidthBlue + 10 + "px";
+  const currentWidthRed = parseInt(getComputedStyle(redBox).width);
+  redBox.style.width = currentWidthRed - 10 + "px";
 
-  boxBlue.innerText = boxBlue.style.width;
-  boxRed.innerText = boxRed.style.width;
+  blueBox.innerText = blueBox.style.width;
+  redBox.innerText = redBox.style.width;
 });
 
-body.appendChild(boxRed);
-body.appendChild(boxBlue);
+body.appendChild(redBox);
+body.appendChild(blueBox);
 
 // px -eer ugsun sul tal ni
 // delgetsee duuren bolgoh yostoi bsn

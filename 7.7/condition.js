@@ -45,6 +45,9 @@ if (num3 < 0) {
 }
 
 // 18 nastai esehiig todorhoildog console.log bich
+// = -> bval uildel myAge huvisagchiig 18 bolgoj bga uildel
+// == -> bval asult bolno <- minii nas 18-tai tentsu yu?
+// if (dotor uildel bish asuult bh yostoi)
 let myAge = 20;
 if (myAge == 18) {
   console.log("yes, I am 18 years old");
@@ -54,18 +57,17 @@ if (myAge == 18) {
 
 // neg huvisagch zarlana, utga ogno
 // tuhain huvisagch dahi utga tegsh esvel sondgoi bolhiig todorhoilson console.log hevleh code bich
-let num5 = 6;
-if (num5 % 2 == 1) {
+let num4 = 7;
+if (num4 % 2 == 1) {
   console.log("sondgoi");
 } else {
   console.log("tegsh");
 }
 
 // neg huvisagch zarlaad tuhain huvisagch 7d huvaagddag esehiig oloh code bich
-let num6 = 15;
-if (num6 % 7 == 0) {
+let num5 = 14;
+if (num5 % 7 == 0) {
   console.log("7-d huvagddag");
 } else {
   console.log("7-d huvagddaggui");
 }
-let num7 = 5;
