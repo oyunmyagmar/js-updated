@@ -1,0 +1,145 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed white;
+  border-radius: 50%;
+  translate: -50% -50%;
+}
+.mercury {
+  width: 100px;
+  height: 100px;
+  animation: rotated 5s linear infinite;
+}
+@keyframes rotated {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.planetMercury {
+  width: 25px;
+  height: 25px;
+  background-image: url(mercury.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotated 5s linear infinite;
+}
+.venus {
+  width: 200px;
+  height: 200px;
+  animation: rotated 5s linear infinite;
+}
+.planetVenus {
+  width: 25px;
+  height: 25px;
+  background-image: url(venus.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotated 5s linear infinite;
+}
+.earth {
+  width: 300px;
+  height: 300px;
+  animation: rotated 5s linear infinite;
+}
+.planetEarth {
+  width: 25px;
+  height: 25px;
+  background-image: url(earth.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotated 5s linear infinite;
+}
+.mars {
+  width: 400px;
+  height: 400px;
+  animation: rotated 5s linear infinite;
+}
+.planetMars {
+  width: 25px;
+  height: 25px;
+  background-image: url(venus.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotated 5s linear infinite;
+}
+.jupiter {
+  width: 500px;
+  height: 500px;
+  animation: rotated 5s linear infinite;
+}
+.planetJupiter {
+  width: 25px;
+  height: 25px;
+  background-image: url(venus.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotated 5s linear infinite;
+}
+.saturn {
+  width: 600px;
+  height: 600px;
+  animation: rotated 5s linear infinite;
+}
+.planetSaturn {
+  width: 25px;
+  height: 25px;
+  background-image: url(venus.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotated 5s linear infinite;
+}
+.uranus {
+  width: 700px;
+  height: 700px;
+  animation: rotated 5s linear infinite;
+}
+.planetUranus {
+  width: 25px;
+  height: 25px;
+  background-image: url(venus.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotated 5s linear infinite;
+}
+.neptune {
+  width: 800px;
+  height: 800px;
+  animation: rotated 5s linear infinite;
+}
+.neptune {
+  width: 25px;
+  height: 25px;
+  background-image: url(venus.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotated 5s linear infinite;
+}
