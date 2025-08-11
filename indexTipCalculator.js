@@ -1,62 +1,124 @@
-const dataList = [];
-
-const printBillInputValue = (value) => {
-  dataList.push(value);
-  console.log(dataList);
-};
-
 const body = document.querySelector("body");
-const tipCalculatorContainer = document.createElement("div");
-const tipCalculator = document.createElement("div");
 
-const bill = document.createElement("p");
-const billInput = document.createElement("input");
+const tipCalculatorContainer = document.createElement("div");
+const tipCalculatorTitle = document.createElement("h1");
+const mainCalculator = document.createElement("div");
+
 const billContainer = document.createElement("div");
-const tipPercent = document.createElement("p");
-const tipPercent5Btn = document.createElement("button");
-const tipPercent10Btn = document.createElement("button");
-const tipPercent15Btn = document.createElement("button");
-const tipPercent25Btn = document.createElement("button");
-const tipPercent35Btn = document.createElement("button");
-const tipPercent50Btn = document.createElement("button");
-const tipPercent65Btn = document.createElement("button");
-const tipPercent80Btn = document.createElement("button");
-const tipPercentContainer = document.createElement("div");
-const totalInput = document.createElement("input");
+const billTitle = document.createElement("p");
+const billInput = document.createElement("input");
+const tipSelectorContainer = document.createElement("div");
+const tipSelectorTitle = document.createElement("p");
+const tipBtns = document.createElement("div");
+const tip5PerBtn = document.createElement("button");
+const tip10PerBtn = document.createElement("button");
+const tip15PerBtn = document.createElement("button");
+const tip25PerBtn = document.createElement("button");
+const tip35PerBtn = document.createElement("button");
+const tip50PerBtn = document.createElement("button");
+const tip65PerBtn = document.createElement("button");
+const tip80PerBtn = document.createElement("button");
+let total = document.createElement("p");
 const resetBtn = document.createElement("button");
 
-bill.innerText = "Bill";
-tipPercent.innerText = "Select Tip %";
-tipPercent5Btn.innerText = "5%";
-tipPercent10Btn.innerText = "10%";
-tipPercent15Btn.innerText = "15%";
-tipPercent25Btn.innerText = "25%";
-tipPercent35Btn.innerText = "35%";
-tipPercent50Btn.innerText = "50%";
-tipPercent65Btn.innerText = "65%";
-tipPercent80Btn.innerText = "80%";
-totalInput.placeholder = "Total";
+tipCalculatorContainer.classList.add("tipCalculatorContainer");
+tipCalculatorTitle.classList.add("tipCalculatorTitle");
+mainCalculator.classList.add("mainCalculator");
+billContainer.classList.add("billContainer");
+billTitle.classList.add("billTitle");
+billInput.classList.add("billInput");
+tipSelectorContainer.classList.add("tipSelectorContainer");
+tipSelectorTitle.classList.add("tipSelectorTitle");
+tipBtns.classList.add("tipBtns");
+tip5PerBtn.classList.add("btn");
+tip10PerBtn.classList.add("btn");
+tip15PerBtn.classList.add("btn");
+tip25PerBtn.classList.add("btn");
+tip35PerBtn.classList.add("btn");
+tip50PerBtn.classList.add("btn");
+tip65PerBtn.classList.add("btn");
+tip80PerBtn.classList.add("btn");
+total.classList.add("total");
+resetBtn.classList.add("resetBtn");
+
+tipCalculatorTitle.innerText = "Tip Calculator";
+
+billTitle.innerText = "Bill";
+billInput.placeholder = "$";
+tipSelectorTitle.innerText = "Select Tip %";
+tip5PerBtn.innerText = "5%";
+tip10PerBtn.innerText = "10%";
+tip15PerBtn.innerText = "15%";
+tip25PerBtn.innerText = "25%";
+tip35PerBtn.innerText = "35%";
+tip50PerBtn.innerText = "50%";
+tip65PerBtn.innerText = "65%";
+tip80PerBtn.innerText = "80%";
+total.innerText = "Total: ";
 resetBtn.innerText = "Reset";
 
-tipPercent5Btn.addEventListener("click", () => {
-  printBillInputValue(billInput.value);
+tip5PerBtn.addEventListener("click", () => {
+  // console.log(billInput.value);
+  total.innerText = "Total: ";
+  total.innerText += parseFloat(billInput.value * 1.05).toFixed(2);
+  // console.log(total.innerText);
+});
+tip10PerBtn.addEventListener("click", () => {
+  total.innerText = "Total: ";
+  total.innerText += parseFloat(billInput.value * 1.1).toFixed(2);
+});
+tip15PerBtn.addEventListener("click", () => {
+  total.innerText = "Total: ";
+  total.innerText += parseFloat(billInput.value * 1.15).toFixed(2);
+});
+tip25PerBtn.addEventListener("click", () => {
+  total.innerText = "Total: ";
+  total.innerText += parseFloat(billInput.value * 1.25).toFixed(2);
+});
+tip35PerBtn.addEventListener("click", () => {
+  total.innerText = "Total: ";
+  total.innerText += parseFloat(billInput.value * 1.35).toFixed(2);
+});
+tip50PerBtn.addEventListener("click", () => {
+  total.innerText = "Total: ";
+  total.innerText += parseFloat(billInput.value * 1.5).toFixed(2);
+});
+tip65PerBtn.addEventListener("click", () => {
+  total.innerText = "Total: ";
+  total.innerText += parseFloat(billInput.value * 1.65).toFixed(2);
+});
+tip80PerBtn.addEventListener("click", () => {
+  total.innerText = "Total: ";
+  total.innerText += parseFloat(billInput.value * 1.8).toFixed(2);
 });
 
-billContainer.appendChild(bill);
-billContainer.appendChild(billInput);
-tipPercentContainer.appendChild(tipPercent);
-tipPercentContainer.appendChild(tipPercent5Btn);
-tipPercentContainer.appendChild(tipPercent10Btn);
-tipPercentContainer.appendChild(tipPercent15Btn);
-tipPercentContainer.appendChild(tipPercent25Btn);
-tipPercentContainer.appendChild(tipPercent35Btn);
-tipPercentContainer.appendChild(tipPercent50Btn);
-tipPercentContainer.appendChild(tipPercent65Btn);
-tipPercentContainer.appendChild(tipPercent80Btn);
+resetBtn.addEventListener("click", () => {
+  // console.log("working");
+  total.innerText = "0.00";
+  billInput.value = "";
+});
 
-tipCalculatorContainer.appendChild(billContainer);
-tipCalculatorContainer.appendChild(tipPercentContainer);
-tipCalculatorContainer.appendChild(totalInput);
-tipCalculatorContainer.appendChild(resetBtn);
+billContainer.appendChild(billTitle);
+billContainer.appendChild(billInput);
+
+tipBtns.appendChild(tip5PerBtn);
+tipBtns.appendChild(tip10PerBtn);
+tipBtns.appendChild(tip15PerBtn);
+tipBtns.appendChild(tip25PerBtn);
+tipBtns.appendChild(tip35PerBtn);
+tipBtns.appendChild(tip50PerBtn);
+tipBtns.appendChild(tip65PerBtn);
+tipBtns.appendChild(tip80PerBtn);
+
+tipSelectorContainer.appendChild(tipSelectorTitle);
+tipSelectorContainer.appendChild(tipBtns);
+
+mainCalculator.appendChild(billContainer);
+mainCalculator.appendChild(tipSelectorContainer);
+mainCalculator.appendChild(total);
+mainCalculator.appendChild(resetBtn);
+
+tipCalculatorContainer.appendChild(tipCalculatorTitle);
+tipCalculatorContainer.appendChild(mainCalculator);
 
 body.appendChild(tipCalculatorContainer);
