@@ -15,10 +15,14 @@ body {
   border-radius: 50%;
   translate: -50% -50%;
 }
-.mercury {
+.sun {
   width: 100px;
   height: 100px;
-  animation: rotated 5s linear infinite;
+  background-image: url(imagesSolarSystem/sun.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
 }
 @keyframes rotated {
   from {
@@ -28,34 +32,38 @@ body {
     transform: rotate(360deg);
   }
 }
+.mercury {
+  width: 200px;
+  height: 200px;
+  animation: rotated 5s linear infinite;
+}
 .planetMercury {
   width: 25px;
   height: 25px;
-  background-image: url(mercury.jpg);
+  background-image: url(imagesSolarSystem/mercury.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  border-radius: 50%;
+  background-size: cover;
   animation: rotated 5s linear infinite;
 }
 .venus {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   animation: rotated 5s linear infinite;
 }
 .planetVenus {
   width: 25px;
   height: 25px;
-  background-image: url(venus.jpeg);
+  background-image: url(imagesSolarSystem/venus.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   border-radius: 50%;
-  animation: rotated 5s linear infinite;
+  animation: rotated 20s linear infinite;
 }
 .earth {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   animation: rotated 5s linear infinite;
 }
 .planetEarth {
@@ -69,8 +77,8 @@ body {
   animation: rotated 5s linear infinite;
 }
 .mars {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   animation: rotated 5s linear infinite;
 }
 .planetMars {
@@ -84,8 +92,8 @@ body {
   animation: rotated 5s linear infinite;
 }
 .jupiter {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   animation: rotated 5s linear infinite;
 }
 .planetJupiter {
@@ -99,8 +107,8 @@ body {
   animation: rotated 5s linear infinite;
 }
 .saturn {
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   animation: rotated 5s linear infinite;
 }
 .planetSaturn {
@@ -114,8 +122,8 @@ body {
   animation: rotated 5s linear infinite;
 }
 .uranus {
-  width: 700px;
-  height: 700px;
+  width: 800px;
+  height: 800px;
   animation: rotated 5s linear infinite;
 }
 .planetUranus {
@@ -129,8 +137,8 @@ body {
   animation: rotated 5s linear infinite;
 }
 .neptune {
-  width: 800px;
-  height: 800px;
+  width: 900px;
+  height: 900px;
   animation: rotated 5s linear infinite;
 }
 .neptune {
