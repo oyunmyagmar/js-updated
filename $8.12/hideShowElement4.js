@@ -1,19 +1,12 @@
 const body = document.querySelector("body");
 const container = document.createElement("div");
-const title = document.createElement("h5");
+const title = document.createElement("h4");
 const text = document.createElement("p");
 const btn = document.createElement("button");
 
 title.innerText = "4) Hide & Show Element";
 text.innerText = "You can hide and show me";
 btn.innerText = "Hide/Show";
-
-const printText = (value) => {
-  text.innerText = "You can hide and show me";
-};
-const removeText = (value) => {
-  text.innerText = "";
-};
 
 btn.addEventListener("click", () => {
   if (text.innerText == "") {

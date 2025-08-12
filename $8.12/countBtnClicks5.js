@@ -1,18 +1,19 @@
-let numArr = [3, 6, 67, 889, 23, 10, 6, 1, 2, 5];
 const body = document.querySelector("body");
 const container = document.createElement("div");
-const title = document.createElement("h5");
+const title = document.createElement("h4");
 const p = document.createElement("p");
 const btn = document.createElement("button");
 
-title.innerText = "6) Filter Numbers > 5";
-btn.innerText = "Show Numbers >5";
+title.innerText = "5) Count Button Clicks";
+p.innerText = "Clicked 0 times";
+btn.innerText = "Click Me";
+
+let count = 0;
 
 btn.addEventListener("click", () => {
-  let newNumArr = numArr.filter((el) => {
-    return Number(el) > 5;
-  });
-  p.innerText = newNumArr;
+  count++;
+  // console.log(count);
+  p.innerText = `Clicked ${count} times`;
 });
 
 container.appendChild(title);

@@ -1,13 +1,14 @@
 const body = document.querySelector("body");
 const container = document.createElement("div");
-const title = document.createElement("h5");
+const title = document.createElement("h4");
 const colorBox = document.createElement("div");
 const btn = document.createElement("button");
 
 colorBox.classList.add("colorBox");
 
-title.innerText = "2) Change Background Color";
 colorBox.style.backgroundColor = "red";
+
+title.innerText = "2) Change Background Color";
 btn.innerText = "Change Color";
 
 btn.addEventListener("click", () => {

@@ -9,7 +9,7 @@ input.value = "Hello World!";
 btn.innerText = "Change to 'Hi There!'";
 
 btn.addEventListener("click", () => {
-  input.value = "Hi there!";
+  input.value = "Hi There!";
 });
 
 container.appendChild(title);

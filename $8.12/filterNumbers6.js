@@ -1,21 +1,23 @@
+let numArr = [3, 6, 67, 889, 23, 10, 6, 1, 2, 5];
 const body = document.querySelector("body");
 const container = document.createElement("div");
 const title = document.createElement("h5");
-const ul = document.createElement("ul");
-
+const p = document.createElement("p");
 const btn = document.createElement("button");
 
-title.innerText = "3) Add List Item";
-btn.innerText = "Add Banana";
+title.innerText = "6) Filter Numbers > 5";
+p.innerText = numArr;
+btn.innerText = "Show Numbers >5";
 
 btn.addEventListener("click", () => {
-  const li = document.createElement("li");
-  li.innerText = btn.innerText;
-  ul.appendChild(li);
+  let newNumArr = numArr.filter((el) => {
+    return Number(el) > 5;
+  });
+  p.innerText = newNumArr;
 });
 
 container.appendChild(title);
-container.appendChild(ul);
+container.appendChild(p);
 container.appendChild(btn);
 
 body.appendChild(container);
