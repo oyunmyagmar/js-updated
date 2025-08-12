@@ -1,12 +1,14 @@
-const itemList = [];
+let itemList = [];
 const body = document.querySelector("body");
 const title = document.createElement("h5");
 const input = document.createElement("input");
 const btn = document.createElement("button");
 const ul = document.createElement("ul");
+const title1 = document.createElement("h5");
 
 title.innerText = "2) Add Item from Input";
 btn.innerText = "Add";
+title1.innerText = "5) Click to Remove Item";
 
 const printInputValue = (value) => {
   //   console.log(value);
@@ -20,6 +22,14 @@ const render = () => {
     const li = document.createElement("li");
     li.innerText = element;
     ul.appendChild(li);
+
+    li.addEventListener("click", () => {
+      console.log("working");
+      let newItemList = itemList.filter((el) => {
+        el !== element;
+      });
+      itemList = newItemList;
+    });
   });
 };
 
@@ -31,4 +41,5 @@ btn.addEventListener("click", () => {
 body.appendChild(title);
 body.appendChild(input);
 body.appendChild(btn);
+body.appendChild(title1);
 body.appendChild(ul);

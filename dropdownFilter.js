@@ -1,11 +1,3 @@
-const body = document.querySelector("body");
-
-const title = document.createElement("h5");
-const select = document.getElementById("food-select");
-const ul = document.createElement("ul");
-
-title.innerText = "5) Dropdown Filter";
-
 let food = [
   { name: "Apple", category: "Fruits" },
   { name: "Banana", category: "Fruits" },
@@ -17,6 +9,12 @@ let food = [
   { name: "Yogurt", category: "Dairy" },
   { name: "Cheese", category: "Dairy" },
 ];
+const body = document.querySelector("body");
+const title = document.createElement("h5");
+const ul = document.createElement("ul");
+const foodSelect = document.getElementById("food-select");
+
+title.innerText = "5) Dropdown Filter";
 
 food.map((element) => {
   const li = document.createElement("li");
@@ -24,14 +22,16 @@ food.map((element) => {
   ul.appendChild(li);
 });
 
-const printFood = () => {
-  food.map((element) => {
+foodSelect.addEventListener("change", () => {
+  // ul.innerHTML = "";
+  // console.log("working");
+  food.filter((el) => {
+    el.category == foodSelect.value;
     const li = document.createElement("li");
-    li.innerText += element.name;
+    li.innerText += el.name;
     ul.appendChild(li);
   });
-};
-// select.append(option);
+});
+
 body.appendChild(title);
 body.appendChild(ul);
-// body.appendChild(select);
