@@ -10,7 +10,7 @@ let food = [
   { name: "Cheese", category: "Dairy" },
 ];
 const body = document.querySelector("body");
-const title = document.createElement("h5");
+const title = document.createElement("h4");
 const ul = document.createElement("ul");
 const foodSelect = document.getElementById("food-select");
 
@@ -23,12 +23,15 @@ food.map((element) => {
 });
 
 foodSelect.addEventListener("change", () => {
-  // ul.innerHTML = "";
+  ul.innerHTML = "";
   // console.log("working");
-  food.filter((el) => {
-    el.category == foodSelect.value;
+  let filteredFood = food.filter((el) => {
+    return el.category == foodSelect.value;
+  });
+  // console.log(filteredFood);
+  filteredFood.map((elem) => {
     const li = document.createElement("li");
-    li.innerText += el.name;
+    li.innerText += elem.name;
     ul.appendChild(li);
   });
 });

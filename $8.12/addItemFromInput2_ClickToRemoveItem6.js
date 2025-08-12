@@ -8,7 +8,7 @@ const title1 = document.createElement("h4");
 
 title.innerText = "2) Add Item from Input";
 btn.innerText = "Add";
-title1.innerText = "5) Click to Remove Item";
+title1.innerText = "6) Click to Remove Item";
 
 const printInputValue = (value) => {
   //   console.log(value);
@@ -18,23 +18,26 @@ const printInputValue = (value) => {
 
 const render = () => {
   ul.innerHTML = "";
-  itemList.map((element) => {
+  itemList.map((element, index) => {
     const li = document.createElement("li");
     li.innerText = element;
     ul.appendChild(li);
 
     li.addEventListener("click", () => {
-      console.log("working");
-      let newItemList = itemList.filter((el) => {
-        el !== element;
+      // console.log("working");
+      let newItemList = itemList.filter((el, i) => {
+        return i !== index;
       });
       itemList = newItemList;
+      // console.log(itemList);
+      render();
     });
   });
 };
 
 btn.addEventListener("click", () => {
   printInputValue(input.value);
+  input.value = "";
   render();
 });
 
