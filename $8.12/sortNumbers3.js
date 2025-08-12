@@ -1,6 +1,6 @@
 let numList = [2, 34, 76, 6, 7, 8, 0];
 const body = document.querySelector("body");
-const title = document.createElement("h5");
+const title = document.createElement("h4");
 const p = document.createElement("p");
 const btn = document.createElement("button");
 

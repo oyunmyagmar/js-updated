@@ -1,10 +1,10 @@
 let itemList = [];
 const body = document.querySelector("body");
-const title = document.createElement("h5");
+const title = document.createElement("h4");
 const input = document.createElement("input");
 const btn = document.createElement("button");
 const ul = document.createElement("ul");
-const title1 = document.createElement("h5");
+const title1 = document.createElement("h4");
 
 title.innerText = "2) Add Item from Input";
 btn.innerText = "Add";

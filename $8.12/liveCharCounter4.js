@@ -6,9 +6,8 @@ const p = document.createElement("p");
 title.innerText = "4) Live Character Counter";
 p.innerText = "Characters: 0";
 
-console.log(input.value.split(""));
-
 input.addEventListener("change", () => {
+  // console.log(input.value.split(""));
   const newCharList = input.value.split("");
   p.innerText = "Characters: " + newCharList.length;
 });
