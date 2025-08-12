@@ -1,3 +1,4 @@
+const percentArr = [0.05, 0.1, 0.15, 0.25, 0.35, 0.5, 0.65, 0.8];
 const body = document.querySelector("body");
 
 const tipCalculatorContainer = document.createElement("div");
@@ -58,11 +59,22 @@ total.innerText = "Total: ";
 resetBtn.innerText = "Reset";
 
 tip5PerBtn.addEventListener("click", () => {
+  percentArr.map((element) => {
+    total.innerText = element * parseInt(billInput.value);
+  });
   // console.log(billInput.value);
-  total.innerText = "Total: ";
-  total.innerText += parseFloat(billInput.value * 1.05).toFixed(2);
+  // total.innerText = "Total: ";
+  // total.innerText += parseFloat(billInput.value * 1.05).toFixed(2);
   // console.log(total.innerText);
 });
+
+// tip5PerBtn.addEventListener("click", () => {
+//   // console.log(billInput.value);
+//   total.innerText = "Total: ";
+//   total.innerText += parseFloat(billInput.value * 1.05).toFixed(2);
+//   // console.log(total.innerText);
+// });
+
 tip10PerBtn.addEventListener("click", () => {
   total.innerText = "Total: ";
   total.innerText += parseFloat(billInput.value * 1.1).toFixed(2);
