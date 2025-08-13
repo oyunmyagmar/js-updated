@@ -1,12 +1,17 @@
 const body = document.querySelector("body");
-const realTimeContainer = document.createElement("div");
-const date = new Date();
-console.log(date);
-console.log(date.toString.split(" "));
+const realTimerContainer = document.createElement("div");
+const p = document.createElement("p");
+
+realTimerContainer.classList.add("realTimerContainer");
 
 function printDate() {
-  const newDate = date.split(" ");
-  console.log(newDate);
+  let date = new Date();
+  // console.log(date.toString().split(" ")[4]);
+  const realTime = date.toString().split(" ")[4];
+  p.innerText = realTime;
 }
 
-body.appendChild(realTimeContainer);
+setInterval(printDate, 1000);
+
+realTimerContainer.appendChild(p);
+body.appendChild(realTimerContainer);
