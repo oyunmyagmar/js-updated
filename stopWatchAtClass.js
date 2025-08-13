@@ -1,17 +1,18 @@
 const counterDiv = document.getElementById("counter");
-const secondSpan = document.getElementById("second");
-const minuteSpan = document.getElementById("minute");
 const hourSpan = document.getElementById("hour");
+const minuteSpan = document.getElementById("minute");
+const secondSpan = document.getElementById("second");
 
 let second = 0;
 let minute = 0;
 let hour = 0;
+
 secondSpan.innerText += ": " + second;
 minuteSpan.innerText += ": " + minute;
 hourSpan.innerText = hour;
 
 function addSecond() {
-  //   console.log("working");
+  // console.log("working");
   second++;
   secondSpan.innerText = ": " + second;
   if (second > 60) {
@@ -34,14 +35,15 @@ function stopTimer() {
 
 function startTimer() {
   clearInterval(interval);
-  interval = setInterval(addSecond, 10);
+  interval = setInterval(addSecond, 100);
 }
 
 function resetTimer() {
-  clearInterval(interval);
+  stopTimer();
   second = 0;
   minute = 0;
   hour = 0;
+
   secondSpan.innerText = ": " + second;
   minuteSpan.innerText = ": " + minute;
   hourSpan.innerText = hour;
