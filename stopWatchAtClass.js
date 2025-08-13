@@ -31,10 +31,12 @@ let interval;
 function stopTimer() {
   clearInterval(interval);
 }
+
 function startTimer() {
   clearInterval(interval);
-  interval = setInterval(addSecond, 1000);
+  interval = setInterval(addSecond, 10);
 }
+
 function resetTimer() {
   clearInterval(interval);
   second = 0;
