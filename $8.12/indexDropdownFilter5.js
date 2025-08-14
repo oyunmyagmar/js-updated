@@ -1,4 +1,3 @@
-foodCategoryArr = ["Fruits", "Vegetables", "Dairy", "Protein"];
 foodList = [
   { name: "Banana", category: "Fruits" },
   { name: "Apple", category: "Fruits" },
@@ -25,8 +24,8 @@ const ul = document.createElement("ul");
 const foodCategorySelect = document.getElementById("foodCategorySelect");
 
 task5.innerText = "5) Dropdown Filter";
-select.value = foodCategoryArr;
 
+// endes dosh dahij harah
 foodList.map((element) => {
   //   console.log("working");
   //   console.log(element.name);
@@ -34,6 +33,17 @@ foodList.map((element) => {
   li.innerText = element.name;
   ul.appendChild(li);
 });
+const categories = foodList.map((item) => {
+  return item.category;
+});
+const uniqueCategories = {};
+categories.forEach((category) => {
+  uniqueCategories[category] = true;
+  // console.log(uniqueCategories);
+  console.log(Object.keys(uniqueCategories));
+});
+
+// endes desh dahij harah
 
 foodCategorySelect.addEventListener("change", () => {
   ul.innerHTML = "";

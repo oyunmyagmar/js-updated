@@ -6,6 +6,7 @@ realTimerContainer.classList.add("realTimerContainer");
 
 function printDate() {
   let date = new Date();
+  // console.log(typeof date);
   // console.log(date.toString().split(" ")[4]);
   const realTime = date.toString().split(" ")[4];
   p.innerText = realTime;

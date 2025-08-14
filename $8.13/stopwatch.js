@@ -13,34 +13,36 @@ startBtn.classList.add("btn");
 stopBtn.classList.add("btn");
 resetBtn.classList.add("btn");
 
-let hour = 0;
-let minute = 0;
-let second = 0;
+let minutes = 0;
+let seconds = 0;
+const date = new Date();
+let milliseconds = date.getMilliseconds();
+console.log(date.getMilliseconds());
 
-timeCounter.innerText = `0${hour}:0${minute}:0${second}`;
+timeCounter.innerText = `0${minutes}:0${seconds}:${milliseconds}`;
 startBtn.innerText = "Start";
 stopBtn.innerText = "Stop";
 resetBtn.innerText = "Reset";
 
-const addSecond = () => {
-  console.log("sec", second);
-  second++;
-  if (second > 59) {
-    second = 0;
-    minute++;
+const addMlliseconds = () => {
+  console.log("ms", milliseconds);
+  milliseconds += 1;
+  if (milliseconds === 1000) {
+    milliseconds = 0;
+    seconds++;
+    if (seconds === 60) {
+      seconds = 0;
+      minutes++;
+    }
   }
-  if (minute > 59) {
-    minute = 0;
-    hour++;
-  }
-  timeCounter.innerText = `${hour}:${minute}:${second}`;
+  timeCounter.innerText = `${minutes}:${seconds}:${milliseconds}`;
 };
 let interval;
 // clearInterval(interval);
 
 startBtn.addEventListener("click", () => {
   clearInterval(interval);
-  interval = setInterval(addSecond, 100);
+  interval = setInterval(addMlliseconds, 0.001);
 });
 
 stopBtn.addEventListener("click", () => {
@@ -49,10 +51,10 @@ stopBtn.addEventListener("click", () => {
 
 resetBtn.addEventListener("click", () => {
   clearInterval(interval);
-  hour = 0;
-  minute = 0;
-  second = 0;
-  timeCounter.innerText = `0${hour}:0${minute}:0${second}`;
+  minutes = 0;
+  seconds = 0;
+  milliseconds = 0;
+  timeCounter.innerText = `0${milliseconds}:0${seconds}:00${minutes}`;
 });
 
 btnContainer.appendChild(startBtn);
