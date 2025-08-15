@@ -12,6 +12,7 @@ let questionsArr = [
 ];
 
 let count = 0;
+let point = 0;
 const printQuestions = () => {
   const question = document.createElement("h3");
   question.innerText = questionsArr[count].q;
@@ -52,6 +53,7 @@ const printQuestions = () => {
     console.log("customerAnswerArr[0]", customerAnswerArr[0]);
     console.log("questionsArr[count].c", questionsArr[count].c);
     // console.log(correctAnswer);
+
     changePrintQuestionValue();
   });
 

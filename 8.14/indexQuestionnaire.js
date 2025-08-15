@@ -147,22 +147,34 @@ const data = [
 ];
 
 const body = document.querySelector("body");
-const startBtn = document.querySelector("button");
+const startBtn = document.createElement("button");
+
+startBtn.classList.add("startBtn");
+startBtn.innerText = "Start";
+
 let currentIndex = 0;
+let point = 0;
 
 const quizStart = () => {
   startBtn.remove();
 
   const question = document.createElement("h2");
   const currentQuestion = document.createElement("p");
-  body.appendChild(question);
+
   currentQuestion.innerText = `${currentIndex}/${data.length}`;
+
+  body.appendChild(question);
   body.appendChild(currentQuestion);
 
-  new Array(4).fill(0).forEach((el) => {
+  new Array(4).fill(0).forEach((el, i) => {
     const btn = document.createElement("button");
     body.appendChild(btn);
+
     btn.addEventListener("click", () => {
+      console.log(point);
+      if (data[currentIndex].correctAnswer === data[currentIndex].answers[i]) {
+        point++;
+      }
       currentIndex++;
       question.innerText = data[currentIndex].question;
 
@@ -186,3 +198,4 @@ const quizStart = () => {
 };
 
 startBtn.addEventListener("click", quizStart);
+body.appendChild(startBtn);
