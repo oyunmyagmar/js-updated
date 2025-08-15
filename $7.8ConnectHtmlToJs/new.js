@@ -1,5 +1,6 @@
+// name //
 // ta neree oruulna uu? gsen garchigtai
-// dood tald ni 1 inout der neree orulad submit btn darangut
+// dood tald ni 1 input der neree orulad submit btn darangut
 // console.log der Sain bn u Andy gj garj irdeg
 
 let input = document.getElementById("name-input");
@@ -11,6 +12,7 @@ button.addEventListener("click", () => {
   console.log(greeting + input.value);
 });
 
+// calculator //
 // 2 sh input
 // find sum of 2 numbers
 // num1-input
@@ -18,6 +20,10 @@ button.addEventListener("click", () => {
 let num1Input = document.getElementById("num1-input");
 let num2Input = document.getElementById("num2-input");
 let sumBtn = document.getElementById("sum-btn");
+let plusBtn = document.getElementById("plus-btn");
+let minusBtn = document.getElementById("minus-btn");
+let multiplyBtn = document.getElementById("multiply-btn");
+let divideBtn = document.getElementById("divide-btn");
 
 sumBtn.addEventListener("click", () => {
   console.log(num1Input.value + num2Input.value);
@@ -32,32 +38,22 @@ sumBtn.addEventListener("click", () => {
 let a = 15;
 let b = "15";
 console.log(a + b);
-console.log(a + parseInt(b));
+console.log(parseInt(a) + parseInt(b));
 
-// odoo tegvel + - uildel hiie
-let plusBtn = document.getElementById("plus-btn");
+// html dotor input type = "text" -g "number" bolgoson ch number blohgui
+// ter ni tuhain input dotor number -aas uur yum bichij blohgui bolgoj bga
+// tsever js -iig baruun mouse darad code run hij bolno
+// odoo tegvel + - * / uildel hiie
 
 plusBtn.addEventListener("click", () => {
   console.log(parseInt(num1Input.value) + parseInt(num2Input.value));
 });
-
-let minusBtn = document.getElementById("minus-btn");
-
 minusBtn.addEventListener("click", () => {
   console.log(parseInt(num1Input.value) - parseInt(num2Input.value));
 });
-
-// html dotor input type = "text" -g "number" bolgoson ch number blohgui
-// ter ni tuhain input dotor number -aas uur yum bichij blgohgui bolgoj bga
-
-let multiplyBtn = document.getElementById("multiply-btn");
-
 multiplyBtn.addEventListener("click", () => {
   console.log(parseInt(num1Input.value) * parseInt(num2Input.value));
 });
-
-let divideBtn = document.getElementById("divide-btn");
-
 divideBtn.addEventListener("click", () => {
   console.log(parseInt(num1Input.value) / parseInt(num2Input.value));
 });
@@ -70,9 +66,8 @@ divideBtn.addEventListener("click", () => {
 let num3Input = document.getElementById("num3-input");
 let maxBtn = document.getElementById("max-btn");
 
-// 3 input -iinhaa toonuudiig avya
-
 maxBtn.addEventListener("click", () => {
+  // 3 input -iinhaa toonuudiig avya
   let num1 = parseInt(num1Input.value);
   let num2 = parseInt(num2Input.value);
   let num3 = parseInt(num3Input.value);
@@ -114,3 +109,23 @@ minBtn.addEventListener("click", () => {
     }
   }
 });
+
+// file ner, huvisagch ner too useg temdegter ehelj bolohgui
+// 3 toonii ih baga der 4 console.log bichsen bol
+// 4 toonii ih baga der 8 console.log bichne, 2-iin heden zeregt?
+
+// average calculator
+
+let averageBtn = document.getElementById("average-btn");
+averageBtn.addEventListener("click", () => {
+  let num1 = parseInt(num1Input.value);
+  let num2 = parseInt(num2Input.value);
+  let num3 = parseInt(num3Input.value);
+
+  let sum = num1 + num2 + num3;
+  let average = sum / 3;
+  console.log(average);
+  console.log((num1 + num2 + num3) / 3);
+});
+
+// if else condition && || operator uzeh

@@ -147,7 +147,11 @@ const data = [
 ];
 
 const body = document.querySelector("body");
-const startBtn = document.querySelector("button");
+const startBtn = document.createElement("button");
+
+startBtn.classList.add("startBtn");
+startBtn.innerText = "Start";
+
 let currentIndex = 0;
 let point = 0;
 
@@ -194,3 +198,4 @@ const quizStart = () => {
 };
 
 startBtn.addEventListener("click", quizStart);
+body.appendChild(startBtn);

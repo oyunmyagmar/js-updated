@@ -11,6 +11,7 @@ let button = document.getElementById("submit");
 button.addEventListener("click", () => {
   // console.log("hello world");
   // console.log(input.value);
+  console.log(input.value + input1.value);
   console.log(parseInt(input.value) + parseInt(input1.value));
 });
 
