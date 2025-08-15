@@ -7,10 +7,10 @@ let input = document.getElementById("age-input");
 let input1 = document.getElementById("num-input");
 let button = document.getElementById("submit");
 
-// tovchluur darahad
+// tovchluur darahad <- chagnah tuhurumj -> click -iig chagnah
 button.addEventListener("click", () => {
-  //   console.log("hello world");
-  //   console.log(input.value);
+  // console.log("hello world");
+  // console.log(input.value);
   console.log(parseInt(input.value) + parseInt(input1.value));
 });
 
