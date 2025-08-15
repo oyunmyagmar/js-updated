@@ -156,13 +156,16 @@ const quizStart = () => {
 
   const question = document.createElement("h2");
   const currentQuestion = document.createElement("p");
-  body.appendChild(question);
+
   currentQuestion.innerText = `${currentIndex}/${data.length}`;
+
+  body.appendChild(question);
   body.appendChild(currentQuestion);
 
   new Array(4).fill(0).forEach((el, i) => {
     const btn = document.createElement("button");
     body.appendChild(btn);
+
     btn.addEventListener("click", () => {
       console.log(point);
       if (data[currentIndex].correctAnswer === data[currentIndex].answers[i]) {
