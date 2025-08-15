@@ -149,6 +149,7 @@ const data = [
 const body = document.querySelector("body");
 const startBtn = document.querySelector("button");
 let currentIndex = 0;
+let point = 0;
 
 const quizStart = () => {
   startBtn.remove();
@@ -159,10 +160,14 @@ const quizStart = () => {
   currentQuestion.innerText = `${currentIndex}/${data.length}`;
   body.appendChild(currentQuestion);
 
-  new Array(4).fill(0).forEach((el) => {
+  new Array(4).fill(0).forEach((el, i) => {
     const btn = document.createElement("button");
     body.appendChild(btn);
     btn.addEventListener("click", () => {
+      console.log(point);
+      if (data[currentIndex].correctAnswer === data[currentIndex].answers[i]) {
+        point++;
+      }
       currentIndex++;
       question.innerText = data[currentIndex].question;
 
