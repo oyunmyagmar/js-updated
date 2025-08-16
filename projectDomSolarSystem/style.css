@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  background-color: black;
+  background-image: url(images/galaxy.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed white;
+  border-radius: 50%;
+  translate: -50% -50%;
+}
+.sun {
+  width: 110px;
+  height: 110px;
+  background-image: url(images/sun.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+}
+.mercury {
+  width: 200px;
+  height: 200px;
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.planetMercury {
+  width: 9%;
+  height: 9%;
+  background-image: url(images/mercury.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotate 10s linear infinite;
+  translate: -50% 91px;
+}
+.venus {
+  width: 275px;
+  height: 275px;
+  animation: rotate 25s linear infinite;
+}
+.planetVenus {
+  width: 10%;
+  height: 10%;
+  background-image: url(images/venus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotate 40s linear infinite;
+  translate: -50% 127.5px;
+}
+.earth {
+  width: 350px;
+  height: 350px;
+  animation: rotate 30s linear infinite;
+}
+.planetEarth {
+  width: 9%;
+  height: 9%;
+  background-image: url(images/earth.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+  translate: -50% 166px;
+}
+.mars {
+  width: 450px;
+  height: 450px;
+  animation: rotate 35s linear infinite;
+}
+.planetMars {
+  width: 4.5%;
+  height: 4.5%;
+  background-image: url(images/mars.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotate 2s linear infinite;
+  translate: -50% 220.5px;
+}
+.jupiter {
+  width: 600px;
+  height: 600px;
+  animation: rotate 50s linear infinite;
+}
+.planetJupiter {
+  width: 11%;
+  height: 11%;
+  background-image: url(images/jupiter.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotate 500ms linear infinite;
+  translate: -50% 289px;
+}
+.saturn {
+  width: 770px;
+  height: 770px;
+  animation: rotate 70s linear infinite;
+}
+.planetSaturn {
+  width: 12.5%;
+  height: 12.5%;
+  background-image: url(images/saturn.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 30%;
+  animation: rotate 600ms linear infinite;
+  translate: -50% 372.5px;
+}
+.uranus {
+  width: 970px;
+  height: 970px;
+  animation: rotate 90s linear infinite;
+}
+.planetUranus {
+  width: 5%;
+  height: 5%;
+  background-image: url(images/uranus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotate 800ms linear infinite;
+  translate: -50% 480px;
+}
+.neptune {
+  width: 1170px;
+  height: 1170px;
+  animation: rotate 110s linear infinite;
+}
+.planetNeptune {
+  width: 5.5%;
+  height: 5.5%;
+  background-image: url(images/neptune.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+  animation: rotate 700ms linear infinite;
+  translate: -50% 579.5px;
+}
+.shootingStarContainer {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: shoot 2s linear infinite;
+}
+@keyframes shoot {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(100vw, -100vh);
+  }
+}
+.shootingStar {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(241, 241, 199);
+  border-radius: 50%;
+  animation: flicker 1s linear infinite;
+}
+@keyframes flicker {
+  0% {
+    transform: rotate(0deg);
+    scale: -1;
+  }
+  50% {
+    transform: rotate(180deg);
+    scale: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    scale: -1;
+  }
+}
