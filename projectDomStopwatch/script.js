@@ -19,19 +19,13 @@ let minutes = 0;
 let seconds = 0;
 let milliseconds = 0;
 
-timeCounter.innerText = "00:00.000";
+timeCounter.innerText = `0${minutes}:0${seconds}.00${milliseconds}`;
 startBtn.innerText = "Start";
 stopBtn.innerText = "Stop";
 resetBtn.innerText = "Reset";
 
 const addMilliseconds = () => {
-  let dateToday = new Date();
-  let milliseconds = dateToday.getMilliseconds();
-  // console.log("milliseconds", milliseconds);
-  let seconds = dateToday.getSeconds();
-  // console.log("seconds", seconds);
-  let minutes = dateToday.getMinutes();
-  // console.log("minutes", minutes);
+  milliseconds += 10;
 
   if (milliseconds === 1000) {
     milliseconds = 0;
@@ -41,43 +35,59 @@ const addMilliseconds = () => {
       minutes++;
     }
   }
-  function formatTimer() {
+
+  function formatMilliseconds(milliseconds) {
     if (milliseconds < 10) {
-      milliseconds = `00${milliseconds}`;
+      return (milliseconds = `00${milliseconds}`);
     } else if (milliseconds < 100) {
-      milliseconds = `0${milliseconds}`;
+      return (milliseconds = `0${milliseconds}`);
     } else if (milliseconds < 1000) {
-      milliseconds = milliseconds;
-    }
-    if (seconds < 10) {
-      seconds = `0${seconds}`;
-    }
-    if (minutes < 10) {
-      minutes = `0${minutes}`;
+      return milliseconds;
     }
   }
-  formatTimer();
-  timeCounter.innerText = `${minutes}:${seconds}.${milliseconds}`;
+  let formattedMilliseconds = formatMilliseconds(milliseconds);
+
+  function formatSeconds(seconds) {
+    if (seconds < 10) {
+      return (seconds = `0${seconds}`);
+    } else {
+      return seconds;
+    }
+  }
+  let formattedSeconds = formatSeconds(seconds);
+
+  function formatMinutes(minutes) {
+    if (minutes < 10) {
+      return (minutes = `0${minutes}`);
+    } else {
+      return minutes;
+    }
+  }
+  let formattedMinutes = formatMinutes(minutes);
+
+  timeCounter.innerText = `${formattedMinutes}:${formattedSeconds}.${formattedMilliseconds}`;
 };
+
 let interval;
-// = setInterval(addMlliseconds, 1);
 
 startBtn.addEventListener("click", () => {
   clearInterval(interval);
-  interval = setInterval(addMilliseconds, 1);
+  interval = setInterval(addMilliseconds, 10);
 });
 stopBtn.addEventListener("click", () => {
   clearInterval(interval);
 });
 resetBtn.addEventListener("click", () => {
   clearInterval(interval);
-  timeCounter.innerText = "00:00.000";
+  minutes = 0;
+  seconds = 0;
+  milliseconds = 0;
+  timeCounter.innerText = `0${minutes}:0${seconds}.00${milliseconds}`;
 });
 
 function printRealTime() {
   let dateToday = new Date();
   const currentTime = dateToday.toString().split(" ")[4];
-  // console.log("currentTime", currentTime);
   currentTimePTag.innerText = `Current time: ${currentTime}`;
 }
 setInterval(printRealTime, 1000);
