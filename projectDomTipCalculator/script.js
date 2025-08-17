@@ -1,4 +1,3 @@
-const percentArr = [0.05, 0.1, 0.15, 0.25, 0.35, 0.5, 0.65, 0.8];
 const body = document.querySelector("body");
 
 const tipCalculatorContainer = document.createElement("div");
@@ -8,6 +7,7 @@ const mainCalculator = document.createElement("div");
 const billContainer = document.createElement("div");
 const billTitle = document.createElement("p");
 const billInput = document.createElement("input");
+
 const tipSelectorContainer = document.createElement("div");
 const tipSelectorTitle = document.createElement("p");
 const tipBtns = document.createElement("div");
@@ -19,6 +19,7 @@ const tip35PerBtn = document.createElement("button");
 const tip50PerBtn = document.createElement("button");
 const tip65PerBtn = document.createElement("button");
 const tip80PerBtn = document.createElement("button");
+
 let total = document.createElement("p");
 const resetBtn = document.createElement("button");
 
@@ -59,22 +60,9 @@ total.innerText = "Total: ";
 resetBtn.innerText = "Reset";
 
 tip5PerBtn.addEventListener("click", () => {
-  percentArr.map((element) => {
-    total.innerText = element * parseInt(billInput.value);
-  });
-  // console.log(billInput.value);
-  // total.innerText = "Total: ";
-  // total.innerText += parseFloat(billInput.value * 1.05).toFixed(2);
-  // console.log(total.innerText);
+  total.innerText = "Total: ";
+  total.innerText += parseFloat(billInput.value * 1.05).toFixed(2);
 });
-
-// tip5PerBtn.addEventListener("click", () => {
-//   // console.log(billInput.value);
-//   total.innerText = "Total: ";
-//   total.innerText += parseFloat(billInput.value * 1.05).toFixed(2);
-//   // console.log(total.innerText);
-// });
-
 tip10PerBtn.addEventListener("click", () => {
   total.innerText = "Total: ";
   total.innerText += parseFloat(billInput.value * 1.1).toFixed(2);
@@ -105,7 +93,6 @@ tip80PerBtn.addEventListener("click", () => {
 });
 
 resetBtn.addEventListener("click", () => {
-  // console.log("working");
   total.innerText = "0.00";
   billInput.value = "";
 });
