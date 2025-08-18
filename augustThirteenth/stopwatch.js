@@ -27,14 +27,14 @@ resetBtn.innerText = "Reset";
 const addMilliseconds = () => {
   let dateToday = new Date();
   let milliseconds = dateToday.getMilliseconds();
-  // console.log("milliseconds", milliseconds);
-  let seconds = dateToday.getSeconds();
-  // console.log("seconds", seconds);
-  let minutes = dateToday.getMinutes();
+  console.log("milliseconds", milliseconds);
+  // let seconds = dateToday.getSeconds();
+  // // console.log("seconds", seconds);
+  // let minutes = dateToday.getMinutes();
   // console.log("minutes", minutes);
 
-  if (milliseconds === 1000) {
-    milliseconds = 0;
+  if (milliseconds > 998) {
+    // milliseconds = 0;
     seconds++;
     if (seconds === 60) {
       seconds = 0;
@@ -58,13 +58,14 @@ const addMilliseconds = () => {
   }
   formatTimer();
   timeCounter.innerText = `${minutes}:${seconds}.${milliseconds}`;
+  console.log("min", `${minutes} "sec":${seconds} "mili.${milliseconds}`);
 };
 let interval;
 // = setInterval(addMlliseconds, 1);
 
 startBtn.addEventListener("click", () => {
   clearInterval(interval);
-  interval = setInterval(addMilliseconds, 1);
+  interval = setInterval(addMilliseconds, 1000);
 });
 stopBtn.addEventListener("click", () => {
   clearInterval(interval);

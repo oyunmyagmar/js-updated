@@ -9,14 +9,10 @@ for (let i = 0; i < numArr.length; i++) {
     sameDigitArr.push(numArr[i]);
   }
 }
-let max = sameDigitArr[0];
-let largest3SameDigitNumber = [];
-sameDigitArr.filter((el) => {
-  if (max < el) {
-    max = el;
-    largest3SameDigitNumber.push(el);
-  }
+sameDigitArr.sort((a, b) => {
+  return b - a;
 });
 
+sameDigitArr.slice();
 console.log("sameDigitArr", sameDigitArr);
-console.log("largest3SameDigitNumber", largest3SameDigitNumber);
+// console.log("largestSameDigitNumber", largestSameDigitNumber);
