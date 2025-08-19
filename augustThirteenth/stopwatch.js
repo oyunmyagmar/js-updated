@@ -1,9 +1,6 @@
 const body = document.querySelector("body");
 const stopWatchContainer = document.createElement("div");
 const timeCounter = document.createElement("div");
-const minutesSpan = document.createElement("span");
-const secondsSpan = document.createElement("span");
-const millisecondsSpan = document.createElement("span");
 const btnContainer = document.createElement("div");
 const startBtn = document.createElement("button");
 const stopBtn = document.createElement("button");
@@ -12,7 +9,6 @@ const currentTimePTag = document.createElement("p");
 
 stopWatchContainer.classList.add("stopWatchContainer");
 timeCounter.classList.add("timeCounter");
-millisecondsSpan.classList.add("millisecondsSpan");
 btnContainer.classList.add("btnContainer");
 startBtn.classList.add("btn");
 stopBtn.classList.add("btn");
@@ -23,51 +19,60 @@ let minutes = 0;
 let seconds = 0;
 let milliseconds = 0;
 
-millisecondsSpan.innerText = ".00" + milliseconds;
-secondsSpan.innerText = ":0" + seconds;
-minutesSpan.innerText = "0" + minutes;
+timeCounter.innerText = `0${minutes}:0${seconds}.00${milliseconds}`;
 startBtn.innerText = "Start";
 stopBtn.innerText = "Stop";
 resetBtn.innerText = "Reset";
 
 const addMilliseconds = () => {
-  let dateToday = new Date();
-  let milliseconds = dateToday.getMilliseconds();
+  milliseconds += 10;
 
-  if (milliseconds > 994) {
+  if (milliseconds === 1000) {
+    milliseconds = 0;
     seconds++;
     if (seconds === 60) {
       seconds = 0;
       minutes++;
     }
   }
-  function formatTimer() {
+
+  function formatMilliseconds(milliseconds) {
     if (milliseconds < 10) {
-      millisecondsSpan.innerText = ".00" + milliseconds;
+      return (milliseconds = `00${milliseconds}`);
     } else if (milliseconds < 100) {
-      millisecondsSpan.innerText = ".0" + milliseconds;
+      return (milliseconds = `0${milliseconds}`);
     } else if (milliseconds < 1000) {
-      millisecondsSpan.innerText = "." + milliseconds;
-    }
-    if (seconds < 10) {
-      secondsSpan.innerText = ":0" + seconds;
-    } else {
-      secondsSpan.innerText = ":" + seconds;
-    }
-    if (minutes < 10) {
-      minutesSpan.innerText = "0" + minutes;
-    } else {
-      minutesSpan.innerText = "" + minutes;
+      return milliseconds;
     }
   }
-  formatTimer();
+  let formattedMilliseconds = formatMilliseconds(milliseconds);
+
+  function formatSeconds(seconds) {
+    if (seconds < 10) {
+      return (seconds = `0${seconds}`);
+    } else {
+      return seconds;
+    }
+  }
+  let formattedSeconds = formatSeconds(seconds);
+
+  function formatMinutes(minutes) {
+    if (minutes < 10) {
+      return (minutes = `0${minutes}`);
+    } else {
+      return minutes;
+    }
+  }
+  let formattedMinutes = formatMinutes(minutes);
+
+  timeCounter.innerText = `${formattedMinutes}:${formattedSeconds}.${formattedMilliseconds}`;
 };
+
 let interval;
-// = setInterval(addMlliseconds, 1);
 
 startBtn.addEventListener("click", () => {
   clearInterval(interval);
-  interval = setInterval(addMilliseconds, 1);
+  interval = setInterval(addMilliseconds, 10);
 });
 stopBtn.addEventListener("click", () => {
   clearInterval(interval);
@@ -77,9 +82,7 @@ resetBtn.addEventListener("click", () => {
   minutes = 0;
   seconds = 0;
   milliseconds = 0;
-  millisecondsSpan.innerText = ".00" + milliseconds;
-  secondsSpan.innerText = ":0" + seconds;
-  minutesSpan.innerText = "0" + minutes;
+  timeCounter.innerText = `0${minutes}:0${seconds}.00${milliseconds}`;
 });
 
 function printRealTime() {
@@ -89,9 +92,6 @@ function printRealTime() {
 }
 setInterval(printRealTime, 1000);
 
-timeCounter.appendChild(minutesSpan);
-timeCounter.appendChild(secondsSpan);
-timeCounter.appendChild(millisecondsSpan);
 btnContainer.appendChild(startBtn);
 btnContainer.appendChild(stopBtn);
 btnContainer.appendChild(resetBtn);
