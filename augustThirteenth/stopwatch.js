@@ -61,14 +61,6 @@ const addMilliseconds = () => {
     }
   }
   formatTimer();
-  console.log(
-    "min:",
-    minutesSpan,
-    "sec:",
-    secondsSpan,
-    "milli:",
-    millisecondsSpan
-  );
 };
 let interval;
 // = setInterval(addMlliseconds, 1);
