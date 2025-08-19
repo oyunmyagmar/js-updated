@@ -35,7 +35,7 @@ function stopTimer() {
 
 function startTimer() {
   clearInterval(interval);
-  interval = setInterval(addSecond, 100);
+  interval = setInterval(addSecond, 1000);
 }
 
 function resetTimer() {
